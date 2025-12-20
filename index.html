@@ -90,10 +90,10 @@
                 <a href="#problem" class="hover:text-accent transition">The Crisis</a>
                 <a href="#programs" class="hover:text-accent transition">Program</a>
                 <a href="#exec" class="hover:text-accent transition">Executive Summary</a>
-                <a href="#book" class="hover:text-accent transition text-accent font-extrabold">Get the Complete Manuscript</a>
+                <a href="#exec" class="hover:text-accent transition text-accent font-extrabold">Get the Complete Manuscript</a>
                 <a class="cta bg-white text-midnight px-6 py-2 rounded-full hover:bg-accent transition transform hover:scale-105"
                    href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
-                   data-calendly="true">Book Discovery</a>
+                  >Book Discovery</a>
             </div>
         </div>
     </nav>
@@ -126,7 +126,7 @@
                     <!-- FIXED: make this a real link + optional calendly popup -->
                     <a class="cta glass px-10 py-5 rounded-xl font-bold hover:bg-white/5 transition text-sm"
                        href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
-                       data-calendly="true">
+                      >
                         Talk Through Fit →
                     </a>
                 </div>
@@ -260,7 +260,7 @@
                 <!-- FIXED: make it a link too -->
                 <a class="cta text-accent border-b border-accent pb-1 font-bold hover:text-white hover:border-white transition"
                    href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
-                   data-calendly="true">
+                  >
                     Talk Through Fit →
                 </a>
             </div>
@@ -310,7 +310,7 @@
                 </div>
                 <a class="cta accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
                    href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
-                   data-calendly="true">
+                  >
                     Book a Fit Call
                 </a>
             </div>
@@ -337,7 +337,7 @@
                 <!-- FIXED: make it a link too -->
                 <a class="cta accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
                    href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
-                   data-calendly="true">
+                  >
                     Map This To Your Team
                 </a>
             </div>
@@ -447,7 +447,7 @@
             </div>
             <a class="cta bg-white text-midnight px-7 py-3 rounded-full hover:bg-accent transition font-black"
                href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
-               data-calendly="true">
+              >
                 Book Discovery Call
             </a>
         </div>
@@ -481,7 +481,7 @@
             <a href="#problem" class="hover:text-accent transition">Crisis</a>
             <a href="#programs" class="hover:text-accent transition">Program</a>
             <a href="#exec" class="hover:text-accent transition">Executive Summary</a>
-            <a href="#book" class="hover:text-accent transition">Book</a>
+            <a href="#exec" class="hover:text-accent transition">Manuscript</a>
             <a href="mailto:contact@biohackingsales.com" class="hover:text-accent transition">Contact</a>
         </div>
     </footer>
@@ -504,20 +504,6 @@
             }
             return false;
         }
-
-        // Attach popup behavior to any element marked data-calendly (anchors still work if popup blocked)
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('[data-calendly="true"]').forEach(function(el) {
-                el.addEventListener('click', function(e) {
-                    // let middle-click / cmd-click open new tab normally
-                    if (e.metaKey || e.ctrlKey || e.button === 1) return;
-                    // try popup
-                    if (window.Calendly) {
-                        e.preventDefault();
-                        openCalendly();
-                    }
-                });
-            });
         });
 
         function submitLeadForm(e) {
