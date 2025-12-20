@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BiohackingSales | The Science of Consistent Outbound Performance</title>
-    <meta name="description" content="Fix the Sales Team Inconsistency Crisis. Use 70×POWER15 to regulate rep nervous systems and eliminate the hesitation tax." />
-    
-    <!-- Premium Typography -->
+    <title>BiohackingSales.com | End the Outbound Sales Inconsistency Crisis</title>
+    <meta name="description" content="Fix outbound sales inconsistency at the source. Increase dials, strengthen closes, and reduce rep churn by training emotional control under pressure." />
+
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -19,10 +20,7 @@
                     colors: {
                         midnight: '#020617',
                         accent: '#ffd166',
-                        slate: {
-                            850: '#1e293b',
-                            950: '#010409',
-                        }
+                        slate: { 850: '#1e293b', 950: '#010409' }
                     },
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -39,16 +37,31 @@
         .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
         .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
-        .book-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); }
-        
+        .book-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75); }
+
         /* DNA Icon Animation */
-        .dna-node { animation: dnaPulse 3s infinite ease-in-out; }
+        .dna-node { animation: dnaPulse 3s infinite ease-in-out; transform-origin: center; }
         @keyframes dnaPulse {
-            0%, 100% { opacity: 0.4; transform: scale(0.9); }
-            50% { opacity: 1; transform: scale(1.1); }
+            0%, 100% { opacity: 0.45; transform: scale(0.92); }
+            50% { opacity: 1; transform: scale(1.10); }
         }
+
+        /* Make the opt-in pop */
+        .optin-glow {
+            box-shadow:
+              0 0 0 1px rgba(255, 209, 102, 0.25),
+              0 0 40px rgba(255, 209, 102, 0.18),
+              0 30px 70px rgba(0, 0, 0, 0.55);
+        }
+        .optin-bg {
+            background: linear-gradient(180deg, rgba(255, 209, 102, 0.10), rgba(255,255,255,0.02));
+        }
+
+        /* Robust clickable buttons */
+        .cta { cursor: pointer; }
     </style>
 </head>
+
 <body class="font-sans antialiased hero-pattern">
 
     <!-- Navigation -->
@@ -57,7 +70,7 @@
             <div class="flex items-center space-x-4">
                 <!-- DNA LOGO ICON -->
                 <div class="relative w-10 h-10 flex items-center justify-center bg-slate-900 rounded-xl border border-white/10 overflow-hidden">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" aria-label="BiohackingSales logo icon">
                         <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 0s;"/>
                         <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 1.5s;"/>
                         <circle cx="9.5" cy="7" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 0.2s;"/>
@@ -65,13 +78,22 @@
                         <circle cx="9.5" cy="17" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 1.2s;"/>
                     </svg>
                 </div>
-                <span class="text-xl font-800 tracking-tight text-white uppercase leading-none">Biohacking<span class="text-accent">Sales.com</span></span>
+
+                <!-- Wordmark -->
+                <span class="text-xl font-extrabold tracking-tight text-white uppercase leading-none flex items-baseline gap-1">
+                    <span>Biohacking</span><span class="text-accent">Sales</span>
+                    <span class="ml-1 px-2 py-[2px] rounded-full border border-white/10 bg-white/5 text-[10px] font-black tracking-widest text-slate-200 normal-case">.com</span>
+                </span>
             </div>
+
             <div class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-slate-400">
                 <a href="#problem" class="hover:text-accent transition">The Crisis</a>
-                <a href="#solutions" class="hover:text-accent transition">Solutions</a>
-                <a href="#manuscript" class="hover:text-accent transition">The Book</a>
-                <button onclick="openCalendly()" class="bg-white text-midnight px-6 py-2 rounded-full hover:bg-accent transition transform hover:scale-105">Book Discovery</button>
+                <a href="#programs" class="hover:text-accent transition">Program</a>
+                <a href="#exec" class="hover:text-accent transition">Executive Summary</a>
+                <a href="#book" class="hover:text-accent transition text-accent font-extrabold">Get the Complete Manuscript</a>
+                <a class="cta bg-white text-midnight px-6 py-2 rounded-full hover:bg-accent transition transform hover:scale-105"
+                   href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
+                   data-calendly="true">Book Discovery</a>
             </div>
         </div>
     </nav>
@@ -81,189 +103,385 @@
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div>
                 <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[10px] font-black tracking-widest uppercase mb-8">
-                    <span>Performance Neuroscience</span>
+                    <span>Outbound Emotional Performance</span>
                 </div>
-                <h1 class="text-5xl md:text-7xl font-800 leading-[1.05] mb-8 font-sans">
-                    End The Sales <br/>
-                    <span class="italic font-serif text-accent">Inconsistency</span> <br/>
-                    <span class="text-gradient">Crisis.</span>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.05] mb-8 font-sans">
+                    End the <br/>
+                    <span class="italic font-serif text-accent">Outbound Sales</span> <br/>
+                    <span class="text-gradient">Inconsistency Crisis.</span>
                 </h1>
-                <p class="text-xl text-slate-400 mb-10 max-w-xl leading-relaxed">
-                    Most VPs blame skills or "hustle." We solve the biological barrier. 
-                    Using <span class="text-white font-semibold">70×POWER15</span>, we regulate rep nervous systems to eliminate hesitation and create predictable revenue.
+
+                <p class="text-xl text-slate-300/90 mb-10 max-w-xl leading-relaxed">
+                    Your reps don’t lack skill — they lose access to it under pressure.
+                    We train <span class="text-white font-semibold">emotional control</span> so reps dial more, close stronger,
+                    and quit less — without managers “turning up the pressure.”
                 </p>
+
                 <div class="flex flex-col sm:flex-row gap-5">
-                    <button onclick="openCalendly()" class="accent-gradient text-midnight font-black px-10 py-5 rounded-xl shadow-2xl shadow-accent/20 hover:scale-105 transition uppercase tracking-wider text-sm">
-                        Schedule Executive Briefing
-                    </button>
-                    <a href="#manuscript" class="glass px-10 py-5 rounded-xl font-bold flex items-center justify-center hover:bg-white/5 transition text-sm">
-                        Download Manuscript
+                    <a href="#programs" class="cta accent-gradient text-midnight font-black px-10 py-5 rounded-xl shadow-2xl shadow-accent/20 hover:scale-105 transition uppercase tracking-wider text-sm">
+                        View Program Options
+                    </a>
+
+                    <!-- FIXED: make this a real link + optional calendly popup -->
+                    <a class="cta glass px-10 py-5 rounded-xl font-bold hover:bg-white/5 transition text-sm"
+                       href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
+                       data-calendly="true">
+                        Talk Through Fit →
                     </a>
                 </div>
-                <div class="mt-12 flex gap-10">
-                    <div>
-                        <p class="text-white font-black text-2xl">34%</p>
-                        <p class="text-slate-500 text-xs uppercase tracking-tighter">Dial Volume Lift</p>
+
+                <div class="mt-12 grid grid-cols-3 gap-5 max-w-xl">
+                    <div class="glass p-5 rounded-2xl">
+                        <p class="text-white font-black text-lg">More Dials</p>
+                        <p class="text-slate-500 text-[11px] mt-2 leading-snug">Reduce dial hesitation + avoidance loops.</p>
                     </div>
-                    <div class="w-px bg-white/10"></div>
-                    <div>
-                        <p class="text-white font-black text-2xl">-22%</p>
-                        <p class="text-slate-500 text-xs uppercase tracking-tighter">Hesitation Events</p>
+                    <div class="glass p-5 rounded-2xl">
+                        <p class="text-white font-black text-lg">Stronger Closes</p>
+                        <p class="text-slate-500 text-[11px] mt-2 leading-snug">Hold tension without collapsing at the ask.</p>
+                    </div>
+                    <div class="glass p-5 rounded-2xl">
+                        <p class="text-white font-black text-lg">Lower Churn</p>
+                        <p class="text-slate-500 text-[11px] mt-2 leading-snug">More resilience = fewer rep exits.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Book Visual -->
             <div class="relative lg:block hidden">
-                <div class="absolute inset-0 bg-accent/20 blur-[120px] rounded-full opacity-20"></div>
-                <div class="relative mx-auto w-72 h-[420px] bg-slate-900 rounded-r-xl border-y border-r border-white/10 book-shadow transform rotate-3 hover:rotate-0 transition duration-700 overflow-hidden flex flex-col p-8">
+                <div class="absolute inset-0 bg-accent/20 blur-[120px] rounded-full opacity-25"></div>
+
+                <div class="relative mx-auto w-80 h-[470px] bg-slate-900 rounded-r-2xl border-y border-r border-white/10 book-shadow transform rotate-2 hover:rotate-0 transition duration-700 overflow-hidden flex flex-col p-10">
                     <div class="absolute top-0 left-0 w-4 h-full bg-black/30"></div>
-                    <p class="text-accent font-black text-2xl leading-none">70×</p>
-                    <p class="text-accent font-black text-2xl mb-8 tracking-tighter">POWER15</p>
+
+                    <!-- Static sideways DNA (like a frozen frame) -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl border border-white/10 bg-slate-950/70 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                 >
+                                <!-- helix rails -->
+                                <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
+                                <!-- dots positioned like a helix rung -->
+                                <circle cx="9.5" cy="7" r="1.25" fill="#ffd166"/>
+                                <circle cx="14.5" cy="12" r="1.25" fill="#ffd166"/>
+                                <circle cx="9.5" cy="17" r="1.25" fill="#ffd166"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-accent font-extrabold text-base leading-none">BiohackingSales<span class="text-white/90">.com</span></p>
+                            <p class="text-slate-300 text-xs mt-1 tracking-wide">Outbound consistency + stronger closes</p>
+                        </div>
+                    </div>
+
                     <div class="mt-auto">
-                        <p class="text-white font-serif italic text-lg leading-tight">The Sales Team Inconsistency Crisis</p>
-                        <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-4">Floyd Orr</p>
+                        <!-- FIXED: no “silly” serif here; clean bold sans -->
+                        <p class="text-white font-extrabold text-[22px] leading-tight tracking-tight mt-10">
+                            THE OUTBOUND SALES TEAM<br/>INCONSISTENCY CRISIS
+                        </p>
+
+                        <p class="text-slate-200 text-sm mt-4 leading-relaxed">
+                            Why Training, Scripts, and Pressure Fail — and How Emotional Regulation Restores Consistent Outbound Execution
+                        </p>
+
+                        <p class="text-slate-400 text-xs uppercase tracking-widest mt-6">Floyd Orr</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- The Problem Section -->
+<!-- Under-Hero Manuscript CTA -->
+<section class="py-12 px-6">
+  <div class="max-w-7xl mx-auto glass rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 border border-white/5">
+    <div>
+      <p class="text-[10px] uppercase tracking-widest text-slate-500 font-black mb-1">Complete Framework</p>
+      <p class="text-slate-200 font-extrabold">
+        Get the Complete Manuscript
+      </p>
+      <p class="text-slate-400 text-sm">
+        <em>The Outbound Sales Team Inconsistency Crisis</em> — the full framework behind this system.
+      </p>
+    </div>
+    <a class="cta accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
+       href="#exec">
+       Get the Complete Manuscript
+    </a>
+  </div>
+</section>
+
+
+    <!-- Problem -->
     <section id="problem" class="py-32 border-y border-white/5 bg-slate-950/30">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-800 mb-8">The $100k Hesitation Tax</h2>
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-8">What CEOs + VPs Actually See</h2>
             <p class="text-xl text-slate-400 leading-relaxed mb-12">
-                When a rep hesitates for 5 seconds between dials, it’s not a time-management issue—it’s a <span class="text-white">Nervous System Relapse</span>. 
-                This micro-freeze costs the average company $100,000 per rep annually in lost pipeline.
+                Inconsistent dialing and soft closing are the first visible symptoms.
+                Underneath is the <span class="text-white font-semibold">brain’s emotional inhibition system</span>:
+                it creates social anxiety, threat perception, and avoidance — causing reps to delay, soften, and disengage
+                even when they know exactly what to do.
             </p>
-            <div class="grid md:grid-cols-2 gap-6 text-left">
+
+            <div class="grid md:grid-cols-3 gap-6 text-left">
                 <div class="glass p-8 rounded-2xl">
-                    <h4 class="text-accent font-bold mb-2">The Biological Brake (BIS)</h4>
-                    <p class="text-slate-400 text-sm italic">Fear of rejection triggers the brain's "stop" signal, making even the best scripts useless.</p>
+                    <h4 class="text-accent font-black mb-2 uppercase tracking-widest text-xs">Shows up first</h4>
+                    <p class="text-slate-200 font-extrabold mb-2">Dial inconsistency</p>
+                    <p class="text-slate-400 text-sm">Hesitation between dials turns into pipeline gaps.</p>
                 </div>
                 <div class="glass p-8 rounded-2xl">
-                    <h4 class="text-accent font-bold mb-2">Cognitive Overload</h4>
-                    <p class="text-slate-400 text-sm italic">Stress narrows perception. Stressed reps misread prospects and lose the ability to close.</p>
+                    <h4 class="text-accent font-black mb-2 uppercase tracking-widest text-xs">Then</h4>
+                    <p class="text-slate-200 font-extrabold mb-2">Objection collapse</p>
+                    <p class="text-slate-400 text-sm">Reps choose safe language over direct questions.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h4 class="text-accent font-black mb-2 uppercase tracking-widest text-xs">Finally</h4>
+                    <p class="text-slate-200 font-extrabold mb-2">Stalled closes</p>
+                    <p class="text-slate-400 text-sm">Prospects delay with “I’ll think it over.” Follow‑up weakens.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="py-32">
+    <!-- Programs -->
+    <section id="programs" class="py-32">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                <div class="max-w-xl">
-                    <h2 class="text-4xl font-800 mb-4 font-sans">Integrated <span class="text-accent font-serif italic">Biohacking</span></h2>
-                    <p class="text-slate-400">We don't just teach sales. We optimize the salesperson's biology for high-output environments.</p>
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl font-extrabold mb-4 font-sans">
+                        The 5‑Hour Workshop That Builds Emotional Athletes
+                    </h2>
+                    <p class="text-slate-400">
+                        This is a single, high‑intensity install — not a long program.
+                        Your team leaves with practical tools + drills that increase outbound volume,
+                        strengthen closes, and reduce rep burnout.
+                    </p>
                 </div>
-                <button onclick="openCalendly()" class="text-accent border-b border-accent pb-1 font-bold hover:text-white hover:border-white transition">View Program Options →</button>
+
+                <!-- FIXED: make it a link too -->
+                <a class="cta text-accent border-b border-accent pb-1 font-bold hover:text-white hover:border-white transition"
+                   href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
+                   data-calendly="true">
+                    Talk Through Fit →
+                </a>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
-                    <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">70×POWER15 Protocol</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">The core operating system for state-access. A 60-second ritual that suppresses the BIS and triggers the BAS for immediate action.</p>
+                    <h3 class="text-xl font-black mb-3 uppercase tracking-tighter">Executive Briefing</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        45–60 minutes with a VP/CEO. We map your team’s inconsistency patterns to a simple workshop plan.
+                    </p>
                     <ul class="text-xs space-y-2 text-slate-500">
-                        <li>• Hourly Reset Rituals</li>
-                        <li>• BAS Override Maneuvers</li>
-                        <li>• Dopamine Micro-Reinforcement</li>
+                        <li>• Identify dial‑gap + close‑stall patterns</li>
+                        <li>• Where pressure is backfiring</li>
+                        <li>• What changes immediately</li>
                     </ul>
                 </div>
+
                 <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
-                    <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">Sleep & Recovery</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Sales is an athletic endeavor. We optimize sleep architecture and intra-day recovery to lower Allostatic Load (accumulated stress).</p>
+                    <h3 class="text-xl font-black mb-3 uppercase tracking-tighter">5‑Hour Team Workshop</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Install tools and drills that restore action under pressure — dialing, objections, and closing.
+                    </p>
                     <ul class="text-xs space-y-2 text-slate-500">
-                        <li>• Circadian Rhythm Alignment</li>
-                        <li>• Neuro-Recovery Protocols</li>
-                        <li>• Stress-Load Monitoring</li>
+                        <li>• Anti‑hesitation reset drills</li>
+                        <li>• Objection pressure simulation</li>
+                        <li>• Close‑under‑tension practice</li>
                     </ul>
                 </div>
+
                 <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
-                    <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">Leader State Coaching</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Teaching VPs to coach "State," not just "Calls." Transforming managers from pressure-drivers into regulation-experts.</p>
+                    <h3 class="text-xl font-black mb-3 uppercase tracking-tighter">Leader Coaching Add‑On</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Optional: teach managers to coach emotional state first, skill second — so the install sticks.
+                    </p>
                     <ul class="text-xs space-y-2 text-slate-500">
-                        <li>• Biological Dashboarding</li>
-                        <li>• State-Signal Recognition</li>
-                        <li>• Regulation-First Management</li>
+                        <li>• Regulation‑first coaching prompts</li>
+                        <li>• Weekly consistency scorecard</li>
+                        <li>• Burnout + churn reduction cues</li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 glass rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <p class="text-slate-200 font-extrabold">Prefer a fast decision?</p>
+                    <p class="text-slate-400 text-sm mt-1">If it’s not a fit, I’ll tell you quickly and you keep the executive summary + book.</p>
+                </div>
+                <a class="cta accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
+                   href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
+                   data-calendly="true">
+                    Book a Fit Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary + Chapter 1 Preview + Gate -->
+    <section id="exec" class="py-32 px-6 bg-slate-950/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
+                <div class="max-w-3xl">
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-black mb-2">Executive Summary</p>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+                        Why Reps Know What To Do — But Don’t Do It
+                        <span class="text-accent font-serif italic">When It Counts</span>
+                    </h2>
+                    <p class="text-slate-400 leading-relaxed">
+                        The biggest outbound performance leak isn’t scripting — it’s emotional inhibition.
+                        When stress rises, reps default to avoidance: fewer dials, softer language, and weaker closes.
+                        Fix state control, and skill becomes available again.
+                    </p>
+                </div>
+
+                <!-- FIXED: make it a link too -->
+                <a class="cta accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
+                   href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
+                   data-calendly="true">
+                    Map This To Your Team
+                </a>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-slate-900/40 border border-white/5 rounded-2xl p-8">
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-black mb-3">1) The Pattern</p>
+                    <h3 class="text-xl font-black mb-3">Dial volume drops first — it’s the highest‑friction behavior.</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        When emotional load rises, the body searches for relief.
+                        The easiest relief is delay. Delay kills outbound.
+                        Leaders call it effort. The nervous system experiences it as threat.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/40 border border-white/5 rounded-2xl p-8">
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-black mb-3">2) The Close Outcome</p>
+                    <h3 class="text-xl font-black mb-3">“I’ll think it over” becomes the dominant outcome.</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Buyers avoid discomfort too — especially when a rep’s emotional state triggers the buyer’s limbic system
+                        to distrust the interaction. If the rep can’t hold tension and guide emotion, the buyer exits with a delay phrase.
+                        Reps then mirror avoidance in follow‑up.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-14 grid lg:grid-cols-2 gap-10 items-start">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-black mb-2">Chapter 1 Preview</p>
+                    <h3 class="text-3xl font-extrabold mb-4">The Inconsistency Crisis Starts as a Feeling</h3>
+                    <div class="text-slate-300 text-sm leading-relaxed space-y-4">
+                        <p>
+                            You don’t see the problem on dashboards at first. You feel it.
+                            The floor gets quieter. The pace drops. A rep opens the dialer… then checks one more tab.
+                            Five seconds becomes fifteen. It looks like time management. It isn’t.
+                        </p>
+                        <p>
+                            Inconsistency is often emotional inhibition. Under pressure, the body tries to reduce discomfort.
+                            Delay becomes the micro‑escape. Dialing becomes optional. Closing becomes timid.
+                        </p>
+                        <p class="text-slate-400 italic">
+                            If you want the full framework for increasing outbound volume and improving closes, get the full manuscript below.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- OPT-IN: make it scream -->
+                <div class="relative rounded-[2.75rem] border border-accent/25 optin-glow optin-bg p-[1px]">
+                    <div class="glass rounded-[2.65rem] p-10 relative">
+                        <div class="absolute -top-3 right-8 bg-accent text-midnight text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                            Free Book
+                        </div>
+                        <h3 class="text-2xl font-extrabold mb-2">Get the Complete Manuscript</h3>
+                        <p class="text-slate-200 text-sm mb-8">
+                            Built for VPs + CEOs who want reps to dial more, close better, and quit less.
+                        </p>
+
+                        <form id="leadForm"
+      method="POST"
+      action="<!-- CONSTANT CONTACT FORM ACTION GOES HERE -->"
+      class="space-y-4"
+      data-cc-form="true">
+      <!--
+        Constant Contact integration notes:
+        - Replace the action URL above with your CC form endpoint
+        - Map fields: first_name, last_name, email
+        - On submit, CC can auto-send the manuscript PDF
+      -->
+    
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="col-span-2 sm:col-span-1">
+                                    <label class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 block">First Name</label>
+                                    <input type="text" id="fname" name="first_name" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <label class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 block">Last Name</label>
+                                    <input type="text" id="lname" name="last_name" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 block">Professional Email</label>
+                                <input type="email" id="email" name="email" required placeholder="vp@company.com"
+                                       class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
+                            </div>
+
+                            <button type="submit" class="w-full accent-gradient text-midnight font-black py-4 rounded-xl mt-2 hover:brightness-110 transition uppercase tracking-widest text-xs">
+                                Email Me the Complete Manuscript
+                            </button>
+                        </form>
+
+                        <p class="mt-6 text-[10px] text-slate-500 text-center">
+                            No spam. One concise note when we publish updates.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Book Gated Section -->
-    <section id="manuscript" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <div>
-                    <h2 class="text-4xl font-800 mb-8">Get The Full <br/><span class="text-accent">Manuscript</span></h2>
-                    <p class="text-slate-400 mb-10 leading-relaxed">
-                        Read Chapters 1–23 of <em>The Sales Team Inconsistency Crisis</em>. 
-                        Learn how to identify the "Winner, Fighter, and Defeated" biological profiles on your floor today.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="mt-1 text-accent">✓</div>
-                            <p class="text-sm text-slate-300"><strong>Chapter 4:</strong> The Hidden Brake System (BIS)</p>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="mt-1 text-accent">✓</div>
-                            <p class="text-sm text-slate-300"><strong>Chapter 12:</strong> Why Managers Misdiagnose Performance</p>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="mt-1 text-accent">✓</div>
-                            <p class="text-sm text-slate-300"><strong>Chapter 19:</strong> Why Traditional Training Fails (The Autopsy)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass p-10 rounded-[2.5rem] border-accent/10 relative">
-                    <h3 class="text-2xl font-bold mb-6">Manuscript Request</h3>
-                    
-                    <form id="leadForm" onsubmit="return submitLeadForm(event)" class="space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="col-span-2 sm:col-span-1">
-                                <label class="text-[10px] font-black uppercase text-slate-500 tracking-widest mb-2 block">First Name</label>
-                                <input type="text" id="fname" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
-                            </div>
-                            <div class="col-span-2 sm:col-span-1">
-                                <label class="text-[10px] font-black uppercase text-slate-500 tracking-widest mb-2 block">Last Name</label>
-                                <input type="text" id="lname" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="text-[10px] font-black uppercase text-slate-500 tracking-widest mb-2 block">Professional Email</label>
-                            <input type="email" id="email" required placeholder="vp@company.com" class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
-                        </div>
-                        <button type="submit" class="w-full accent-gradient text-midnight font-black py-4 rounded-xl mt-4 hover:brightness-110 transition uppercase tracking-widest text-xs">
-                            Access Full Manuscript
-                        </button>
-                    </form>
-                    <p class="mt-6 text-[10px] text-slate-600 text-center">Your data is secured. We only send science-backed performance updates.</p>
-                </div>
+    <!-- Book anchor -->
+    <section id="book" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto glass rounded-3xl p-10 border border-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+                <h3 class="text-2xl font-extrabold">Want a quick fit-check?</h3>
+                <p class="text-slate-400 mt-2">We’ll tell you fast if the 5-hour install solves your outbound inconsistency problem.</p>
             </div>
+            <a class="cta bg-white text-midnight px-7 py-3 rounded-full hover:bg-accent transition font-black"
+               href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener"
+               data-calendly="true">
+                Book Discovery Call
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-20 border-t border-white/5 text-center">
         <div class="flex items-center justify-center space-x-4 mb-8">
-            <div class="w-8 h-8 flex items-center justify-center bg-slate-900 rounded-lg border border-white/10">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-                    <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
+            <div class="w-9 h-9 flex items-center justify-center bg-slate-900 rounded-lg border border-white/10 overflow-hidden">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" aria-hidden="true">
+                    <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node"/>
+                    <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 1.5s;"/>
+                    <circle cx="9.5" cy="7" r="1.3" fill="#ffd166" class="dna-node" style="animation-delay: 0.2s;"/>
+                    <circle cx="14.5" cy="12" r="1.3" fill="#ffd166" class="dna-node" style="animation-delay: 0.7s;"/>
+                    <circle cx="9.5" cy="17" r="1.3" fill="#ffd166" class="dna-node" style="animation-delay: 1.2s;"/>
                 </svg>
             </div>
-            <span class="text-lg font-800 tracking-tight text-white uppercase">Biohacking<span class="text-accent">Sales</span></span>
+
+            <div class="flex flex-col items-center gap-2">
+                <span class="text-lg font-extrabold tracking-tight text-white uppercase leading-none">
+                    Biohacking<span class="text-accent">Sales</span>
+                    <span class="ml-1 px-2 py-[2px] rounded-full border border-white/10 bg-white/5 text-[10px] font-black tracking-widest text-slate-200 normal-case">.com</span>
+                </span>
+                <p class="text-[10px] uppercase tracking-widest text-slate-600 font-black">More Dials • Stronger Closes • Lower Churn</p>
+            </div>
         </div>
-        <p class="text-slate-600 text-sm">© <span id="year"></span> BiohackingSales. Built for Revenue Leaders.</p>
-        <div class="mt-6 flex justify-center space-x-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+
+        <p class="text-slate-600 text-sm">© <span id="year"></span> BiohackingSales.com</p>
+
+        <div class="mt-6 flex justify-center flex-wrap gap-x-8 gap-y-3 text-[10px] font-bold uppercase tracking-widest text-slate-500">
             <a href="#problem" class="hover:text-accent transition">Crisis</a>
-            <a href="#solutions" class="hover:text-accent transition">Solutions</a>
-            <a href="#manuscript" class="hover:text-accent transition">The Book</a>
+            <a href="#programs" class="hover:text-accent transition">Program</a>
+            <a href="#exec" class="hover:text-accent transition">Executive Summary</a>
+            <a href="#book" class="hover:text-accent transition">Book</a>
             <a href="mailto:contact@biohackingsales.com" class="hover:text-accent transition">Contact</a>
         </div>
     </footer>
@@ -273,23 +491,40 @@
     <script>
         document.getElementById('year').innerText = new Date().getFullYear();
 
+        // Robust: try Calendly popup; fallback to opening the link (already works because anchors exist)
         function openCalendly() {
             try {
-                if(window.Calendly) {
-                    Calendly.showPopupWidget('https://calendly.com/biohackingsales');
+                if (window.Calendly) {
+                    Calendly.showPopupWidget('https://calendly.com/biohackingsales/30-minute-meeting');
                 } else {
-                    window.open('https://calendly.com/biohackingsales', '_blank');
+                    window.open('https://calendly.com/biohackingsales/30-minute-meeting', '_blank');
                 }
-            } catch(e) {
-                window.open('https://calendly.com/biohackingsales', '_blank');
+            } catch (e) {
+                window.open('https://calendly.com/biohackingsales/30-minute-meeting', '_blank');
             }
             return false;
         }
 
+        // Attach popup behavior to any element marked data-calendly (anchors still work if popup blocked)
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-calendly="true"]').forEach(function(el) {
+                el.addEventListener('click', function(e) {
+                    // let middle-click / cmd-click open new tab normally
+                    if (e.metaKey || e.ctrlKey || e.button === 1) return;
+                    // try popup
+                    if (window.Calendly) {
+                        e.preventDefault();
+                        openCalendly();
+                    }
+                });
+            });
+        });
+
         function submitLeadForm(e) {
             e.preventDefault();
-            const email = document.getElementById('email').value;
-            alert("Manuscript Access Granted. Sending to: " + email);
+            const email = document.getElementById('email').value.trim();
+            const fname = document.getElementById('fname').value.trim();
+            alert("Manuscript request received for " + fname + ". We'll send the full manuscript to: " + email + "\n\n(Next step: connect this form to your email platform or backend.)");
             return false;
         }
     </script>
