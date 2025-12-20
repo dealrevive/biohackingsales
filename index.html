@@ -1,997 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0b0b0c" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BiohackingSales | The Science of Consistent Outbound Performance</title>
+    <meta name="description" content="Fix the Sales Team Inconsistency Crisis. Use 70×POWER15 to regulate rep nervous systems and eliminate the hesitation tax." />
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <title>BiohackingSales.com — The Sales Team Inconsistency Crisis</title>
-  <meta name="description" content="Why training, scripts, and pressure fail — and how emotional regulation restores consistent outbound execution. Read the full book and book an executive briefing." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://www.biohackingsales.com/" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#020617',
+                        accent: '#ffd166',
+                        slate: {
+                            850: '#1e293b',
+                            950: '#010409',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="BiohackingSales.com — The Sales Team Inconsistency Crisis" />
-  <meta property="og:description" content="Read the book: why sales inconsistency is biological — not a skill issue. Book an executive briefing." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.biohackingsales.com/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BiohackingSales.com — The Sales Team Inconsistency Crisis" />
-  <meta name="twitter:description" content="Read the book + book an executive briefing." />
-
-  <style>
-    :root{
-      --bg:#0b0b0c;
-      --panel:#111215;
-      --panel2:#14161b;
-      --text:#f4f5f7;
-      --muted:#b7bdc6;
-      --muted2:#8f96a3;
-      --line:#262a33;
-      --shadow: 0 14px 40px rgba(0,0,0,.45);
-      --radius:18px;
-      --max: 1120px;
-      --accent:#ff3b30; /* red */
-      --accent2:#3aa0ff; /* cool blue */
-      --good:#33d17a;
-      --warn:#ffd24d;
-      --link:#7bc4ff;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:var(--sans);
-      background:
-        radial-gradient(1200px 500px at 15% -5%, rgba(255,59,48,.18), transparent 60%),
-        radial-gradient(900px 500px at 85% 10%, rgba(58,160,255,.16), transparent 60%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px;
-      margin-bottom:20px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 220px;
-    }
-    .logo{
-      width:44px;height:44px;border-radius:12px;
-      background:linear-gradient(145deg, rgba(255,59,48,.35), rgba(58,160,255,.28));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow: 0 10px 22px rgba(0,0,0,.35);
-      display:grid; place-items:center;
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-    .logo img{width:100%;height:100%;object-fit:cover;display:block}
-    .brandname{font-weight:800; letter-spacing:.2px}
-    .brandname small{display:block; color:var(--muted2); font-weight:600; letter-spacing:.2px}
-
-    .actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px;
-      border-radius: 999px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      cursor:pointer;
-      transition:transform .08s ease, background .18s ease, border-color .18s ease;
-      user-select:none;
-    }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.08)}
-    .btn.primary{
-      background: linear-gradient(90deg, rgba(255,59,48,.95), rgba(255,59,48,.70));
-      border-color: rgba(255,59,48,.30);
-      box-shadow: 0 18px 40px rgba(255,59,48,.18);
-    }
-    .btn.primary:hover{background: linear-gradient(90deg, rgba(255,59,48,1), rgba(255,59,48,.82))}
-    .btn.ghost{background:transparent}
-    .btn small{color:rgba(255,255,255,.85)}
-    .kbd{
-      font-family:var(--mono);
-      font-size:.85rem;
-      padding:2px 8px;
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
-      color:rgba(255,255,255,.88);
-    }
-
-    .hero{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:16px;
-      align-items:stretch;
-      margin: 18px 0 18px;
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero-left{padding:22px 22px 18px}
-    .hero h1{
-      margin:0 0 10px;
-      font-size: clamp(28px, 3.3vw, 44px);
-      line-height:1.12;
-      letter-spacing:-.6px;
-    }
-    .hero p{margin:0 0 14px; color:var(--muted); font-size:1.06rem}
-    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin: 14px 0 16px}
-    .pill{
-      font-size:.92rem;
-      padding:6px 10px;
-      border-radius: 999px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.25);
-      color:rgba(255,255,255,.90);
-    }
-    .pill strong{color:var(--text)}
-    .cta-row{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top: 12px}
-    .meta-row{display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top: 10px; color: var(--muted2); font-size:.95rem}
-    .meta-row span{display:inline-flex; gap:8px; align-items:center}
-    .dot{width:8px;height:8px;border-radius:50%}
-    .dot.red{background:var(--accent)}
-    .dot.blue{background:var(--accent2)}
-
-    .hero-right{padding:18px}
-    .mini{
-      display:grid;
-      gap:12px;
-    }
-    .mini .box{
-      padding:14px 14px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.22);
-    }
-    .mini h3{margin:0 0 8px; font-size:1rem}
-    .mini p{margin:0; color:var(--muted); font-size:.98rem}
-    .mini code{font-family:var(--mono); font-size:.92rem; color:rgba(255,255,255,.92)}
-    .mini .label{
-      display:inline-flex; gap:8px; align-items:center;
-      margin-top:10px;
-      padding:8px 10px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-    }
-
-    .layout{
-      display:grid;
-      grid-template-columns: 340px 1fr;
-      gap:16px;
-      margin-top: 16px;
-    }
-
-    .toc{
-      position: sticky;
-      top: 14px;
-      align-self:start;
-      padding: 16px;
-      max-height: calc(100vh - 28px);
-      overflow:auto;
-    }
-    .toc h2{margin:0 0 8px; font-size:1.05rem}
-    .toc .sub{color:var(--muted2); font-size:.95rem; margin:0 0 12px}
-    .toc input{
-      width:100%;
-      padding:10px 12px;
-      border-radius: 12px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.30);
-      color: var(--text);
-      outline:none;
-      margin-bottom: 10px;
-    }
-    .toc a{
-      display:block;
-      padding:8px 10px;
-      border-radius: 12px;
-      border:1px solid transparent;
-      color: rgba(255,255,255,.90);
-      font-size:.96rem;
-      line-height:1.25;
-    }
-    .toc a:hover{background: rgba(255,255,255,.06); text-decoration:none}
-    .toc a.active{
-      border-color: rgba(255,255,255,.12);
-      background: rgba(255,255,255,.08);
-    }
-    .toc .group{
-      margin-top: 10px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      padding-top: 10px;
-    }
-    .toc .small{
-      font-size:.92rem;
-      color: var(--muted2);
-      margin-top: 10px;
-    }
-
-    .content{
-      padding: 20px 22px;
-    }
-    .book-title{
-      margin:0;
-      font-size: 1.6rem;
-      letter-spacing:-.3px;
-      line-height:1.2;
-    }
-    .book-sub{
-      margin:8px 0 0;
-      color: var(--muted);
-    }
-    .hr{
-      height:1px;
-      background: rgba(255,255,255,.10);
-      margin: 18px 0;
-    }
-
-    .chapter{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.18);
-      border-radius: 18px;
-      margin: 14px 0;
-      overflow:hidden;
-    }
-    .chapter header{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      justify-content:space-between;
-      padding: 14px 14px;
-      cursor:pointer;
-      user-select:none;
-    }
-    .chapter header:hover{background: rgba(255,255,255,.04)}
-    .chapter h3{
-      margin:0;
-      font-size:1.08rem;
-      line-height:1.25;
-    }
-    .chapter header .tag{
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      padding:6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
-      color: rgba(255,255,255,.90);
-      font-size:.9rem;
-      flex:0 0 auto;
-    }
-    .chapter .body{
-      padding: 2px 14px 14px;
-      color: rgba(255,255,255,.92);
-    }
-    .chapter .body p{margin:10px 0}
-    .chapter .body ul{margin:10px 0 10px 18px}
-    .chapter .body li{margin:6px 0; color: rgba(255,255,255,.88)}
-    .chapter .body .callout{
-      border:1px solid rgba(255,59,48,.25);
-      background: rgba(255,59,48,.08);
-      padding: 12px 12px;
-      border-radius: 16px;
-      color: rgba(255,255,255,.92);
-      margin: 12px 0;
-    }
-    .chapter .body .quote{
-      border-left: 3px solid rgba(58,160,255,.6);
-      padding-left: 12px;
-      margin: 12px 0;
-      color: rgba(255,255,255,.88);
-    }
-    .chapter.collapsed .body{display:none}
-    .chev{
-      width:24px;height:24px;border-radius:10px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      display:grid; place-items:center;
-      flex:0 0 auto;
-      margin-top:2px;
-    }
-    .chev svg{transition: transform .18s ease}
-    .chapter.collapsed .chev svg{transform: rotate(-90deg)}
-    .note{
-      margin-top: 14px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.18);
-      color: var(--muted);
-      font-size:.98rem;
-    }
-
-    .cta-wide{
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 18px;
-      border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(90deg, rgba(255,59,48,.12), rgba(58,160,255,.10));
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .cta-wide strong{font-size:1.05rem}
-    .cta-wide span{color:var(--muted)}
-    .footer{
-      margin-top: 18px;
-      color: var(--muted2);
-      font-size:.92rem;
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .floating{
-      position:fixed;
-      right:16px;
-      bottom:16px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      z-index:50;
-    }
-    .fab{
-      width:46px;height:46px;
-      border-radius: 16px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.35);
-      box-shadow: 0 16px 40px rgba(0,0,0,.45);
-      display:grid; place-items:center;
-      cursor:pointer;
-      color: var(--text);
-    }
-    .fab:hover{background: rgba(255,255,255,.06)}
-    .hidden{display:none !important}
-
-    @media (max-width: 980px){
-      .hero{grid-template-columns: 1fr}
-      .layout{grid-template-columns: 1fr}
-      .toc{position:relative; top:auto; max-height: none}
-    }
-
-    @media print{
-      body{background:#fff;color:#000}
-      .topbar,.hero,.toc,.floating,.btn{display:none !important}
-      .card,.chapter{box-shadow:none;border:1px solid #ddd;background:#fff}
-      a{color:#000;text-decoration:none}
-      .content{padding:0}
-    }
-  </style>
-
-  <!-- Optional JSON-LD (basic Book schema) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "The Sales Team Inconsistency Crisis",
-    "alternateName": "Why Training, Scripts, and Pressure Fail — and How Emotional Regulation Restores Consistent Outbound Execution",
-    "author": {
-      "@type": "Person",
-      "name": "Floyd Orr"
-    },
-    "inLanguage": "en",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Biohacking Sales"
-    },
-    "about": ["Sales performance", "Emotional regulation", "BIS", "BAS", "Outbound consistency"]
-  }
-  </script>
+    <style>
+        body { background-color: #010409; color: #f8fafc; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
+        .book-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); }
+        
+        /* DNA Icon Animation */
+        .dna-node { animation: dnaPulse 3s infinite ease-in-out; }
+        @keyframes dnaPulse {
+            0%, 100% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+    </style>
 </head>
+<body class="font-sans antialiased hero-pattern">
 
-<body>
-  <div class="wrap">
-    <!-- TOP BAR -->
-    <div class="topbar">
-      <div class="brand">
-        <div class="logo" title="Biohacking Sales">
-          <!-- Replace with your real logo file -->
-          <img src="logo.png" alt="Biohacking Sales logo" onerror="this.remove(); this.parentElement.textContent='BS';" />
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <!-- DNA LOGO ICON -->
+                <div class="relative w-10 h-10 flex items-center justify-center bg-slate-900 rounded-xl border border-white/10 overflow-hidden">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7">
+                        <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 0s;"/>
+                        <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 1.5s;"/>
+                        <circle cx="9.5" cy="7" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 0.2s;"/>
+                        <circle cx="14.5" cy="12" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 0.7s;"/>
+                        <circle cx="9.5" cy="17" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 1.2s;"/>
+                    </svg>
+                </div>
+                <span class="text-xl font-800 tracking-tight text-white uppercase leading-none">Biohacking<span class="text-accent">Sales</span></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-slate-400">
+                <a href="#problem" class="hover:text-accent transition">The Crisis</a>
+                <a href="#solutions" class="hover:text-accent transition">Solutions</a>
+                <a href="#manuscript" class="hover:text-accent transition">The Book</a>
+                <button onclick="openCalendly()" class="bg-white text-midnight px-6 py-2 rounded-full hover:bg-accent transition transform hover:scale-105">Book Discovery</button>
+            </div>
         </div>
-        <div>
-          <div class="brandname">BiohackingSales<span style="color:var(--muted2)">.com</span>
-            <small>Sales is a performance sport.</small>
-          </div>
-        </div>
-      </div>
+    </nav>
 
-      <div class="actions">
-        <a class="btn primary" id="bookNowTop" href="#" target="_blank" rel="noopener">
-          Book an Executive Briefing
-          <span class="kbd">↗</span>
-        </a>
-        <button class="btn ghost" id="toggleAll">Collapse all</button>
-        <button class="btn" id="copyGift">Copy gift label</button>
-      </div>
-    </div>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="card hero-left">
-        <h1>The Sales Team Inconsistency Crisis</h1>
-        <p>
-          Why training, scripts, and pressure fail — and how <strong>emotional regulation</strong>
-          restores consistent outbound execution.
-        </p>
-
-        <div class="pillrow">
-          <div class="pill"><strong>Not a skill issue</strong> — a nervous system issue</div>
-          <div class="pill">BIS (STOP) vs BAS (GO)</div>
-          <div class="pill">Call volume • tone • resilience</div>
-          <div class="pill">Built for outbound teams</div>
-        </div>
-
-        <div class="cta-row">
-          <a class="btn primary" id="bookNowHero" href="#" target="_blank" rel="noopener">Book a call (Calendly)</a>
-          <a class="btn" href="#book">Read the book</a>
-          <a class="btn" href="#label">Gift label message</a>
-        </div>
-
-        <div class="meta-row">
-          <span><span class="dot red"></span>Immediate ROI: stabilized output</span>
-          <span><span class="dot blue"></span>Installs a daily regulation system</span>
-        </div>
-      </div>
-
-      <div class="card hero-right">
-        <div class="mini">
-          <div class="box">
-            <h3>What executives usually misdiagnose</h3>
-            <p>
-              Low calls, hesitation, “lack of motivation,” “needs coaching,” “needs discipline.”
-              <br/>The real cause: <strong>state collapse</strong> (BIS dominance).
-            </p>
-          </div>
-          <div class="box">
-            <h3>What this book does</h3>
-            <p>
-              Names the real problem, removes denial, and creates demand for the workshop:
-              <strong>install the solution</strong> (not another script).
-            </p>
-          </div>
-          <div class="box">
-            <h3>Fast path</h3>
-            <p class="label">
-              <span class="dot red"></span>
-              <span><strong>Read</strong> → <strong>Book</strong> → <strong>Install</strong></span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MAIN LAYOUT -->
-    <section class="layout" id="book">
-      <!-- TOC -->
-      <aside class="card toc" aria-label="Table of Contents">
-        <h2>Table of Contents</h2>
-        <p class="sub">Search + jump to chapters. Click a chapter title to expand/collapse.</p>
-
-        <input id="tocSearch" type="search" placeholder="Search chapters (e.g., BIS, dopamine, last hour)..." />
-
-        <nav id="tocLinks"></nav>
-
-        <div class="group">
-          <div class="small"><strong>Tip:</strong> Press <span class="kbd">/</span> to focus search.</div>
-          <div class="small"><strong>Note:</strong> This page is built for web + print.</div>
-        </div>
-      </aside>
-
-      <!-- CONTENT -->
-      <main class="card content">
-        <h2 class="book-title">THE SALES TEAM INCONSISTENCY CRISIS</h2>
-        <p class="book-sub">Why Training, Scripts, and Pressure Fail — and How Emotional Regulation Restores Consistent Outbound Execution</p>
-
-        <div class="hr"></div>
-
-        <!-- CTA above book -->
-        <div class="cta-wide">
-          <div>
-            <strong>Want the workshop installed?</strong><br/>
-            <span>Book a short executive briefing and I’ll tell you if it fits your team.</span>
-          </div>
-          <a class="btn primary" id="bookNowMid" href="#" target="_blank" rel="noopener">Book on Calendly</a>
-        </div>
-
-        <div class="note" id="label">
-          <strong>Amazon / Hourglass Gift Label (copy/paste):</strong><br/>
-          <span style="color:rgba(255,255,255,.9)">
-            John — you’re wasting time if you think low, inconsistent outbound volume is a skill issue. It’s an emotional regulation issue. Read the book: BiohackingSales.com — then book a time.
-          </span>
-        </div>
-
-        <div class="hr"></div>
-
-        <!-- CHAPTERS -->
-        <div id="chapters"></div>
-
-        <!-- CTA after book -->
-        <div class="cta-wide" style="margin-top:18px">
-          <div>
-            <strong>Ready to stabilize outbound execution?</strong><br/>
-            <span>If the book named the problem your org keeps paying for — book the briefing.</span>
-          </div>
-          <a class="btn primary" id="bookNowBottom" href="#" target="_blank" rel="noopener">Book a call</a>
-        </div>
-
-        <div class="footer">
-          <div>© <span id="year"></span> BiohackingSales.com</div>
-          <div>
-            <a href="#book">Back to top</a> ·
-            <a href="javascript:void(0)" id="printPage">Print</a>
-          </div>
-        </div>
-      </main>
-    </section>
-  </div>
-
-  <!-- floating buttons -->
-  <div class="floating">
-    <button class="fab" id="toTop" title="Back to top" aria-label="Back to top">↑</button>
-    <a class="fab" id="bookNowFab" href="#" target="_blank" rel="noopener" title="Book on Calendly" aria-label="Book on Calendly">↗</a>
-  </div>
-
-  <script>
-    // =============================
-    // CONFIG — EDIT THESE
-    // =============================
-    const CALENDLY_URL = "https://calendly.com/YOUR_CALENDLY_LINK"; // <-- replace
-    // =============================
-
-    // Wire all booking links
-    const bookLinks = ["bookNowTop","bookNowHero","bookNowMid","bookNowBottom","bookNowFab"]
-      .map(id => document.getElementById(id))
-      .filter(Boolean);
-    bookLinks.forEach(a => a.href = CALENDLY_URL);
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Print
-    document.getElementById("printPage").addEventListener("click", () => window.print());
-
-    // Gift label copy
-    document.getElementById("copyGift").addEventListener("click", async () => {
-      const text = "John — you’re wasting time if you think low, inconsistent outbound volume is a skill issue. It’s an emotional regulation issue. Read the book: BiohackingSales.com — then book a time.";
-      try{
-        await navigator.clipboard.writeText(text);
-        alert("Gift label copied.");
-      }catch(e){
-        prompt("Copy this gift label:", text);
-      }
-    });
-
-    // Keyboard shortcut: "/" focuses search
-    document.addEventListener("keydown", (e) => {
-      if(e.key === "/" && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA"){
-        e.preventDefault();
-        document.getElementById("tocSearch").focus();
-      }
-    });
-
-    // Scroll to top button
-    const toTopBtn = document.getElementById("toTop");
-    toTopBtn.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
-    const onScroll = () => {
-      if(window.scrollY > 700) toTopBtn.classList.remove("hidden");
-      else toTopBtn.classList.add("hidden");
-    };
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-
-    // ==========================================
-    // BOOK CONTENT (your text embedded for SEO)
-    // ==========================================
-    const chaptersData = [
-      {
-        id:"ch1",
-        title:"CHAPTER 1 — The Inconsistency Crisis",
-        tag:"Foundation",
-        body: `
-<p>Most people don’t understand what it feels like to wake up every day knowing your job is built on rejection. CEOs don’t feel it. Most managers forget it. Coworkers hide it behind fake confidence and caffeine. But every salesperson knows the truth:</p>
-<ul>
-  <li>Some days you show up strong.</li>
-  <li>Some days you show up broken.</li>
-  <li>And nobody can see the difference from the outside.</li>
-</ul>
-<p>This book starts with the problem nobody talks about—the crisis that decides who wins in modern sales, and who quietly burns out: <strong>inconsistency</strong>.</p>
-<p>Not lack of talent. Not lack of skill. Not lack of training. Not lack of intelligence. <strong>Inconsistency.</strong></p>
-
-<div class="callout"><strong>Core claim:</strong> Inconsistency is a nervous system problem (BIS dominance), not a skill problem.</div>
-
-<p><strong>My story starts with a hard truth:</strong> I wasn’t born consistent. I was the guy every manager was confused about: “Why is Floyd so talented… but so unpredictable?”</p>
-<p>At one job, I sold better than most of the team—when I showed up. I crushed when I was “on”… and disappeared when I was “off.” A manager once told me: <em>“We’re taking away your hourly pay and putting you on commission.”</em> That hurt. But it was my fault: my output was low, my nervous system was fried, my emotions were unstable.</p>
-<p>I built my own thing. I got early wins… then the same patterns returned: low call volume, procrastination, avoidance, internal chaos, shame. I wasn’t lazy. I was overloaded.</p>
-
-<p><strong>The turning point:</strong> At Yelp, I started dialing like a man fighting for his life—100 dials a day. And I learned something that shocked me: when my nervous system was in BAS (activation), I was unstoppable. When it slipped into BIS (shutdown), I couldn’t function.</p>
-
-<div class="quote">“Two reps can have identical training—and produce wildly different results—because one has emotional control, and the other doesn’t.”</div>
-
-<p><strong>The promise of this book:</strong> Your people don’t need more scripts. They need more capacity. Your people don’t need more motivation. They need more recovery. Your people don’t need more discipline. They need nervous-system regulation.</p>
-<p>This book’s job is awareness. The workshop installs the solution.</p>
-`
-      },
-      {
-        id:"ch2",
-        title:"CHAPTER 2 — The Inconsistency Epidemic",
-        tag:"Diagnosis",
-        body: `
-<p>Every company has that rep who looks like a superhero one month and a ghost the next. It’s the most expensive and least understood problem in sales: <strong>inconsistency</strong>.</p>
-<p>At Comcast, I saw the pattern clearly. I had a month where I was #1 in my division—then I collapsed. Managers asked what changed. I had nothing but shame. I didn’t understand the real problem back then.</p>
-
-<div class="callout"><strong>Key reframing:</strong> Inconsistency is not laziness. It is not a personality flaw. It is not a lack of discipline. It is a nervous-system relapse.</div>
-
-<p>The pattern mirrors relapse dynamics: high stress → emotional flooding → avoidance → guilt → shutdown → inconsistency → shame → deeper collapse.</p>
-<p>Most companies respond with more pressure, more scripts, more meetings. None of that fixes nervous-system collapse.</p>
-`
-      },
-      {
-        id:"ch3",
-        title:"CHAPTER 3 — The $100,000 Hesitation Tax",
-        tag:"Revenue Leak",
-        body: `
-<p>Hesitation is microscopic. It doesn’t show up on dashboards—yet it costs companies massive revenue.</p>
-<ul>
-  <li>Knowing you should ask one more question… but not doing it.</li>
-  <li>Hearing an objection and softening instead of leaning in.</li>
-  <li>Letting the prospect escape when you felt the truth was right there.</li>
-</ul>
-
-<div class="callout"><strong>Most misunderstood symptom:</strong> low call output. Not discipline — BIS refusing to engage.</div>
-
-<p>Managers assume: “not focused,” “not motivated,” “not disciplined.” But when BIS is activated, even clicking dial becomes an emotional battle.</p>
-<p>Hesitation is BIS activation in real time. If a rep loses just 1 opportunity per day, that can become $20k–$100k per rep per year depending on deal size.</p>
-`
-      },
-      {
-        id:"ch4",
-        title:"CHAPTER 4 — The Hidden Brake System (BIS)",
-        tag:"Neuroscience",
-        body: `
-<p>Sales isn’t a fight-or-flight job. It’s a <strong>freeze-or-forward</strong> job.</p>
-<p>BIS is the internal brake pedal that fires when something feels uncertain, socially risky, or emotionally costly. It overrides training in microseconds.</p>
-
-<div class="callout"><strong>Two systems:</strong> BAS (GO) creates momentum, clarity, assertiveness. BIS (STOP) creates hesitation, overthinking, soft tone, avoidance.</div>
-
-<p>Managers try to coach skills while BIS is running the body. Training lives in the cortex. Pressure lives in the limbic system. Under tension, the cortex goes offline first.</p>
-<p><strong>Core insight:</strong> Sales performance is state-dependent, not knowledge-dependent.</p>
-`
-      },
-      {
-        id:"ch5",
-        title:"CHAPTER 5 — The Winner, The Fighter, and The Defeated",
-        tag:"States",
-        body: `
-<p>Three performance profiles show up on every sales floor, driven by biology:</p>
-<ul>
-  <li><strong>Winner State:</strong> regulated, confident, clear (BAS strong).</li>
-  <li><strong>Fighter State:</strong> adrenaline-driven grind (works short-term, unstable long-term).</li>
-  <li><strong>Defeated State:</strong> chronic overload, low drive, shutdown (biology collapsed).</li>
-</ul>
-<p>Reps move between states depending on sleep, stress load, hormones, and recovery. You can’t coach a Defeated rep like a Fighter. You can’t assume a Winner will stay that way forever.</p>
-`
-      },
-      {
-        id:"ch6",
-        title:"CHAPTER 6 — The Stress Body (Allostatic Load)",
-        tag:"Stress",
-        body: `
-<p>Allostatic load is the total stress burden your body is carrying: emotional, financial, relational, sleep-related, and more.</p>
-<p>High allostatic load shows up as brain fog, fatigue, low motivation, emotional fragility, and reduced assertiveness.</p>
-
-<div class="callout"><strong>Key point:</strong> You cannot out-script an overloaded nervous system. Sales is a perfect storm for chronic stress accumulation.</div>
-
-<p>Stress changes hormones (cortisol, dopamine, norepinephrine, testosterone). When dopamine dips, BAS weakens and BIS strengthens — call volume drops first.</p>
-`
-      },
-      {
-        id:"ch7",
-        title:"CHAPTER 7 — Scripts Don’t Fix Neurobiology",
-        tag:"Training",
-        body: `
-<p>Sales orgs respond to performance dips with more scripts, more coaching, more roleplay. Then reps get on real calls… and it disappears.</p>
-
-<div class="callout"><strong>Critical distinction:</strong> Scripts are helpful — they’re just not the answer. Scripts fail when the nervous system is overloaded.</div>
-
-<p>Scripts are a map. The nervous system is the vehicle. A flawless map means nothing if the engine won’t start.</p>
-<p>Practice without the script builds real confidence; the script becomes a support tool, not a crutch.</p>
-`
-      },
-      {
-        id:"ch8",
-        title:"CHAPTER 8 — Emotional Interference: Why Output Collapses Even When Skill Is There",
-        tag:"Emotion",
-        body: `
-<p>Sometimes reps know the pitch, know the objections, know what to do — and still hesitate. The phone feels heavier. They “prepare” endlessly. That’s emotional interference.</p>
-<p>Emotion operates before effort. Emotional load sets the bandwidth for action.</p>
-
-<div class="callout"><strong>Simple truth:</strong> Salespeople don’t stop calling because they’re lazy. They stop calling when the moment feels heavier than the meaning behind the work.</div>
-`
-      },
-      {
-        id:"ch9",
-        title:"CHAPTER 9 — Recovery Is a Sales Skill",
-        tag:"Recovery",
-        body: `
-<p>Recovery is not optional and not “after work.” It’s a performance skill.</p>
-<p>Sales drains biological resources. Most orgs create stress faster than reps can recover. Without micro-recovery during the day, reps burn out daily in micro-collapses.</p>
-
-<div class="callout"><strong>Executive takeaway:</strong> The reps who recover fastest win. The reps who cannot recover collapse.</div>
-`
-      },
-      {
-        id:"ch10",
-        title:"CHAPTER 10 — Stress Creates Cognitive Blind Spots",
-        tag:"Cognition",
-        body: `
-<p>Under stress, perception drops. Reps literally see less, hear less, process less. The prefrontal cortex overloads and the limbic system takes over.</p>
-<p>Tunnel vision causes reps to miss buying signals, avoid qualification, and misread “busy” as rejection.</p>
-`
-      },
-      {
-        id:"ch11",
-        title:"CHAPTER 11 — The Hidden BIS Triggers Inside Sales Culture",
-        tag:"Culture",
-        body: `
-<p>Sales cultures unintentionally activate BIS by overwhelming reps with too many objectives at once.</p>
-<div class="callout"><strong>Principle:</strong> Under pressure, you can only execute ONE objective at a time.</div>
-<p>Breaking the process into micro-sections with single objectives suppresses BIS and restores flow.</p>
-`
-      },
-      {
-        id:"ch12",
-        title:"CHAPTER 12 — Why Traditional Sales Managers Misdiagnose Performance",
-        tag:"Leadership",
-        body: `
-<p>Managers coach behavior. Your system coaches biology.</p>
-<p>Leaders confuse biological fatigue with a motivation issue. Motivation is a dopamine function, not a mindset function.</p>
-<div class="callout"><strong>Dopamine micro-reinforcement:</strong> small wins after frustration stabilize motivation and confidence throughout the day.</div>
-`
-      },
-      {
-        id:"ch13",
-        title:"CHAPTER 13 — The Biology of Assertiveness",
-        tag:"Assertiveness",
-        body: `
-<p>Assertiveness is not a personality trait. It’s a biological state.</p>
-<p>BAS creates calm leadership. BIS creates hesitation, soft tone, and retreat.</p>
-<p>Same words. Different biology.</p>
-`
-      },
-      {
-        id:"ch14",
-        title:"CHAPTER 14 — What a Regulated Sales System Actually Looks Like",
-        tag:"System",
-        body: `
-<p>A regulated system starts with one principle: behavior is downstream of nervous system state.</p>
-<ul>
-  <li>Clarity instead of confusion</li>
-  <li>Curiosity instead of fear</li>
-  <li>Assertiveness without aggression</li>
-  <li>Execution without hesitation</li>
-  <li>Rapid recovery</li>
-  <li>Consistent output</li>
-</ul>
-`
-      },
-      {
-        id:"ch15",
-        title:"CHAPTER 15 — The Transformation: How the System Was Born",
-        tag:"Story",
-        body: `
-<p>This system came from lived inconsistency: extreme highs, confusing lows, and learning the real driver was state access (BIS/BAS), not skill.</p>
-<p>Breakthrough insight: reps in BIS don’t just struggle internally — they trigger the prospect’s limbic threat systems.</p>
-`
-      },
-      {
-        id:"ch17",
-        title:"CHAPTER 17 — The Future of Sales Is Biological",
-        tag:"Future",
-        body: `
-<p>The next era of sales belongs to nervous system literacy. Tools improved; humans stayed overloaded.</p>
-<div class="callout"><strong>Bottom line:</strong> Sales performance is the expression of biology, not willpower.</div>
-`
-      },
-      {
-        id:"ch18",
-        title:"CHAPTER 18 — Why Sales Collapses in the Last Hour (And Why BAS Fixes It)",
-        tag:"Timing",
-        body: `
-<p>The final hour collapse is dopamine depletion + allostatic load + decision fatigue.</p>
-<p>The fix is state-first reactivation: motion, grounding, micro-objectives, call→reset→call loops.</p>
-`
-      },
-      {
-        id:"ch19",
-        title:"CHAPTER 19 — Why Most Sales Training Fails: A Biological Autopsy",
-        tag:"Autopsy",
-        body: `
-<p>Training ignores BIS, overloads working memory, ignores biological load, and misses the prospect’s limbic reactions.</p>
-<p>Traditional training targets the mind; sales performance is controlled by the nervous system.</p>
-`
-      },
-      {
-        id:"ch20",
-        title:"CHAPTER 20 — Why Traditional Sales Training Fails (And What Replaces It)",
-        tag:"Replacement",
-        body: `
-<p>Skill isn’t the barrier. Access to skill is controlled by the nervous system.</p>
-<p>The future category is biobehavioral sales technology: regulate state, simplify load, stabilize dopamine, restore consistent execution.</p>
-`
-      },
-      {
-        id:"ch21",
-        title:"CHAPTER 21 — The Shift: From Pressure-Based Cultures to Regulation-Based Cultures",
-        tag:"Culture Shift",
-        body: `
-<p>Pressure creates output spikes. Regulation creates output stability.</p>
-<p>Pressure activates BIS; regulation activates BAS.</p>
-`
-      },
-      {
-        id:"ch22",
-        title:"CHAPTER 22 — The Pivot Point: What Happens When a Company Finally Gets Out of Denial",
-        tag:"Leadership Shift",
-        body: `
-<p>The pivot point is when leadership admits: the problem isn’t motivation — it’s regulation.</p>
-<p>From “push harder” to “what state are you in, and how do we get you back to BAS?”</p>
-`
-      },
-      {
-        id:"ch23",
-        title:"CHAPTER 23 — The Invitation: The 70×POWER15 Workshop",
-        tag:"Call to Action",
-        body: `
-<p>This book gives leaders language for a problem they already feel. The workshop installs the solution.</p>
-<ul>
-  <li>Restore outbound call volume without pressure</li>
-  <li>Re-activate action even under stress</li>
-  <li>Stabilize performance during emotional strain</li>
-  <li>Reduce burnout without lowering standards</li>
-  <li>Create consistency without micromanagement</li>
-</ul>
-<p><strong>Learn more or request a private executive briefing at:</strong> <a href="https://www.biohackingsales.com/" target="_blank" rel="noopener">www.biohackingsales.com</a></p>
-`
-      }
-    ];
-
-    // Render chapters
-    const chaptersEl = document.getElementById("chapters");
-    const tocEl = document.getElementById("tocLinks");
-
-    function chapterTemplate(ch){
-      return `
-        <section class="chapter collapsed" id="${ch.id}" data-title="${escapeHtml(ch.title)} ${escapeHtml(ch.tag)}">
-          <header role="button" aria-expanded="false" tabindex="0">
+    <!-- Hero Section -->
+    <header class="pt-48 pb-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h3>${escapeHtml(ch.title)}</h3>
-              <div style="color:var(--muted2);font-size:.95rem;margin-top:6px">${escapeHtml(ch.tag)}</div>
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[10px] font-black tracking-widest uppercase mb-8">
+                    <span>Performance Neuroscience</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-800 leading-[1.05] mb-8 font-sans">
+                    End The Sales <br/>
+                    <span class="italic font-serif text-accent">Inconsistency</span> <br/>
+                    <span class="text-gradient">Crisis.</span>
+                </h1>
+                <p class="text-xl text-slate-400 mb-10 max-w-xl leading-relaxed">
+                    Most VPs blame skills or "hustle." We solve the biological barrier. 
+                    Using <span class="text-white font-semibold">70×POWER15</span>, we regulate rep nervous systems to eliminate hesitation and create predictable revenue.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <button onclick="openCalendly()" class="accent-gradient text-midnight font-black px-10 py-5 rounded-xl shadow-2xl shadow-accent/20 hover:scale-105 transition uppercase tracking-wider text-sm">
+                        Schedule Executive Briefing
+                    </button>
+                    <a href="#manuscript" class="glass px-10 py-5 rounded-xl font-bold flex items-center justify-center hover:bg-white/5 transition text-sm">
+                        Download Manuscript
+                    </a>
+                </div>
+                <div class="mt-12 flex gap-10">
+                    <div>
+                        <p class="text-white font-black text-2xl">34%</p>
+                        <p class="text-slate-500 text-xs uppercase tracking-tighter">Dial Volume Lift</p>
+                    </div>
+                    <div class="w-px bg-white/10"></div>
+                    <div>
+                        <p class="text-white font-black text-2xl">-22%</p>
+                        <p class="text-slate-500 text-xs uppercase tracking-tighter">Hesitation Events</p>
+                    </div>
+                </div>
             </div>
-            <div class="tag">
-              <span class="dot ${tagDot(ch.tag)}"></span>
-              ${escapeHtml(ch.tag)}
-              <span class="chev" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+            <!-- Book Visual -->
+            <div class="relative lg:block hidden">
+                <div class="absolute inset-0 bg-accent/20 blur-[120px] rounded-full opacity-20"></div>
+                <div class="relative mx-auto w-72 h-[420px] bg-slate-900 rounded-r-xl border-y border-r border-white/10 book-shadow transform rotate-3 hover:rotate-0 transition duration-700 overflow-hidden flex flex-col p-8">
+                    <div class="absolute top-0 left-0 w-4 h-full bg-black/30"></div>
+                    <p class="text-accent font-black text-2xl leading-none">70×</p>
+                    <p class="text-accent font-black text-2xl mb-8 tracking-tighter">POWER15</p>
+                    <div class="mt-auto">
+                        <p class="text-white font-serif italic text-lg leading-tight">The Sales Team Inconsistency Crisis</p>
+                        <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-4">Floyd Orr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-32 border-y border-white/5 bg-slate-950/30">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-800 mb-8">The $100k Hesitation Tax</h2>
+            <p class="text-xl text-slate-400 leading-relaxed mb-12">
+                When a rep hesitates for 5 seconds between dials, it’s not a time-management issue—it’s a <span class="text-white">Nervous System Relapse</span>. 
+                This micro-freeze costs the average company $100,000 per rep annually in lost pipeline.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="glass p-8 rounded-2xl">
+                    <h4 class="text-accent font-bold mb-2">The Biological Brake (BIS)</h4>
+                    <p class="text-slate-400 text-sm italic">Fear of rejection triggers the brain's "stop" signal, making even the best scripts useless.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <h4 class="text-accent font-bold mb-2">Cognitive Overload</h4>
+                    <p class="text-slate-400 text-sm italic">Stress narrows perception. Stressed reps misread prospects and lose the ability to close.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-xl">
+                    <h2 class="text-4xl font-800 mb-4 font-sans">Integrated <span class="text-accent font-serif italic">Biohacking</span></h2>
+                    <p class="text-slate-400">We don't just teach sales. We optimize the salesperson's biology for high-output environments.</p>
+                </div>
+                <button onclick="openCalendly()" class="text-accent border-b border-accent pb-1 font-bold hover:text-white hover:border-white transition">View Program Options →</button>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">70×POWER15 Protocol</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">The core operating system for state-access. A 60-second ritual that suppresses the BIS and triggers the BAS for immediate action.</p>
+                    <ul class="text-xs space-y-2 text-slate-500">
+                        <li>• Hourly Reset Rituals</li>
+                        <li>• BAS Override Maneuvers</li>
+                        <li>• Dopamine Micro-Reinforcement</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">Sleep & Recovery</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Sales is an athletic endeavor. We optimize sleep architecture and intra-day recovery to lower Allostatic Load (accumulated stress).</p>
+                    <ul class="text-xs space-y-2 text-slate-500">
+                        <li>• Circadian Rhythm Alignment</li>
+                        <li>• Neuro-Recovery Protocols</li>
+                        <li>• Stress-Load Monitoring</li>
+                    </ul>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tighter">Leader State Coaching</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Teaching VPs to coach "State," not just "Calls." Transforming managers from pressure-drivers into regulation-experts.</p>
+                    <ul class="text-xs space-y-2 text-slate-500">
+                        <li>• Biological Dashboarding</li>
+                        <li>• State-Signal Recognition</li>
+                        <li>• Regulation-First Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Gated Section -->
+    <section id="manuscript" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-800 mb-8">Get The Full <br/><span class="text-accent">Manuscript</span></h2>
+                    <p class="text-slate-400 mb-10 leading-relaxed">
+                        Read Chapters 1–23 of <em>The Sales Team Inconsistency Crisis</em>. 
+                        Learn how to identify the "Winner, Fighter, and Defeated" biological profiles on your floor today.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="mt-1 text-accent">✓</div>
+                            <p class="text-sm text-slate-300"><strong>Chapter 4:</strong> The Hidden Brake System (BIS)</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="mt-1 text-accent">✓</div>
+                            <p class="text-sm text-slate-300"><strong>Chapter 12:</strong> Why Managers Misdiagnose Performance</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="mt-1 text-accent">✓</div>
+                            <p class="text-sm text-slate-300"><strong>Chapter 19:</strong> Why Traditional Training Fails (The Autopsy)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-10 rounded-[2.5rem] border-accent/10 relative">
+                    <h3 class="text-2xl font-bold mb-6">Manuscript Request</h3>
+                    
+                    <form id="leadForm" onsubmit="return submitLeadForm(event)" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-2 sm:col-span-1">
+                                <label class="text-[10px] font-black uppercase text-slate-500 tracking-widest mb-2 block">First Name</label>
+                                <input type="text" id="fname" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label class="text-[10px] font-black uppercase text-slate-500 tracking-widest mb-2 block">Last Name</label>
+                                <input type="text" id="lname" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-black uppercase text-slate-500 tracking-widest mb-2 block">Professional Email</label>
+                            <input type="email" id="email" required placeholder="vp@company.com" class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
+                        </div>
+                        <button type="submit" class="w-full accent-gradient text-midnight font-black py-4 rounded-xl mt-4 hover:brightness-110 transition uppercase tracking-widest text-xs">
+                            Access Full Manuscript
+                        </button>
+                    </form>
+                    <p class="mt-6 text-[10px] text-slate-600 text-center">Your data is secured. We only send science-backed performance updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="flex items-center justify-center space-x-4 mb-8">
+            <div class="w-8 h-8 flex items-center justify-center bg-slate-900 rounded-lg border border-white/10">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+                    <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-              </span>
             </div>
-          </header>
-          <div class="body">${ch.body}</div>
-        </section>
-      `;
-    }
+            <span class="text-lg font-800 tracking-tight text-white uppercase">Biohacking<span class="text-accent">Sales</span></span>
+        </div>
+        <p class="text-slate-600 text-sm">© <span id="year"></span> BiohackingSales. Built for Revenue Leaders.</p>
+        <div class="mt-6 flex justify-center space-x-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+            <a href="#problem" class="hover:text-accent transition">Crisis</a>
+            <a href="#solutions" class="hover:text-accent transition">Solutions</a>
+            <a href="#manuscript" class="hover:text-accent transition">The Book</a>
+            <a href="mailto:contact@biohackingsales.com" class="hover:text-accent transition">Contact</a>
+        </div>
+    </footer>
 
-    function tocLinkTemplate(ch){
-      return `<a href="#${ch.id}" data-id="${ch.id}">${escapeHtml(ch.title)}</a>`;
-    }
+    <!-- Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        document.getElementById('year').innerText = new Date().getFullYear();
 
-    function tagDot(tag){
-      // Simple: some tags red, others blue
-      const redTags = new Set(["Foundation","Revenue Leak","Neuroscience","Stress","Training","Autopsy","Replacement"]);
-      return redTags.has(tag) ? "red" : "blue";
-    }
-
-    function escapeHtml(str){
-      return String(str).replace(/[&<>"']/g, (m) => ({
-        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-      }[m]));
-    }
-
-    chaptersEl.innerHTML = chaptersData.map(chapterTemplate).join("");
-    tocEl.innerHTML = chaptersData.map(tocLinkTemplate).join("");
-
-    // Expand/collapse behavior
-    function setCollapsed(section, collapsed){
-      section.classList.toggle("collapsed", collapsed);
-      const header = section.querySelector("header");
-      header.setAttribute("aria-expanded", String(!collapsed));
-    }
-
-    document.querySelectorAll(".chapter header").forEach(header => {
-      header.addEventListener("click", () => {
-        const sec = header.closest(".chapter");
-        const isCollapsed = sec.classList.contains("collapsed");
-        setCollapsed(sec, !isCollapsed);
-      });
-      header.addEventListener("keydown", (e) => {
-        if(e.key === "Enter" || e.key === " "){
-          e.preventDefault();
-          header.click();
+        function openCalendly() {
+            try {
+                if(window.Calendly) {
+                    Calendly.showPopupWidget('https://calendly.com/biohackingsales');
+                } else {
+                    window.open('https://calendly.com/biohackingsales', '_blank');
+                }
+            } catch(e) {
+                window.open('https://calendly.com/biohackingsales', '_blank');
+            }
+            return false;
         }
-      });
-    });
 
-    // Toggle all
-    const toggleAllBtn = document.getElementById("toggleAll");
-    let allCollapsed = true;
-    toggleAllBtn.addEventListener("click", () => {
-      allCollapsed = !allCollapsed;
-      document.querySelectorAll(".chapter").forEach(sec => setCollapsed(sec, allCollapsed));
-      toggleAllBtn.textContent = allCollapsed ? "Expand all" : "Collapse all";
-    });
-
-    // TOC search filter
-    const tocSearch = document.getElementById("tocSearch");
-    tocSearch.addEventListener("input", () => {
-      const q = tocSearch.value.trim().toLowerCase();
-      document.querySelectorAll("#tocLinks a").forEach(a => {
-        const id = a.getAttribute("data-id");
-        const sec = document.getElementById(id);
-        const hay = (sec?.getAttribute("data-title") || "").toLowerCase();
-        a.style.display = (!q || hay.includes(q)) ? "block" : "none";
-      });
-    });
-
-    // Scroll spy for TOC active link
-    const tocLinks = Array.from(document.querySelectorAll("#tocLinks a"));
-    const sections = chaptersData.map(ch => document.getElementById(ch.id)).filter(Boolean);
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const id = entry.target.id;
-          tocLinks.forEach(a => a.classList.toggle("active", a.getAttribute("data-id") === id));
+        function submitLeadForm(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            alert("Manuscript Access Granted. Sending to: " + email);
+            return false;
         }
-      });
-    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+    </script>
 
-    sections.forEach(sec => observer.observe(sec));
-
-    // Default: expand Chapter 1 only
-    const ch1 = document.getElementById("ch1");
-    if(ch1) setCollapsed(ch1, false);
-
-    // If the user clicks a TOC link, expand that chapter automatically
-    tocLinks.forEach(a => {
-      a.addEventListener("click", () => {
-        const id = a.getAttribute("data-id");
-        const sec = document.getElementById(id);
-        if(sec) setCollapsed(sec, false);
-      });
-    });
-  </script>
 </body>
 </html>
