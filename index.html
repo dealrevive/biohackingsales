@@ -36,7 +36,6 @@
     .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
     .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
-    .book-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75); }
 
     /* DNA Icon Animation */
     .dna-node { animation: dnaPulse 3s infinite ease-in-out; transform-origin: center; }
@@ -45,7 +44,7 @@
       50% { opacity: 1; transform: scale(1.10); }
     }
 
-    /* Make the opt-in pop */
+    /* Opt-in pop */
     .optin-glow {
       box-shadow:
         0 0 0 1px rgba(255, 209, 102, 0.25),
@@ -58,23 +57,22 @@
 
     /* Book image sizing */
     .book-img {
-      width: min(520px, 92vw);
+      width: min(420px, 92vw);
       height: auto;
-      filter: drop-shadow(0 25px 50px rgba(0,0,0,0.65));
+      filter: drop-shadow(0 25px 40px rgba(0,0,0,.75));
       transform: rotate(2deg);
-      transition: transform 700ms ease;
+      transition: transform 600ms ease;
     }
-    .book-img:hover { transform: rotate(0deg); }
+    .book-img:hover { transform: rotate(0deg) scale(1.01); }
 
-    /* Make Constant Contact inline form match dark theme */
-    /* CC injects its own markup. We can at least style the container + give spacing. */
-    .cc-wrap { }
-    .cc-wrap .ctct-inline-form { min-height: 240px; }
-    .cc-note { font-size: 10px; color: rgba(148,163,184,0.8); text-align:center; margin-top: 12px; }
-
-    /* Robust clickable buttons */
-    .cta { cursor: pointer; }
+    /* Ensure CC form fits nicely */
+    .ctct-inline-form { min-height: 220px; }
   </style>
+
+  <!-- Begin Constant Contact Active Forms (OK in <head> or before </body>) -->
+  <script> var _ctct_m = "ecd81de60098820365573a3c28c34522"; </script>
+  <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+  <!-- End Constant Contact Active Forms -->
 </head>
 
 <body class="font-sans antialiased hero-pattern">
@@ -104,7 +102,7 @@
         <a href="#problem" class="hover:text-accent transition">The Crisis</a>
         <a href="#programs" class="hover:text-accent transition">Program</a>
         <a href="#exec" class="hover:text-accent transition">Executive Summary</a>
-        <a href="#manuscript-form" class="text-accent font-extrabold hover:text-white transition" onclick="return scrollToManuscriptForm(event)">Get the Complete Manuscript</a>
+        <a href="#manuscript-form" class="text-accent font-extrabold hover:text-white transition" onclick="return scrollToManuscriptForm(event)">Get the Manuscript</a>
         <a class="bg-white text-midnight px-6 py-2 rounded-full hover:bg-accent transition transform hover:scale-105"
            href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener">Book Discovery</a>
       </div>
@@ -132,11 +130,11 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-5">
-          <a href="#programs" class="cta accent-gradient text-midnight font-black px-10 py-5 rounded-xl shadow-2xl shadow-accent/20 hover:scale-105 transition uppercase tracking-wider text-sm">
+          <a href="#programs" class="accent-gradient text-midnight font-black px-10 py-5 rounded-xl shadow-2xl shadow-accent/20 hover:scale-105 transition uppercase tracking-wider text-sm">
             View Program Options
           </a>
 
-          <a class="cta glass px-10 py-5 rounded-xl font-bold hover:bg-white/5 transition text-sm"
+          <a class="glass px-10 py-5 rounded-xl font-bold hover:bg-white/5 transition text-sm"
              href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener">
             Talk Through Fit →
           </a>
@@ -158,43 +156,18 @@
         </div>
       </div>
 
-      <!-- Book Visual (uses your PNG) -->
-      <div class="relative hidden lg:flex items-center justify-center">
+      <!-- Book Visual (YOUR PNG) -->
+      <div class="relative flex justify-center lg:justify-end">
         <div class="absolute inset-0 bg-accent/20 blur-[120px] rounded-full opacity-25"></div>
 
-        <div class="relative glass rounded-3xl p-10 border border-white/5">
-          <!-- IMPORTANT: Upload your PNG as booknobackground.png next to this HTML -->
-          <img src="booknobackground.png"
-               alt="The Outbound Sales Team Inconsistency Crisis book cover by Floyd Orr"
-               class="book-img" />
-
-          <div class="mt-6 flex items-center gap-3 justify-center">
-            <div class="w-10 h-10 rounded-xl border border-white/10 bg-slate-950/70 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
-                <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="9.5" cy="7" r="1.25" fill="#ffd166"/>
-                <circle cx="14.5" cy="12" r="1.25" fill="#ffd166"/>
-                <circle cx="9.5" cy="17" r="1.25" fill="#ffd166"/>
-              </svg>
-            </div>
-            <div class="text-center">
-              <p class="text-accent font-extrabold text-base leading-none">BiohackingSales<span class="text-white/90">.com</span></p>
-              <p class="text-slate-300 text-xs mt-1 tracking-wide">More Dials • Stronger Closes • Lower Churn</p>
-            </div>
-          </div>
-        </div>
+        <!-- Use your uploaded file name here -->
+        <img
+          src="booknobackground.png"
+          alt="The Outbound Sales Team Inconsistency Crisis — Floyd Orr"
+          class="relative book-img"
+          loading="eager"
+        />
       </div>
-
-      <!-- Mobile book (shows under hero copy) -->
-      <div class="lg:hidden">
-        <div class="glass rounded-3xl p-8 border border-white/5">
-          <img src="booknobackground.png"
-               alt="The Outbound Sales Team Inconsistency Crisis book cover by Floyd Orr"
-               class="book-img mx-auto" />
-        </div>
-      </div>
-
     </div>
   </header>
 
@@ -211,7 +184,7 @@
       <a href="#manuscript-form"
          onclick="return scrollToManuscriptForm(event)"
          class="accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs">
-        Get the Complete Manuscript
+        Get the Manuscript
       </a>
     </div>
   </section>
@@ -262,7 +235,7 @@
           </p>
         </div>
 
-        <a class="cta text-accent border-b border-accent pb-1 font-bold hover:text-white hover:border-white transition"
+        <a class="text-accent border-b border-accent pb-1 font-bold hover:text-white hover:border-white transition"
            href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener">
           Talk Through Fit →
         </a>
@@ -311,7 +284,7 @@
           <p class="text-slate-200 font-extrabold">Prefer a fast decision?</p>
           <p class="text-slate-400 text-sm mt-1">If it’s not a fit, I’ll tell you quickly and you keep the executive summary + book.</p>
         </div>
-        <a class="cta accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
+        <a class="accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
            href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener">
           Book a Fit Call
         </a>
@@ -319,7 +292,7 @@
     </div>
   </section>
 
-  <!-- Executive Summary + Chapter 1 Preview + Gate -->
+  <!-- Executive Summary + Gate -->
   <section id="exec" class="py-32 px-6 bg-slate-950/30 border-y border-white/5">
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
@@ -336,7 +309,7 @@
           </p>
         </div>
 
-        <a class="cta accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
+        <a class="accent-gradient text-midnight font-black px-6 py-3 rounded-xl hover:scale-105 transition uppercase tracking-wider text-xs"
            href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener">
           Map This To Your Team
         </a>
@@ -379,17 +352,18 @@
               Delay becomes the micro-escape. Dialing becomes optional. Closing becomes timid.
             </p>
             <p class="text-slate-400 italic">
-              If you want the full framework for increasing outbound volume and improving closes, get the full manuscript below.
+              Get the full manuscript below.
             </p>
           </div>
         </div>
 
-        <!-- Constant Contact Opt-in -->
+        <!-- Constant Contact Embed -->
         <div id="manuscript-form" class="relative rounded-[2.75rem] border border-accent/25 optin-glow optin-bg p-[1px]">
-          <div class="glass rounded-[2.65rem] p-10 relative cc-wrap">
+          <div class="glass rounded-[2.65rem] p-10 relative">
             <div class="absolute -top-3 right-8 bg-accent text-midnight text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
               Free Book
             </div>
+
             <h3 class="text-2xl font-extrabold mb-2">Get the Complete Manuscript</h3>
             <p class="text-slate-200 text-sm mb-8">
               Built for VPs + CEOs who want reps to dial more, close better, and quit less.
@@ -399,25 +373,13 @@
             <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
             <!-- End Constant Contact Inline Form Code -->
 
-            <p class="cc-note">No spam. One concise note when we publish updates.</p>
+            <p class="mt-6 text-[10px] text-slate-500 text-center">
+              No spam. One concise note when we publish updates.
+            </p>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- Book anchor -->
-  <section id="book" class="py-24 px-6">
-    <div class="max-w-7xl mx-auto glass rounded-3xl p-10 border border-white/5 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-      <div>
-        <h3 class="text-2xl font-extrabold">Want a quick fit-check?</h3>
-        <p class="text-slate-400 mt-2">We’ll tell you fast if the 5-hour install solves your outbound inconsistency problem.</p>
-      </div>
-      <a class="cta bg-white text-midnight px-7 py-3 rounded-full hover:bg-accent transition font-black"
-         href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" rel="noopener">
-        Book Discovery Call
-      </a>
     </div>
   </section>
 
@@ -453,22 +415,8 @@
     </div>
   </footer>
 
-  <!-- Calendly (optional) -->
+  <!-- Calendly -->
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-  <!-- Constant Contact Inline Form Script (REQUIRED) -->
-  <script>
-    // If you already have this script elsewhere on your site, remove the duplicate.
-    (function () {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
-      s.async = true;
-      s.defer = true;
-      var head = d.getElementsByTagName('head')[0];
-      head.appendChild(s);
-    })();
-  </script>
-
   <script>
     document.getElementById('year').innerText = new Date().getFullYear();
 
@@ -489,9 +437,5 @@
       return false;
     }
   </script>
-  <!-- Begin Constant Contact Active Forms -->
-    <script> var _ctct_m = "ecd81de60098820365573a3c28c34522"; </script>
-    <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
-<!-- End Constant Contact Active Forms -->
 </body>
 </html>
