@@ -36,6 +36,7 @@
     .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
     .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
+    .book-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75); }
 
     /* DNA Icon Animation */
     .dna-node { animation: dnaPulse 3s infinite ease-in-out; transform-origin: center; }
@@ -44,7 +45,7 @@
       50% { opacity: 1; transform: scale(1.10); }
     }
 
-    /* Opt-in emphasis */
+    /* Make the opt-in pop */
     .optin-glow {
       box-shadow:
         0 0 0 1px rgba(255, 209, 102, 0.25),
@@ -55,10 +56,24 @@
       background: linear-gradient(180deg, rgba(255, 209, 102, 0.10), rgba(255,255,255,0.02));
     }
 
-    .cta { cursor: pointer; }
+    /* Book image sizing */
+    .book-img {
+      width: min(520px, 92vw);
+      height: auto;
+      filter: drop-shadow(0 25px 50px rgba(0,0,0,0.65));
+      transform: rotate(2deg);
+      transition: transform 700ms ease;
+    }
+    .book-img:hover { transform: rotate(0deg); }
 
-    /* Book image treatment */
-    .book-img-shadow { filter: drop-shadow(0 25px 50px rgba(0,0,0,0.75)); }
+    /* Make Constant Contact inline form match dark theme */
+    /* CC injects its own markup. We can at least style the container + give spacing. */
+    .cc-wrap { }
+    .cc-wrap .ctct-inline-form { min-height: 240px; }
+    .cc-note { font-size: 10px; color: rgba(148,163,184,0.8); text-align:center; margin-top: 12px; }
+
+    /* Robust clickable buttons */
+    .cta { cursor: pointer; }
   </style>
 </head>
 
@@ -143,18 +158,40 @@
         </div>
       </div>
 
-      <!-- Book Visual (YOUR PNG) -->
-      <div class="relative lg:block hidden">
+      <!-- Book Visual (uses your PNG) -->
+      <div class="relative hidden lg:flex items-center justify-center">
         <div class="absolute inset-0 bg-accent/20 blur-[120px] rounded-full opacity-25"></div>
 
-        <div class="relative flex justify-center">
-          <!-- IMPORTANT: Put your uploaded file next to index.html and name it booknobackground.png -->
-          <img
-            src="booknobackground.png"
-            alt="The Outbound Sales Team Inconsistency Crisis — Floyd Orr"
-            class="book-img-shadow w-[520px] max-w-full h-auto transform rotate-2 hover:rotate-0 transition duration-700 select-none"
-            loading="eager"
-          />
+        <div class="relative glass rounded-3xl p-10 border border-white/5">
+          <!-- IMPORTANT: Upload your PNG as booknobackground.png next to this HTML -->
+          <img src="booknobackground.png"
+               alt="The Outbound Sales Team Inconsistency Crisis book cover by Floyd Orr"
+               class="book-img" />
+
+          <div class="mt-6 flex items-center gap-3 justify-center">
+            <div class="w-10 h-10 rounded-xl border border-white/10 bg-slate-950/70 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="9.5" cy="7" r="1.25" fill="#ffd166"/>
+                <circle cx="14.5" cy="12" r="1.25" fill="#ffd166"/>
+                <circle cx="9.5" cy="17" r="1.25" fill="#ffd166"/>
+              </svg>
+            </div>
+            <div class="text-center">
+              <p class="text-accent font-extrabold text-base leading-none">BiohackingSales<span class="text-white/90">.com</span></p>
+              <p class="text-slate-300 text-xs mt-1 tracking-wide">More Dials • Stronger Closes • Lower Churn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile book (shows under hero copy) -->
+      <div class="lg:hidden">
+        <div class="glass rounded-3xl p-8 border border-white/5">
+          <img src="booknobackground.png"
+               alt="The Outbound Sales Team Inconsistency Crisis book cover by Floyd Orr"
+               class="book-img mx-auto" />
         </div>
       </div>
 
@@ -166,9 +203,7 @@
     <div class="max-w-7xl mx-auto glass rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 border border-white/5">
       <div>
         <p class="text-[10px] uppercase tracking-widest text-slate-500 font-black mb-1">Complete Framework</p>
-        <p class="text-slate-200 font-extrabold text-lg">
-          Get the Complete Manuscript
-        </p>
+        <p class="text-slate-200 font-extrabold text-lg">Get the Complete Manuscript</p>
         <p class="text-slate-400 text-sm max-w-xl">
           <em>The Outbound Sales Team Inconsistency Crisis</em> — the full framework behind this system.
         </p>
@@ -322,8 +357,8 @@
           <p class="text-[10px] uppercase tracking-widest text-slate-500 font-black mb-3">2) The Close Outcome</p>
           <h3 class="text-xl font-black mb-3">“I’ll think it over” becomes the dominant outcome.</h3>
           <p class="text-slate-300 text-sm leading-relaxed">
-            Buyers avoid discomfort too — especially when a rep’s emotional state triggers the buyer’s limbic system
-            to distrust the interaction. If the rep can’t hold tension and guide emotion, the buyer exits with a delay phrase.
+            Buyers avoid discomfort too — especially when a rep’s emotional state triggers distrust.
+            If the rep can’t hold tension and guide emotion, the buyer exits with a delay phrase.
             Reps then mirror avoidance in follow-up.
           </p>
         </div>
@@ -349,9 +384,9 @@
           </div>
         </div>
 
-        <!-- OPT-IN -->
+        <!-- Constant Contact Opt-in -->
         <div id="manuscript-form" class="relative rounded-[2.75rem] border border-accent/25 optin-glow optin-bg p-[1px]">
-          <div class="glass rounded-[2.65rem] p-10 relative">
+          <div class="glass rounded-[2.65rem] p-10 relative cc-wrap">
             <div class="absolute -top-3 right-8 bg-accent text-midnight text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
               Free Book
             </div>
@@ -360,37 +395,11 @@
               Built for VPs + CEOs who want reps to dial more, close better, and quit less.
             </p>
 
-            <form id="leadForm"
-              method="POST"
-              action="<!-- CONSTANT CONTACT FORM ACTION GOES HERE -->"
-              class="space-y-4"
-              data-cc-form="true">
+            <!-- Begin Constant Contact Inline Form Code -->
+            <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
+            <!-- End Constant Contact Inline Form Code -->
 
-              <div class="grid grid-cols-2 gap-4">
-                <div class="col-span-2 sm:col-span-1">
-                  <label class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 block">First Name</label>
-                  <input type="text" id="fname" name="first_name" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
-                </div>
-                <div class="col-span-2 sm:col-span-1">
-                  <label class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 block">Last Name</label>
-                  <input type="text" id="lname" name="last_name" required class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
-                </div>
-              </div>
-
-              <div>
-                <label class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 block">Professional Email</label>
-                <input type="email" id="email" name="email" required placeholder="vp@company.com"
-                  class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent">
-              </div>
-
-              <button type="submit" class="w-full accent-gradient text-midnight font-black py-4 rounded-xl mt-2 hover:brightness-110 transition uppercase tracking-widest text-xs">
-                Email Me the Complete Manuscript
-              </button>
-            </form>
-
-            <p class="mt-6 text-[10px] text-slate-500 text-center">
-              No spam. One concise note when we publish updates.
-            </p>
+            <p class="cc-note">No spam. One concise note when we publish updates.</p>
           </div>
         </div>
 
@@ -444,6 +453,22 @@
     </div>
   </footer>
 
+  <!-- Calendly (optional) -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <!-- Constant Contact Inline Form Script (REQUIRED) -->
+  <script>
+    // If you already have this script elsewhere on your site, remove the duplicate.
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
+      s.async = true;
+      s.defer = true;
+      var head = d.getElementsByTagName('head')[0];
+      head.appendChild(s);
+    })();
+  </script>
+
   <script>
     document.getElementById('year').innerText = new Date().getFullYear();
 
@@ -453,20 +478,11 @@
         const el = document.getElementById('manuscript-form');
         if (!el) return false;
 
-        // Offset for fixed nav
         const y = el.getBoundingClientRect().top + window.pageYOffset - 90;
         window.scrollTo({ top: y, behavior: 'smooth' });
 
-        // Highlight
         el.classList.add('ring-2','ring-accent/40');
         setTimeout(() => el.classList.remove('ring-2','ring-accent/40'), 1400);
-
-        // Focus email
-        setTimeout(() => {
-          const email = document.getElementById('email');
-          if (email) email.focus({ preventScroll: true });
-        }, 450);
-
       } catch(err) {
         location.hash = '#manuscript-form';
       }
