@@ -41,6 +41,11 @@
     .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
     .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
+    .dna-node { animation: dnaPulse 3s infinite ease-in-out; transform-origin: center; }
+    @keyframes dnaPulse {
+      0%, 100% { opacity: 0.45; transform: scale(0.92); }
+      50% { opacity: 1; transform: scale(1.10); }
+    }
     .book-img { width: min(420px, 92vw); height: auto; filter: drop-shadow(0 25px 40px rgba(0,0,0,.75)); transform: rotate(2deg); }
     .ctct-inline-form { min-height: 280px !important; display: block !important; }
   </style>
@@ -54,7 +59,16 @@
   <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <span class="text-xl font-extrabold tracking-tight text-white uppercase">Biohacking<span class="text-accent">Sales</span></span>
+        <div class="relative w-9 h-9 flex items-center justify-center bg-slate-900 rounded-xl border border-white/10 overflow-hidden -mr-1">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7">
+            <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 0s;"/>
+            <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 1.5s;"/>
+            <circle cx="9.5" cy="7" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 0.2s;"/>
+            <circle cx="14.5" cy="12" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 0.7s;"/>
+            <circle cx="9.5" cy="17" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 1.2s;"/>
+          </svg>
+        </div>
+        <span class="text-xl font-extrabold tracking-tight text-white uppercase leading-none">Biohacking<span class="text-accent">Sales</span></span>
       </div>
       <div class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-slate-400">
         <a href="#system" class="hover:text-accent transition">The Protocol</a>
