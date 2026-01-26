@@ -11,14 +11,15 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BiohackingSales | 25-50% Outbound Lift</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>BiohackingSales</title>
 
   <script> var _ctct_m = "ecd81de60098820365573a3c28c34522"; </script>
   <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -31,17 +32,12 @@
   </script>
 
   <style>
-    body { background-color: #010409; color: #f8fafc; scroll-behavior: smooth; overflow-x: hidden; }
+    body { background-color: #010409; color: #f8fafc; scroll-behavior: smooth; }
     .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
     .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
     .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
-    
-    /* Animated Icon */
-    .icon-pulse { animation: pulse 2s infinite ease-in-out; }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); filter: brightness(1); }
-      50% { transform: scale(1.15); filter: brightness(1.2); }
-    }
+    .icon-pulse { animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
   </style>
 </head>
 
@@ -50,89 +46,46 @@
   <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-accent rounded-lg icon-pulse flex items-center justify-center shadow-[0_0_15px_rgba(255,209,102,0.3)]">
+        <div class="w-8 h-8 bg-accent rounded-lg icon-pulse flex items-center justify-center">
             <div class="w-4 h-4 bg-midnight rotate-45"></div>
         </div>
         <span class="text-xl font-extrabold tracking-tight text-white uppercase">Biohacking<span class="text-accent">Sales</span></span>
       </div>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#licensing" class="text-xs font-bold uppercase text-slate-400 hover:text-accent transition">Licensing</a>
-        <a class="bg-white text-midnight px-6 py-2 rounded-full font-bold text-xs uppercase hover:bg-accent transition" href="https://calendly.com/biohackingsales/30-minute-meeting">Book Discovery</a>
-      </div>
+      <a class="bg-white text-midnight px-6 py-2 rounded-full font-bold text-xs uppercase" href="https://calendly.com/biohackingsales/30-minute-meeting">Book Discovery</a>
     </div>
   </nav>
 
-  <header class="pt-44 pb-24 px-6">
+  <header class="pt-44 pb-20 px-6">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
       <div>
         <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-7">
-          Increase Outbound <br/>
+          Increase Dial <br/>
           <span class="italic font-serif text-accent">Volume 25-50%</span> <br/>
-          <span class="text-white text-4xl md:text-6xl">In Exactly 7 Days.</span>
+          <span class="text-white">In 7 Days.</span>
         </h1>
-        <p class="text-xl text-slate-300 mb-9 max-w-lg leading-relaxed">
-          The <strong>80Xpower15</strong> system. A neuroscience-backed licensing agreement for sales teams. 60-minute video deployment + implementation workbook.
+        <p class="text-xl text-slate-300 mb-9 max-w-lg">
+          The 80Xpower15 licensing agreement. 60-minute video deployment for virtual sales teams. Immediate outbound lift.
         </p>
-        <a href="#manuscript-form" class="accent-gradient text-midnight font-black px-10 py-5 rounded-xl uppercase text-sm inline-block shadow-xl hover:scale-105 transition">Get the Framework</a>
       </div>
-      <div class="flex justify-center relative">
-         <div class="absolute inset-0 bg-accent/10 blur-[100px] rounded-full"></div>
-         <img src="booknobackground.png" alt="Framework" class="relative max-w-sm drop-shadow-2xl" />
+      <div class="flex justify-center">
+         <img src="booknobackground.png" alt="Framework" class="max-w-sm drop-shadow-2xl" />
       </div>
     </div>
   </header>
 
-  <section id="licensing" class="py-24 border-t border-white/5 bg-slate-950/30">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-        <div class="glass p-10 rounded-3xl border border-white/10">
-          <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-6">
-            <span class="text-accent font-bold">01</span>
-          </div>
-          <h3 class="text-2xl font-black mb-4 uppercase">Video Masterclass</h3>
-          <p class="text-slate-400 leading-relaxed">A 45-60 minute deployment video for frontline virtual sales operators. Immediate biological regulation for high-volume dialing.</p>
-        </div>
-        <div class="glass p-10 rounded-3xl border border-white/10">
-          <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-6">
-            <span class="text-accent font-bold">02</span>
-          </div>
-          <h3 class="text-2xl font-black mb-4 uppercase">Implementation Workbook</h3>
-          <p class="text-slate-400 leading-relaxed">The tactical companion to the video license. Includes the 50% Volume Lift scorecard for managers and reps.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="py-24 px-6 border-t border-white/5">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_2fr] gap-16 items-center">
-      <div class="glass aspect-[4/5] rounded-[2.5rem] bg-slate-800 flex items-center justify-center border border-white/10 overflow-hidden relative">
-        <img src="YOUR_PHOTO_HERE.jpg" alt="Floyd Orr" class="w-full h-full object-cover opacity-60" />
-        <div class="absolute inset-0 bg-gradient-to-t from-midnight to-transparent"></div>
-      </div>
-      <div>
-        <h2 class="text-4xl font-extrabold mb-6 uppercase">Meet <span class="text-accent italic font-serif">Floyd Orr</span></h2>
-        <p class="text-xl text-slate-300 leading-relaxed mb-6">
-          Architect of the 80Xpower15 System. Floyd uses practical neuroscience to remove the biological "friction" that causes dial-hesitation in virtual sales teams.
-        </p>
-        <div class="h-px w-20 bg-accent mb-6"></div>
-        <p class="text-slate-400">The goal is simple: Increase outbound output by 25-50% in the first week of deployment.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="manuscript-form" class="py-24 px-6 bg-slate-950 border-t border-white/5">
     <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-3xl font-extrabold mb-4 uppercase">Access the 80Xpower15 Framework</h3>
-      <p class="text-slate-400 mb-12">Register for the executive summary and licensing details.</p>
+      <h3 class="text-3xl font-extrabold mb-4 uppercase">Get the Framework</h3>
       
-      <div class="glass p-8 md:p-12 rounded-[2.5rem] border border-accent/20 shadow-[0_0_50px_rgba(255,209,102,0.1)]">
+      <div class="glass p-8 rounded-[2.5rem] border border-accent/20">
         <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
       </div>
-      </div>
+
+    </div>
   </section>
 
   <footer class="py-12 text-center text-slate-600 text-[10px] uppercase font-bold tracking-widest border-t border-white/5">
-    © 2026 BiohackingSales • Applied Neuroscience • 50% Volume Target
+    © 2026 BiohackingSales
   </footer>
 
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
