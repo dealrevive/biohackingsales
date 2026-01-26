@@ -33,8 +33,7 @@
   </script>
 
   <style>
-    body { background-color: #010409; color: #f8fafc; scroll-behavior: smooth; padding-bottom: 80px; }
-    @media (min-width: 768px) { body { padding-bottom: 0; } }
+    body { background-color: #010409; color: #f8fafc; scroll-behavior: smooth; }
     .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
     .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
     .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -46,8 +45,6 @@
     }
     .book-img { width: min(420px, 92vw); height: auto; filter: drop-shadow(0 25px 40px rgba(0,0,0,.75)); transform: rotate(2deg); }
     .ctct-inline-form { min-height: 280px !important; display: block !important; }
-    .mobile-cta { position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 100; display: block; }
-    @media (min-width: 768px) { .mobile-cta { display: none; } }
   </style>
 
   <script> var _ctct_m = "ecd81de60098820365573a3c28c34522"; </script>
@@ -56,22 +53,16 @@
 
 <body class="font-sans antialiased hero-pattern">
 
-  <div class="mobile-cta">
-    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="accent-gradient text-midnight font-black w-full py-5 rounded-2xl shadow-2xl text-center block uppercase tracking-widest text-sm border-2 border-midnight/10">
-      Book Performance Audit
-    </a>
-  </div>
-
   <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="relative w-9 h-9 flex items-center justify-center bg-slate-900 rounded-xl border border-white/10 overflow-hidden">
+        <div class="relative w-9 h-9 flex items-center justify-center bg-slate-900 rounded-xl border border-white/10 overflow-hidden -mr-1">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7">
             <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" />
             <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 1.5s;"/>
           </svg>
         </div>
-        <span class="text-xl font-extrabold tracking-tight text-white uppercase">Biohacking<span class="text-accent">Sales</span></span>
+        <span class="text-xl font-extrabold tracking-tight text-white uppercase leading-none">Biohacking<span class="text-accent">Sales</span></span>
       </div>
       <div class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-slate-400">
         <a href="#system" class="hover:text-accent transition">The System</a>
@@ -86,14 +77,14 @@
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
       <div>
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-black tracking-widest uppercase mb-7">
-          <span>Outbound Sales Mastery | The 80XPower15 System</span>
+          <span>Executive Practitioner | The 80XPower15 System</span>
         </div>
         <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.05] mb-7 uppercase tracking-tight">
           Turn Your <span class="text-accent">Lambs</span><br/>
           <span class="text-gradient">Into Lions.</span>
         </h1>
         <p class="text-xl text-slate-300/90 mb-9 max-w-xl leading-relaxed font-medium">
-          Without volume, a rep is doomed. The <strong>80XPower15 System</strong> uses neuroscience to automate high-volume activity and turn average reps into outbound lions.
+          Without volume, a rep is doomed. The <strong>80XPower15 System</strong> uses practical neuroscience to automate high-volume activity and unlock elite performance.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#manuscript-form" class="accent-gradient text-midnight font-black px-10 py-5 rounded-xl shadow-xl hover:scale-105 transition uppercase tracking-wider text-sm inline-block text-center">Get the System</a>
@@ -109,66 +100,45 @@
   <section class="py-10 border-y border-white/5 bg-slate-950/20">
     <div class="max-w-7xl mx-auto px-6">
       <p class="text-center text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black mb-6">Proven in the trenches of</p>
-      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale font-black text-xl tracking-tighter uppercase">
-         <span>American Express</span>
-         <span>Constant Contact</span>
-         <span>Google (Strat)</span>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale">
+         <span class="text-xl font-bold text-white tracking-tighter">AMERICAN EXPRESS</span>
+         <span class="text-xl font-bold text-white tracking-tighter">CONSTANT CONTACT</span>
+         <span class="text-xl font-bold text-white tracking-tighter">GOOGLE (STRAT)</span>
       </div>
     </div>
   </section>
 
   <section class="py-24 px-6 border-b border-white/5">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-extrabold uppercase text-accent tracking-tight text-center mb-16">Strategic Outbound Insights</h2>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold uppercase text-accent tracking-tight">Strategic Outbound Insights</h2>
+      </div>
       <div class="grid gap-6">
         <div class="glass p-8 rounded-3xl border-white/10">
           <h4 class="text-white font-black mb-3 uppercase tracking-widest text-xs">Does this solve rep turnover and burnout?</h4>
-          <p class="text-slate-400 text-sm leading-relaxed font-medium">Yes. Burnout is the result of "biological friction"—the mental tax of forcing willpower. By regulating the nervous system, we remove that friction, allowing reps to stay in a "flow state" longer.</p>
+          <p class="text-slate-400 text-sm leading-relaxed font-medium">Yes. Burnout is the result of "biological friction"—the mental tax of forcing willpower. By regulating the nervous system, we remove that friction. Reps stay in a "flow state" longer, which drastically reduces churn.</p>
         </div>
         <div class="glass p-8 rounded-3xl border-white/10">
           <h4 class="text-white font-black mb-3 uppercase tracking-widest text-xs">What is the ROI for the Sales Organization?</h4>
-          <p class="text-slate-400 text-sm leading-relaxed font-medium">By making high-volume activity automatic, you lower your CAC. When your current head-count produces 20-50% more activity, your ROI scales exponentially.</p>
+          <p class="text-slate-400 text-sm leading-relaxed font-medium">By making high-volume activity automatic, you lower your Customer Acquisition Cost (CAC). When your current head-count produces 20-50% more activity without adding payroll, your ROI scales exponentially.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-24 px-6 bg-slate-950">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold uppercase tracking-tight text-white">Unlock the <span class="text-accent">Elite Game</span></h2>
-        <p class="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed mt-4 font-medium">
-          When volume is no longer a struggle, your team has the mental bandwidth to master the craft.
-        </p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <div class="p-6 glass rounded-2xl border-white/5 text-center"><p class="text-[11px] font-black uppercase tracking-widest text-white/50">Discovery</p></div>
-        <div class="p-6 glass rounded-2xl border-white/5 text-center"><p class="text-[11px] font-black uppercase tracking-widest text-white/50">Rapport</p></div>
-        <div class="p-6 glass rounded-2xl border-white/5 text-center"><p class="text-[11px] font-black uppercase tracking-widest text-white/50">Objections</p></div>
-        <div class="p-6 glass rounded-2xl border-white/5 text-center"><p class="text-[11px] font-black uppercase tracking-widest text-white/50">Buy-In</p></div>
-        <div class="p-6 glass rounded-2xl border-accent/30 text-center col-span-2 md:col-span-1 bg-accent/5"><p class="text-[11px] font-black uppercase tracking-widest text-accent font-bold">Closing</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="system" class="py-24 px-6 border-y border-white/5 bg-slate-950/40">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold mb-4 uppercase tracking-tight text-white">The <span class="text-accent">80XPower15</span> System</h2>
-        <p class="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed font-medium">Biological predictability. Move from mentally defeated to elite challenger.</p>
-      </div>
-      <div class="grid lg:grid-cols-3 gap-8">
-        <div class="p-10 glass rounded-[2.5rem] border-white/5">
-          <h3 class="text-2xl font-black text-accent mb-4 uppercase">Avoidance to Challenger</h3>
-          <p class="text-slate-400 leading-relaxed font-medium">Flip the script from "I'm not feeling it" to an aggressive hunt using neurological triggers on demand.</p>
+  <section class="py-24 px-6 bg-accent/5">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-extrabold mb-10 text-white uppercase tracking-tighter text-center">Systematized Grit</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-8 glass rounded-3xl border-accent/10">
+          <h4 class="text-3xl font-black text-accent mb-2">20–50%</h4>
+          <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Immediate Volume Increase</p>
+          <p class="text-slate-400 text-sm leading-relaxed font-medium">Volume is the baseline. By removing the biological resistance to the "No," reps check volume off their list by 10 AM, allowing them to focus on high-level strategy.</p>
         </div>
-        <div class="p-10 glass rounded-[2.5rem] border-white/5">
-          <h3 class="text-2xl font-black text-accent mb-4 uppercase">Predictable Endurance</h3>
-          <p class="text-slate-400 leading-relaxed font-medium">Install a biological engine that ensures high-volume performance regardless of how a rep "feels."</p>
-        </div>
-        <div class="p-10 glass rounded-[2.5rem] border-white/5">
-          <h3 class="text-2xl font-black text-accent mb-4 uppercase">Self-Correction</h3>
-          <p class="text-slate-400 leading-relaxed font-medium">Identify slumps and use 80X resets to fix state in under 60 seconds. Mentally defeated to dominant.</p>
+        <div class="p-8 glass rounded-3xl border-accent/10">
+          <h4 class="text-3xl font-black text-accent mb-2">No Hype</h4>
+          <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Sustainable Performance</p>
+          <p class="text-slate-400 text-sm leading-relaxed font-medium">I integrated elite sports psychology principles into a system that works even when willpower is at zero. This is how you turn underperforming reps into self-coaching lions.</p>
         </div>
       </div>
     </div>
@@ -182,11 +152,11 @@
         <span class="text-accent">I Built It to Save My Life.</span>
       </h2>
       <div class="space-y-6 text-lg text-slate-300 leading-relaxed font-medium">
-        <p>In the past, I struggled. I worked at places like <strong>American Express</strong> and <strong>Constant Contact</strong>, but maintaining volume was a constant battle.</p>
+        <p>In the past, I struggled. I worked at places like <strong>American Express</strong> and <strong>Constant Contact</strong>, but maintaining volume was a constant battle. I was the guy who could sell, but couldn't keep the pace.</p>
         <p class="border-l-4 border-accent pl-6 italic bg-white/5 py-6 px-6 rounded-r-xl text-white font-medium">
-          "The week my marriage ended... I turned my camera off so I wouldn't cry. I was grieving the loss of my family, but I had a job to do."
+          "The week my marriage ended, I had to get back on the phones immediately... I turned my camera off so I wouldn't cry. I was grieving the loss of my family, but I had a job to do."
         </p>
-        <p>I realized traditional "sales hustle" fails when your body is in survival mode. I stopped trying to use 'willpower' and started integrating neuroscience to regulate my biology.</p>
+        <p>I realized traditional "sales hustle" fails when your body is in survival mode. I stopped trying to use 'willpower' and started integrating neuroscience to regulate my biology. I went from the absolute bottom of the report to the top of the leaderboard in days.</p>
         <p class="text-white font-bold text-2xl text-center bg-accent/10 py-6 rounded-xl border border-accent/20 uppercase tracking-tight">
           Volume is no longer a struggle. It’s a checked box.
         </p>
@@ -203,12 +173,12 @@
         <div>
           <p class="text-[11px] uppercase tracking-widest text-accent font-black mb-2">Executive & Practitioner</p>
           <h2 class="text-4xl md:text-5xl font-extrabold mb-6 uppercase tracking-tight text-white">Meet <span class="text-accent">Floyd Orr</span></h2>
-          <p class="text-slate-300 leading-relaxed mb-8 text-xl font-bold italic">Front-Line Sales Executive. Ex-Athlete. University Counselor.</p>
+          <p class="text-slate-300 leading-relaxed mb-8 text-xl font-bold">Front-Line Sales Executive. Ex-Athlete. University Counselor.</p>
           <div class="space-y-4 text-slate-400 leading-relaxed font-medium">
-            <p>I don't teach from a stage; I teach from the desk next to yours. I spent years fighting the volume grind before engineering a system that finally worked.</p>
+            <p>I don't teach from a stage; I teach from the desk next to yours. I spent years fighting the volume grind at top-tier companies before engineering a system that finally worked.</p>
             <p>Today, I use the 80XPower15 System to maintain elite performance with actual joy and zero burnout. I’m here to help your team do the same.</p>
           </div>
-          <a class="mt-8 bg-white text-midnight px-10 py-5 rounded-xl font-black hover:bg-accent transition uppercase tracking-widest text-xs inline-block" href="https://calendly.com/biohackingsales/30-minute-meeting">Book Performance Audit →</a>
+          <a class="mt-8 bg-white text-midnight px-10 py-5 rounded-xl font-black hover:bg-accent transition uppercase tracking-widest text-xs inline-block shadow-lg" href="https://calendly.com/biohackingsales/30-minute-meeting">Request Team Audit →</a>
         </div>
     </div>
   </section>
@@ -217,7 +187,7 @@
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <h3 class="text-4xl font-extrabold mb-4 uppercase tracking-tighter text-white">Get the <span class="text-accent">80XPower15</span> System.</h3>
-        <p class="text-slate-300 mb-8 leading-relaxed text-lg font-medium">Download the manuscript built for leaders who need their team to perform today.</p>
+        <p class="text-slate-300 mb-8 leading-relaxed text-lg font-medium">Download the manuscript built for leaders who need their team to perform at a high level starting today.</p>
       </div>
       <div class="glass rounded-[2.65rem] p-10 relative border border-white/5">
         <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
@@ -229,10 +199,10 @@
     <div class="max-w-3xl mx-auto">
       <h2 class="text-4xl font-extrabold mb-6 uppercase tracking-tight text-accent">Without Volume, You Are Doomed.</h2>
       <p class="text-xl text-slate-400 mb-10 leading-relaxed font-medium">
-        VP or CEO ready to see a 20%+ spike in revenue this month by systematizing biology?
+        If you are a VP or CEO ready to see a 20%+ spike in revenue this month by systematizing your team's biology, let's talk.
       </p>
       <a href="https://calendly.com/biohackingsales/30-minute-meeting" target="_blank" class="accent-gradient text-midnight font-black px-12 py-6 rounded-2xl shadow-2xl hover:scale-105 transition uppercase tracking-widest text-sm inline-block">
-        Book Performance Audit
+        Request a Team Audit
       </a>
     </div>
   </section>
