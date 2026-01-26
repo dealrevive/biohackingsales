@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHYCN9WWRX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LHYCN9WWRX');
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BiohackingSales | 80Xpower15 System</title>
+
+  <title>BiohackingSales | Sales Coaching & Sales Training to Fix Outbound Dial Volume</title>
+  <meta name="description" content="B2B sales coaching and sales training that stabilizes outbound dial volume. Fix hesitation, improve real-time sales coaching under pressure, strengthen closes, and reduce rep churn." />
 
   <script> var _ctct_m = "ecd81de60098820365573a3c28c34522"; </script>
   <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { midnight: '#020617', accent: '#ffd166' },
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], serif: ['"Playfair Display"', 'serif'] }
+          colors: {
+            midnight: '#020617',
+            accent: '#ffd166',
+            slate: { 850: '#1e293b', 950: '#010409' }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
         }
       }
     }
@@ -25,20 +42,30 @@
   <style>
     body { background-color: #010409; color: #f8fafc; scroll-behavior: smooth; }
     .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
+    .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
-    
-    /* RESTORED ANIMATED LOGO ICON */
-    .logo-icon {
-      width: 32px; height: 32px; background: #ffd166; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      animation: pulse-animation 2s infinite ease-in-out;
+
+    .dna-node { animation: dnaPulse 3s infinite ease-in-out; transform-origin: center; }
+    @keyframes dnaPulse {
+      0%, 100% { opacity: 0.45; transform: scale(0.92); }
+      50% { opacity: 1; transform: scale(1.10); }
     }
-    .logo-inner { width: 16px; height: 16px; background: #020617; transform: rotate(45deg); }
-    @keyframes pulse-animation {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 209, 102, 0.4); }
-      70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(255, 209, 102, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 209, 102, 0); }
+
+    .optin-glow {
+      box-shadow: 0 0 0 1px rgba(255, 209, 102, 0.25), 0 0 40px rgba(255, 209, 102, 0.18), 0 30px 70px rgba(0, 0, 0, 0.55);
     }
+    .optin-bg { background: linear-gradient(180deg, rgba(255, 209, 102, 0.10), rgba(255,255,255,0.02)); }
+
+    .book-img {
+      width: min(420px, 92vw);
+      height: auto;
+      filter: drop-shadow(0 25px 40px rgba(0,0,0,.75));
+      transform: rotate(2deg);
+      transition: transform 600ms ease;
+    }
+    .book-img:hover { transform: rotate(0deg) scale(1.01); }
+    .ctct-inline-form { min-height: 250px !important; }
   </style>
 </head>
 
@@ -46,48 +73,142 @@
 
   <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="logo-icon">
-          <div class="logo-inner"></div>
+      <div class="flex items-center gap-2">
+        <div class="relative w-9 h-9 flex items-center justify-center bg-slate-900 rounded-xl border border-white/10 overflow-hidden -mr-1">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7">
+            <path d="M8 4C8 4 11 7 11 12C11 17 8 20 8 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 0s;"/>
+            <path d="M16 4C16 4 13 7 13 12C13 17 16 20 16 20" stroke="#ffd166" stroke-width="2" stroke-linecap="round" class="dna-node" style="animation-delay: 1.5s;"/>
+            <circle cx="9.5" cy="7" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 0.2s;"/>
+            <circle cx="14.5" cy="12" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 0.7s;"/>
+            <circle cx="9.5" cy="17" r="1.5" fill="#ffd166" class="dna-node" style="animation-delay: 1.2s;"/>
+          </svg>
         </div>
         <span class="text-xl font-extrabold tracking-tight text-white uppercase">Biohacking<span class="text-accent">Sales</span></span>
       </div>
-      <a class="bg-white text-midnight px-6 py-2 rounded-full font-bold text-xs uppercase hover:bg-accent transition" href="https://calendly.com/biohackingsales/30-minute-meeting">Book Discovery</a>
+      <div class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-slate-400">
+        <a href="#problem" class="hover:text-accent transition">The Crisis</a>
+        <a href="#programs" class="hover:text-accent transition">Program</a>
+        <a href="#about" class="hover:text-accent transition">Founder</a>
+        <a href="#manuscript-form" class="text-accent font-extrabold" onclick="return scrollToManuscriptForm(event)">Get Manuscript</a>
+        <a class="bg-white text-midnight px-6 py-2 rounded-full hover:bg-accent transition transform hover:scale-105" href="https://calendly.com/biohackingsales/30-minute-meeting">Book Discovery</a>
+      </div>
     </div>
   </nav>
 
-  <header class="pt-44 pb-20 px-6">
+  <header class="pt-40 pb-20 px-6 relative overflow-hidden">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
       <div>
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-black tracking-widest uppercase mb-7">
+          <span>Sales Coaching + Sales Training</span>
+        </div>
         <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-7">
-          Increase Dial <br/>
-          <span class="italic font-serif text-accent">Volume 25-50%</span> <br/>
-          <span class="text-white">In 7 Days.</span>
+          End the <br/>
+          <span class="italic font-serif text-accent text-6xl md:text-8xl">Outbound Sales</span> <br/>
+          <span class="text-gradient">Inconsistency</span> Crisis.
         </h1>
-        <p class="text-xl text-slate-300 mb-9 max-w-lg">
-          The 80Xpower15 licensing agreement. A 45-60 minute video deployment + workbook for virtual sales teams. Immediate outbound lift.
+        <p class="text-xl text-slate-300/90 mb-9 max-w-xl">
+          Your reps don’t lack skill — they lose access to it under pressure. We train emotional control so dial volume stabilizes and output remains consistent.
         </p>
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href="#programs" class="accent-gradient text-midnight font-black px-10 py-5 rounded-xl uppercase tracking-wider text-sm shadow-xl hover:scale-105 transition">View Program Options</a>
+        </div>
       </div>
-      <div class="flex justify-center">
-         <img src="booknobackground.png" alt="Framework" class="max-w-sm drop-shadow-2xl" />
+      <div class="relative flex justify-center lg:justify-end">
+        <img src="booknobackground.png" alt="Framework" class="book-img" />
       </div>
     </div>
   </header>
 
-  <section id="manuscript-form" class="py-24 px-6 bg-slate-950 border-t border-white/5">
-    <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-3xl font-extrabold mb-8 uppercase tracking-wide">Access the System</h3>
-      
-      <div class="glass p-8 rounded-[2.5rem] border border-accent/20 min-h-[300px]">
-        <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
+  <section id="problem" class="py-24 border-y border-white/5 bg-slate-950/30">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-7">What CEOs + VPs Actually See</h2>
+      <p class="text-xl text-slate-400 leading-relaxed mb-10">
+        Inconsistent dialing and soft closing are symptoms of the brain's inhibition system. We bypass social anxiety and threat perception to keep reps on the phone.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="glass p-8 rounded-2xl">
+          <p class="text-white font-extrabold mb-2">Dial Inconsistency</p>
+          <p class="text-slate-400 text-sm">Hesitation between dials turns into pipeline gaps.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl">
+          <p class="text-white font-extrabold mb-2">Objection Collapse</p>
+          <p class="text-slate-400 text-sm">Reps choose safe language over direct questions.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl">
+          <p class="text-white font-extrabold mb-2">Stalled Closes</p>
+          <p class="text-slate-400 text-sm">Prospects delay with "I'll think it over."</p>
+        </div>
       </div>
-      </div>
+    </div>
   </section>
 
-  <footer class="py-12 text-center text-slate-600 text-[10px] uppercase font-bold tracking-widest border-t border-white/5">
-    © 2026 BiohackingSales
+  <section id="about" class="py-24 px-6 border-b border-white/5">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_2.5fr] gap-16 items-center">
+        <div class="glass aspect-[4/5] rounded-[2.5rem] bg-slate-800 flex items-center justify-center overflow-hidden border border-white/10 relative">
+            <img src="floyd.jpg" alt="Floyd Orr" class="w-full h-full object-cover opacity-80" />
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight to-transparent"></div>
+        </div>
+        <div>
+          <p class="text-[11px] uppercase tracking-widest text-accent font-black mb-2">Founder</p>
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Meet <span class="text-accent italic font-serif">Floyd Orr</span></h2>
+          <p class="text-xl text-slate-300 leading-relaxed mb-6">
+            Architect of the 80Xpower15 System. Floyd specializes in the practical neuroscience of high-volume virtual sales.
+          </p>
+          <p class="text-slate-400 mb-8 leading-relaxed max-w-2xl">
+            He works with VPs of Sales and CEOs to remove the biological "friction" that causes dial-hesitation. His model is built for front-line operators to spike outbound volume by 25-50% within one week.
+          </p>
+          <a class="text-white border-b border-accent pb-1 font-bold hover:text-accent transition" href="https://calendly.com/biohackingsales/30-minute-meeting">Book a Fit Call with Floyd →</a>
+        </div>
+    </div>
+  </section>
+
+  <section id="programs" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-extrabold mb-12 uppercase">Workshop Options</h2>
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
+          <h3 class="text-xl font-black mb-3 uppercase">5-Hour Workshop</h3>
+          <p class="text-slate-300 text-sm">A single install that restores outbound execution under pressure.</p>
+        </div>
+        <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
+          <h3 class="text-xl font-black mb-3 uppercase">Closer Coaching</h3>
+          <p class="text-slate-300 text-sm">Tighten discovery and holding power so prospects don't slip off.</p>
+        </div>
+        <div class="p-8 rounded-3xl bg-slate-900/50 border border-white/5">
+          <h3 class="text-xl font-black mb-3 uppercase">Leader Coaching</h3>
+          <p class="text-slate-300 text-sm">Teach managers to coach for emotional state so the install sticks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="manuscript-form" class="py-24 px-6 bg-slate-950/30 border-t border-white/5">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-extrabold mb-4 uppercase">Get the Manuscript</h2>
+      <p class="text-slate-400 mb-12">The full framework behind the Outbound Inconsistency Crisis.</p>
+      
+      <div class="relative rounded-[2.75rem] border border-accent/25 optin-glow optin-bg p-[1px]">
+        <div class="glass rounded-[2.65rem] p-10 relative">
+          <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-16 border-t border-white/5 text-center">
+    <p class="text-slate-600 text-sm">© <span id="year"></span> BiohackingSales</p>
   </footer>
 
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+    function scrollToManuscriptForm(e) {
+      if (e) e.preventDefault();
+      const el = document.getElementById('manuscript-form');
+      const y = el.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      return false;
+    }
+  </script>
 </body>
 </html>
