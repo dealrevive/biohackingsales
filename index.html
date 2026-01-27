@@ -14,37 +14,30 @@
         .bg-accent { background-color: var(--accent); }
         .hero-gradient { background: radial-gradient(circle at center, rgba(255,62,0,0.1) 0%, transparent 70%); }
         
-        /* CLASSICAL DNA HELIX ANIMATION */
-        .dna-helix {
+        /* SPIRAL DNA HELIX LOGO */
+        .dna-spiral {
             position: relative;
-            width: 30px;
-            height: 40px;
+            width: 24px;
+            height: 24px;
+            perspective: 1000px;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
         }
-        .strand {
-            width: 4px;
-            height: 100%;
-            background: var(--accent);
-            border-radius: 10px;
-            position: relative;
-        }
-        .strand-1 { animation: helix-move 2s ease-in-out infinite; }
-        .strand-2 { animation: helix-move 2s ease-in-out infinite reverse; background: #ff7b00; }
-        
-        @keyframes helix-move {
-            0%, 100% { transform: translateY(0) scaleX(1); }
-            50% { transform: translateY(5px) scaleX(1.5); }
-        }
-
-        .rung {
+        .helix-dot {
             position: absolute;
-            width: 30px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.2);
-            top: 50%;
-            left: 0;
-            z-index: -1;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: spiral 2s infinite ease-in-out;
+        }
+        .dot-2 { animation-delay: -1s; background: #ff7b00; }
+
+        @keyframes spiral {
+            0% { transform: rotateY(0deg) translateZ(12px) scale(1); opacity: 1; }
+            50% { transform: rotateY(180deg) translateZ(-12px) scale(0.6); opacity: 0.5; }
+            100% { transform: rotateY(360deg) translateZ(12px) scale(1); opacity: 1; }
         }
 
         /* SPINNING BOOK ANIMATION */
@@ -66,10 +59,9 @@
     <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <div class="dna-helix">
-                    <div class="strand strand-1"></div>
-                    <div class="rung"></div>
-                    <div class="strand strand-2"></div>
+                <div class="dna-spiral">
+                    <div class="helix-dot dot-1"></div>
+                    <div class="helix-dot dot-2"></div>
                 </div>
                 <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span></span>
             </div>
@@ -122,7 +114,7 @@
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="text-4xl font-black uppercase mb-8 leading-tight">The Science of <br/><span class="text-accent">State Access</span></h2>
-                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed font-medium">
                     Inconsistency is the activation of the <strong>Behavioral Inhibition System (BIS)</strong>. When your team's biological brake is on, they lose their edge. We install <strong>BAS dominance</strong> for high-velocity outbound.
                 </p>
                 <div class="space-y-6">
@@ -136,17 +128,6 @@
                     <li class="p-4 rounded-xl bg-red-500/5 border border-red-500/10"><span class="text-red-500 font-bold uppercase text-[10px]">BIS (Stop System)</span><p class="text-slate-400 text-sm mt-1">Apologetic tone, heavy phones, and rapid burnout.</p></li>
                     <li class="p-4 rounded-xl bg-green-500/5 border border-green-500/10"><span class="text-green-500 font-bold uppercase text-[10px]">BAS (Go System)</span><p class="text-slate-400 text-sm mt-1">Assertive tonality, effortless dialing, and zero-latency execution.</p></li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="poll" class="py-32 px-6 border-y border-white/5 bg-white/[0.02]">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 tracking-tighter">Which state is your team stuck in?</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-left">
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block"><span class="text-green-500 font-black text-xs uppercase mb-4 block">The Winner</span><p class="text-sm text-slate-400 leading-relaxed font-medium">BAS Dominant. Ready to scale.</p></a>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block border-yellow-500/20"><span class="text-yellow-500 font-black text-xs uppercase mb-4 block">The Fighter</span><p class="text-sm text-slate-400 leading-relaxed font-medium">Willpower-heavy. High burnout risk.</p></a>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block border-red-500/20"><span class="text-red-500 font-black text-xs uppercase mb-4 block">The Defeated</span><p class="text-sm text-slate-400 leading-relaxed font-medium">BIS Dominant. Emergency reset needed.</p></a>
             </div>
         </div>
     </section>
