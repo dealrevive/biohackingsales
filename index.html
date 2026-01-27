@@ -7,50 +7,48 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --midnight: #0a0e14; --accent: #ff3e00; }
+        :root { --midnight: #0a0e14; --accent: #ff5f15; } /* Updated to Safety Orange */
         body { background-color: var(--midnight); color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .text-accent { color: var(--accent); }
         .bg-accent { background-color: var(--accent); }
-        .hero-gradient { background: radial-gradient(circle at center, rgba(255,62,0,0.1) 0%, transparent 70%); }
+        .hero-gradient { background: radial-gradient(circle at center, rgba(255,95,21,0.1) 0%, transparent 70%); }
         
-        /* FULL 3D SPIRAL DNA HELIX */
+        /* UPDATED CAPSULE DNA HELIX */
         .dna-container {
             position: relative;
-            width: 20px;
-            height: 40px;
-            perspective: 500px;
+            width: 30px;
+            height: 45px;
+            perspective: 1000px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        .helix-dot {
-            width: 5px;
-            height: 5px;
+        .helix-bar {
+            width: 18px;
+            height: 5px; /* Makes it a capsule/bar like the hat */
             background: var(--accent);
-            border-radius: 50%;
+            border-radius: 10px;
             position: absolute;
             left: 50%;
             transform-origin: center;
         }
 
-        /* 12-Dot Spiral Logic */
-        @keyframes dna-rotate {
-            0% { transform: translateX(-12px) translateZ(-10px) scale(0.7); opacity: 0.4; }
-            50% { transform: translateX(12px) translateZ(10px) scale(1.1); opacity: 1; }
-            100% { transform: translateX(-12px) translateZ(-10px) scale(0.7); opacity: 0.4; }
+        @keyframes capsule-rotate {
+            0% { transform: translateX(-50%) rotateY(0deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
+            50% { transform: translateX(-50%) rotateY(180deg) translateZ(15px); opacity: 1; scale: 1.1; }
+            100% { transform: translateX(-50%) rotateY(360deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
         }
 
-        .dot:nth-child(odd) { animation: dna-rotate 2s infinite ease-in-out; background: var(--accent); }
-        .dot:nth-child(even) { animation: dna-rotate 2s infinite ease-in-out reverse; background: #ff7b00; }
+        .bar { animation: capsule-rotate 3s infinite ease-in-out; }
         
-        /* Stagger dots to create the twist */
-        .dot:nth-child(1), .dot:nth-child(2) { top: 0%; animation-delay: 0s; }
-        .dot:nth-child(3), .dot:nth-child(4) { top: 20%; animation-delay: -0.2s; }
-        .dot:nth-child(5), .dot:nth-child(6) { top: 40%; animation-delay: -0.4s; }
-        .dot:nth-child(7), .dot:nth-child(8) { top: 60%; animation-delay: -0.6s; }
-        .dot:nth-child(9), .dot:nth-child(10) { top: 80%; animation-delay: -0.8s; }
-        .dot:nth-child(11), .dot:nth-child(12) { top: 100%; animation-delay: -1.0s; }
+        /* Stagger bars to create the 80XPower15 Twist */
+        .bar:nth-child(1) { top: 0%; animation-delay: 0s; }
+        .bar:nth-child(2) { top: 20%; animation-delay: -0.4s; }
+        .bar:nth-child(3) { top: 40%; animation-delay: -0.8s; }
+        .bar:nth-child(4) { top: 60%; animation-delay: -1.2s; }
+        .bar:nth-child(5) { top: 80%; animation-delay: -1.6s; }
+        .bar:nth-child(6) { top: 100%; animation-delay: -2.0s; }
 
         /* SPINNING BOOK ANIMATION */
         @keyframes slowRotate {
@@ -60,7 +58,7 @@
         }
         .animate-spin-slow {
             animation: slowRotate 8s ease-in-out infinite;
-            filter: drop-shadow(0 25px 50px rgba(255, 62, 0, 0.3));
+            filter: drop-shadow(0 25px 50px rgba(255, 95, 21, 0.3));
         }
 
         .poll-card:hover { border-color: var(--accent); transform: translateY(-5px); transition: all 0.3s ease; }
@@ -72,14 +70,14 @@
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-6">
                 <div class="dna-container">
-                    <div class="helix-dot dot"></div><div class="helix-dot dot"></div>
-                    <div class="helix-dot dot"></div><div class="helix-dot dot"></div>
-                    <div class="helix-dot dot"></div><div class="helix-dot dot"></div>
-                    <div class="helix-dot dot"></div><div class="helix-dot dot"></div>
-                    <div class="helix-dot dot"></div><div class="helix-dot dot"></div>
-                    <div class="helix-dot dot"></div><div class="helix-dot dot"></div>
+                    <div class="helix-bar bar"></div>
+                    <div class="helix-bar bar"></div>
+                    <div class="helix-bar bar"></div>
+                    <div class="helix-bar bar"></div>
+                    <div class="helix-bar bar"></div>
+                    <div class="helix-bar bar"></div>
                 </div>
-                <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span></span>
+                <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span><span class="text-[10px] ml-0.5 opacity-70">.com</span></span>
             </div>
             <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#system" class="hover:text-accent transition">The Science</a>
@@ -101,7 +99,7 @@
                     Stop paying the <strong>$100,000 Hesitation Tax</strong>. We use applied neuroscience to regulate the biology of execution and stabilize your team's output floor.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,62,0,0.4)]">
+                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,95,21,0.4)]">
                         Book Performance Audit
                     </a>
                     <a href="#book" class="glass text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-white/10 transition-all text-center">
@@ -158,7 +156,7 @@
                     <p>I realized that <strong>Inconsistency is a biological problem</strong>. My 80XPower15 framework doesn't just teach scripts; it installs State Access.</p>
                     <p>I am a high-level practitioner proving these protocols daily to maintain #1 productivity rankings in a Fortune 500 tech leader.</p>
                 </div>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-10 bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,62,0,0.3)]">
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-10 bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,95,21,0.3)]">
                     Book Performance Audit
                 </a>
             </div>
