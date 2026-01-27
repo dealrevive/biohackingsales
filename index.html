@@ -3,81 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Outbound Inconsistency Crisis | Floyd Orr</title>
+    <title>The Outbound Sales Inconsistency Crisis | Floyd Orr</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --midnight: #0a0e14;
-            --accent: #ff3e00; /* Aggressive orange-red for 'The Lion' */
-        }
-        body { background-color: var(--midnight); color: #fff; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        :root { --midnight: #0a0e14; --accent: #ff3e00; }
+        body { background-color: var(--midnight); color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .text-accent { color: var(--accent); }
         .bg-accent { background-color: var(--accent); }
-        .border-accent { border-color: var(--accent); }
+        .hero-gradient { background: radial-gradient(circle at center, rgba(255,62,0,0.1) 0%, transparent 70%); }
+        .poll-card:hover { border-color: var(--accent); transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-midnight"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px]"></div>
+    <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span></span>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#system" class="hover:text-accent transition">The Science</a>
+                <a href="#poll" class="hover:text-accent transition">Team Audit</a>
+                <a href="#founder" class="hover:text-accent transition">Floyd Orr</a>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="text-accent border border-accent/30 px-6 py-2 rounded-full hover:bg-accent hover:text-white transition">Book Audit</a>
+            </div>
         </div>
+    </nav>
 
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5 pt-20">
+        <div class="absolute inset-0 z-0 hero-gradient"></div>
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <p class="text-accent font-black uppercase tracking-[0.3em] text-xs mb-6 animate-pulse">For CROs & VPs of Sales</p>
+            <p class="text-accent font-black uppercase tracking-[0.3em] text-xs mb-6">Strategic Outbound Performance</p>
             <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
-                End the <br/><span class="text-accent">Inconsistency</span> Crisis.
+                End the <span class="text-accent">Outbound</span> <br/>Inconsistency Crisis.
             </h1>
-            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-                Traditional training fails because it coaches the <strong>mind</strong> while ignoring the <strong>biology</strong> that controls it. Stop paying the "Hesitation Tax" and start regulating for performance.
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
+                Traditional outbound training fails because it coaches the <strong>mind</strong> while ignoring the <strong>biology</strong> that controls it. Stop paying the "Hesitation Tax" and scale your team's biological capacity.
             </p>
             <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <a href="#book" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,62,0,0.3)]">
-                    Get the Book Summary
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,62,0,0.3)]">
+                    Book 30-Min Performance Audit
                 </a>
-                <a href="#system" class="border border-white/20 hover:bg-white/5 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest transition-all">
-                    The Science
+                <a href="#book" class="glass text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-white/10 transition-all">
+                    Get Manuscript Summary
                 </a>
             </div>
         </div>
     </header>
+
+    <section class="py-12 border-b border-white/5 bg-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black mb-8">Battle-Tested At</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-30 grayscale font-bold text-xl uppercase tracking-tighter">
+                <span>Fortune 500 Leaders</span>
+                <span>American Express</span>
+                <span>Constant Contact</span>
+                <span>Siemplify</span>
+            </div>
+        </div>
+    </section>
 
     <section id="system" class="py-32 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-4xl font-black uppercase mb-8 leading-tight">
-                        Your Team is Paying a <br/>
-                        <span class="text-accent">$100,000 Hesitation Tax</span>
+                        The <span class="text-accent">$100,000 Outbound</span> Hesitation Tax
                     </h2>
-                    <p class="text-slate-400 text-lg mb-8">
-                        Hesitation isn't fear; it's the activation of the <strong>Behavioral Inhibition System (BIS)</strong>—the internal brake pedal that slams down when a situation feels high-risk[cite: 788, 803]. 
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Hesitation isn't a lack of motivation; it's the activation of the <strong>Behavioral Inhibition System (BIS)</strong>. When an outbound rep's BIS is triggered, their tone softens, their timing collapses, and they unconsciously avoid high-value conflict. This "biological brake" is costing you thousands in missed opportunities.
                     </p>
+                    
                     <div class="space-y-6">
                         <div class="flex gap-4">
-                            <i class="fas fa-microscope text-accent mt-1"></i>
-                            <p class="text-slate-300"><strong>The Biological Brake:</strong> BIS overrides training in microseconds, causing tone to soften and timing to collapse[cite: 790, 811].</p>
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-microscope text-accent"></i>
+                            </div>
+                            <p class="text-slate-300"><strong>The Biological Brake:</strong> BIS overrides outbound scripts in microseconds. You are losing revenue on calls that are being made but not <em>executed</em>.</p>
                         </div>
                         <div class="flex gap-4">
-                            <i class="fas fa-chart-line text-accent mt-1"></i>
-                            <p class="text-slate-300"><strong>Invisible Revenue Leak:</strong> When a rep loses just one opportunity a day to hesitation, it costs you up to $100k per year, per rep[cite: 779].</p>
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-bolt text-accent"></i>
+                            </div>
+                            <p class="text-slate-300"><strong>The Eustress Advantage:</strong> My system doesn't remove pressure; it applies <strong>Eustress</strong>—positive alertness that keeps reps in the "Go" state (BAS) for high-velocity dialing.</p>
                         </div>
                     </div>
                 </div>
-                <div class="glass p-12 rounded-[3rem] border-white/10 relative">
-                    <div class="absolute -top-6 -right-6 bg-accent text-white px-6 py-2 rounded-full font-bold text-sm uppercase">State-Dependent Performance</div>
-                    <h3 class="text-2xl font-black mb-6 uppercase">BIS vs. BAS Dominance</h3>
-                    <ul class="space-y-4 text-slate-400">
-                        <li class="flex items-center gap-3">
-                            <span class="w-2 h-2 bg-red-500 rounded-full"></span>
-                            <span><strong>BIS (Stop):</strong> Overthinking, apologizing, and avoiding conflict[cite: 797].</span>
+                <div class="glass p-12 rounded-[3.5rem] border-white/10 relative overflow-hidden">
+                    <h3 class="text-2xl font-black mb-8 uppercase tracking-tight">Outbound State Dynamics</h3>
+                    <ul class="space-y-6">
+                        <li class="p-6 rounded-2xl bg-red-500/5 border border-red-500/20">
+                            <span class="text-red-500 font-black uppercase text-xs block mb-2">BIS (Stop System)</span>
+                            <span class="text-slate-300 text-sm italic">"The phone feels heavy today."</span>
+                            <p class="text-slate-400 text-sm mt-2">Over-analysis, "polite" tone to avoid friction, and rapid adrenal burnout.</p>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
-                            <span><strong>BAS (Go):</strong> Effortless dialing, grounded tonality, and "Winner Aura"[cite: 793, 840].</span>
+                        <li class="p-6 rounded-2xl bg-green-500/5 border border-green-500/20">
+                            <span class="text-green-500 font-black uppercase text-xs block mb-2">BAS (Go System)</span>
+                            <span class="text-slate-300 text-sm italic">"I'm in the flow."</span>
+                            <p class="text-slate-400 text-sm mt-2">Grounded tonality, zero-latency dialing, and natural, confident assertiveness.</p>
                         </li>
                     </ul>
                 </div>
@@ -85,69 +108,77 @@
         </div>
     </section>
 
-    <section class="py-32 bg-slate-900/30 px-6 border-y border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-black uppercase tracking-tight">From the Manuscript: <br/><span class="text-accent">The 80XPower15 Protocol</span></h2>
-            </div>
-            
-            <div class="space-y-12">
-                <div class="border-l-4 border-accent pl-8 py-2">
-                    <p class="text-xl text-slate-300 italic mb-4">
-                        "Most reps don't lack 'work ethic'; they lack 'biological momentum.' The average rep loses 40% of their day in the micro-seconds of indecision. The 80XPower15 system creates a zero-latency environment where the body moves before the mind can hesitate."
-                    </p>
-                    <span class="text-accent font-bold uppercase text-xs tracking-widest">— Chapter 17: The Afternoon Crash</span>
-                </div>
-
-                <div class="border-l-4 border-accent pl-8 py-2">
-                    <p class="text-xl text-slate-300 italic mb-4">
-                        "We don't apply pressure; we trigger <strong>Eustress</strong>—the positive biological state of alertness. By stacking 15-minute high-intensity bursts with neuro-regulation resets, we prevent the 'Adrenal Slump' that kills afternoon revenue."
-                    </p>
-                    <span class="text-accent font-bold uppercase text-xs tracking-widest">— Chapter 14: What a Regulated System Looks Like</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <div class="aspect-square bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
-                    <div class="absolute inset-0 flex items-center justify-center text-slate-600 font-black text-2xl uppercase">Floyd Orr</div>
-                </div>
-            </div>
-            <div class="order-1 md:order-2">
-                <p class="text-accent font-black uppercase text-xs mb-2">The Founder's Story</p>
-                <h2 class="text-4xl font-black uppercase mb-6">Born in the <span class="text-accent">Trenches</span></h2>
-                <p class="text-slate-400 leading-relaxed mb-6">
-                    I wasn't born consistent. I was the rep managers were confused by: talented but unpredictable[cite: 565]. I built this system because I lived inside the "Inconsistency Crisis"—dominating one month and disappearing the next due to <strong>nervous system overload</strong>[cite: 572, 632].
-                </p>
-                <p class="text-slate-400 leading-relaxed">
-                    I stopped trying to fix mindset and started focusing on the source of performance: <strong>Biological Regulation</strong>[cite: 314]. Today, I help teams shift from "Freeze-or-Forward" to consistent BAS dominance[cite: 786, 810].
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="book" class="py-32 px-6 bg-accent">
+    <section id="poll" class="py-32 px-6 border-y border-white/5 bg-white/[0.02]">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl font-black uppercase text-white mb-8">Stop Managing Fatigue. <br/>Start Scaling Capacity.</h2>
-            <p class="text-white/80 text-xl mb-12 font-medium">
-                Enter your email to receive a 15-page summary of the book and the <strong>80XPower15 Execution Audit.</strong>
-            </p>
-            <form class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
-                <input type="email" placeholder="Work Email Address" class="flex-1 px-8 py-5 rounded-full bg-white text-midnight font-bold outline-none">
-                <button class="bg-midnight text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all">
-                    Get Access
-                </button>
-            </form>
-            <p class="text-white/60 text-xs mt-6 uppercase tracking-widest">Join 500+ CROs optimizing their biological floor.</p>
+            <p class="text-accent font-black uppercase text-xs mb-4">Quick Diagnostic</p>
+            <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 tracking-tighter">Which State is your <br/>team stuck in?</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <a href="#book" class="glass p-8 rounded-3xl poll-card block">
+                    <span class="text-green-500 font-black text-xs uppercase mb-4 block">The Winner</span>
+                    <p class="text-sm text-slate-400 leading-relaxed font-medium">Effortless volume, grounded tonality, and high-velocity truth-seeking. BAS is dominant.</p>
+                </a>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block">
+                    <span class="text-yellow-500 font-black text-xs uppercase mb-4 block">The Fighter</span>
+                    <p class="text-sm text-slate-400 leading-relaxed font-medium">Hitting goals through raw willpower and adrenaline. High burnout risk. Adrenal fatigue is imminent.</p>
+                </a>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block">
+                    <span class="text-red-500 font-black text-xs uppercase mb-4 block">The Defeated</span>
+                    <p class="text-sm text-slate-400 leading-relaxed font-medium">Low output, "heavy" phones, and apologetic tone. BIS has taken full control of the floor.</p>
+                </a>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-600 text-xs font-bold uppercase tracking-widest border-t border-white/5">
-        &copy; 2026 Floyd Orr | Biohacking Sales | All Rights Reserved.
+    <section id="founder" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-accent/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition duration-500"></div>
+                <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+                    <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                </div>
+            </div>
+            <div>
+                <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Pioneer</p>
+                <h2 class="text-5xl font-black uppercase mb-8 tracking-tighter">Meet <span class="text-accent">Floyd Orr</span></h2>
+                <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+                    <p>
+                        I build outbound engines for high-growth sales organizations. I realized that <strong>Inconsistency is a biological problem, not a skill problem.</strong>
+                    </p>
+                    <p>
+                        The 80XPower15 framework doesn't just teach scripts; it installs <strong>State Access</strong>. By regulating a rep's biology, we ensure their tone remains grounded, preventing them from triggering the prospect’s "limbic alarms."
+                    </p>
+                </div>
+                <div class="mt-10 p-6 glass rounded-2xl border-accent/20">
+                    <p class="text-white italic font-medium">"I am currently inside a Fortune 500 tech leader, battle-testing these protocols daily to maintain #1 productivity rankings."</p>
+                </div>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-8 text-accent font-black uppercase text-sm tracking-widest border-b border-accent pb-1">Book a Discovery Call &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="py-32 px-6 bg-midnight relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="glass p-12 md:p-20 rounded-[4rem] border-accent/30 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-accent"></div>
+                <h2 class="text-4xl md:text-6xl font-black uppercase text-white mb-8 tracking-tighter leading-none">Scale Your <br/><span class="text-accent">Outbound Capacity.</span></h2>
+                <p class="text-slate-400 text-xl mb-12 max-w-2xl mx-auto">
+                    Download the <strong>Outbound Inconsistency Manuscript</strong> or book a performance audit to identify the biological triggers killing your revenue.
+                </p>
+                
+                <div class="max-w-md mx-auto mb-10 min-h-[300px]">
+                    <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
+                </div>
+
+                <p class="text-white/40 text-[10px] font-bold uppercase tracking-widest">Join 500+ leaders optimizing their biological floor.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 text-center text-slate-600 text-[10px] font-black uppercase tracking-[0.4em]">
+        &copy; 2026 BiohackingSales LLC | The 80XPower15 System | All Rights Reserved.
     </footer>
 
+    <script> var _ctct_m = "ecd81de60098820365573a3c28c34522"; </script>
+    <script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
 </body>
 </html>
