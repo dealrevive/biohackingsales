@@ -14,35 +14,48 @@
         .bg-accent { background-color: var(--accent); }
         .hero-gradient { background: radial-gradient(circle at center, rgba(255,62,0,0.1) 0%, transparent 70%); }
         
-        /* THE INTERLOCKING DNA/DA LOGO ICON */
-        .logo-container { display: flex; align-items: center; gap: 12px; }
-        .da-icon {
+        /* CLASSICAL DNA HELIX ANIMATION */
+        .dna-helix {
             position: relative;
-            width: 32px;
-            height: 20px;
+            width: 30px;
+            height: 40px;
             display: flex;
-            align-items: center;
+            justify-content: space-between;
         }
-        .da-icon::before, .da-icon::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 3px solid var(--accent);
-            border-radius: 50%;
+        .strand {
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            border-radius: 10px;
+            position: relative;
         }
-        .da-icon::before { left: 0; }
-        .da-icon::after { right: 0; border-color: #ff7b00; opacity: 0.8; }
+        .strand-1 { animation: helix-move 2s ease-in-out infinite; }
+        .strand-2 { animation: helix-move 2s ease-in-out infinite reverse; background: #ff7b00; }
+        
+        @keyframes helix-move {
+            0%, 100% { transform: translateY(0) scaleX(1); }
+            50% { transform: translateY(5px) scaleX(1.5); }
+        }
 
-        /* SPINNING ANIMATION */
+        .rung {
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            top: 50%;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* SPINNING BOOK ANIMATION */
         @keyframes slowRotate {
             0% { transform: rotate(0deg) translateY(0px); }
-            50% { transform: rotate(3deg) translateY(-10px); }
+            50% { transform: rotate(3deg) translateY(-15px); }
             100% { transform: rotate(0deg) translateY(0px); }
         }
         .animate-spin-slow {
             animation: slowRotate 8s ease-in-out infinite;
-            filter: drop-shadow(0 25px 50px rgba(255, 62, 0, 0.2));
+            filter: drop-shadow(0 25px 50px rgba(255, 62, 0, 0.3));
         }
 
         .poll-card:hover { border-color: var(--accent); transform: translateY(-5px); transition: all 0.3s ease; }
@@ -52,14 +65,17 @@
 
     <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="logo-container">
-                <div class="da-icon"></div>
+            <div class="flex items-center gap-4">
+                <div class="dna-helix">
+                    <div class="strand strand-1"></div>
+                    <div class="rung"></div>
+                    <div class="strand strand-2"></div>
+                </div>
                 <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span></span>
             </div>
             <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#system" class="hover:text-accent transition">The Science</a>
                 <a href="#poll" class="hover:text-accent transition">Team Audit</a>
-                <a href="#founder" class="hover:text-accent transition">Floyd Orr</a>
                 <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-6 py-2 rounded-full hover:scale-105 transition">Book Audit</a>
             </div>
         </div>
@@ -77,7 +93,7 @@
                     Stop paying the <strong>$100,000 Hesitation Tax</strong>. We use applied neuroscience to regulate the biology of execution and stabilize your team's output floor.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,62,0,0.3)]">
+                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,62,0,0.4)]">
                         Book Performance Audit
                     </a>
                     <a href="#book" class="glass text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-white/10 transition-all text-center">
@@ -92,92 +108,52 @@
     </header>
 
     <section class="py-12 border-b border-white/5 bg-white/[0.02]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <p class="text-2xl font-black text-white">80-120</p>
-                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Dials Per Day</p>
-                </div>
-                <div>
-                    <p class="text-2xl font-black text-white">-30%</p>
-                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Rep Turnover</p>
-                </div>
-                <div>
-                    <p class="text-2xl font-black text-white">+25%</p>
-                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Pipeline Velocity</p>
-                </div>
-                <div>
-                    <p class="text-2xl font-black text-white">Zero</p>
-                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Hesitation Tax</p>
-                </div>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div><p class="text-2xl font-black text-white">80-120</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Dials Per Day</p></div>
+                <div><p class="text-2xl font-black text-white">-30%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Rep Turnover</p></div>
+                <div><p class="text-2xl font-black text-white">+25%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Pipeline Velocity</p></div>
+                <div><p class="text-2xl font-black text-white">Zero</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Hesitation Tax</p></div>
             </div>
         </div>
     </section>
 
     <section id="system" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-black uppercase mb-8 leading-tight">
-                        The Science of <br/><span class="text-accent">State Access</span>
-                    </h2>
-                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                        Inconsistency is the activation of the <strong>Behavioral Inhibition System (BIS)</strong>. When your team's biological brake is on, they lose their edge. My 80XPower15 framework installs <strong>BAS dominance</strong> for high-velocity outbound.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <i class="fas fa-brain text-accent mt-1"></i>
-                            <p class="text-slate-300"><strong>Neuro-Regulation:</strong> We manage allostatic load to prevent the 2:00 PM output crash, keeping reps assertive for the full shift.</p>
-                        </div>
-                        <div class="flex gap-4">
-                            <i class="fas fa-bolt text-accent mt-1"></i>
-                            <p class="text-slate-300"><strong>Eustress Activation:</strong> We trigger positive alertness to maintain grounded tonality and confident execution on every dial.</p>
-                        </div>
-                    </div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-black uppercase mb-8 leading-tight">The Science of <br/><span class="text-accent">State Access</span></h2>
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    Inconsistency is the activation of the <strong>Behavioral Inhibition System (BIS)</strong>. When your team's biological brake is on, they lose their edge. We install <strong>BAS dominance</strong> for high-velocity outbound.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex gap-4"><i class="fas fa-brain text-accent mt-1"></i><p class="text-slate-300"><strong>Neuro-Regulation:</strong> Manage allostatic load to prevent the 2:00 PM output crash.</p></div>
+                    <div class="flex gap-4"><i class="fas fa-bolt text-accent mt-1"></i><p class="text-slate-300"><strong>Eustress Activation:</strong> Maintain grounded tonality and confident execution on every dial.</p></div>
                 </div>
-                <div class="glass p-12 rounded-[3.5rem] border-white/10">
-                    <h3 class="text-xl font-black mb-6 uppercase tracking-widest">Outbound State Dynamics</h3>
-                    <ul class="space-y-6">
-                        <li class="p-4 rounded-xl bg-red-500/5 border border-red-500/10">
-                            <span class="text-red-500 font-bold uppercase text-[10px]">BIS (Stop System)</span>
-                            <p class="text-slate-400 text-sm mt-1">Apologetic tone, heavy phones, and rapid burnout.</p>
-                        </li>
-                        <li class="p-4 rounded-xl bg-green-500/5 border border-green-500/10">
-                            <span class="text-green-500 font-bold uppercase text-[10px]">BAS (Go System)</span>
-                            <p class="text-slate-400 text-sm mt-1">Assertive tonality, effortless dialing, and zero-latency execution.</p>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+            <div class="glass p-12 rounded-[3.5rem] border-white/10">
+                <h3 class="text-xl font-black mb-6 uppercase tracking-widest">Outbound State Dynamics</h3>
+                <ul class="space-y-6">
+                    <li class="p-4 rounded-xl bg-red-500/5 border border-red-500/10"><span class="text-red-500 font-bold uppercase text-[10px]">BIS (Stop System)</span><p class="text-slate-400 text-sm mt-1">Apologetic tone, heavy phones, and rapid burnout.</p></li>
+                    <li class="p-4 rounded-xl bg-green-500/5 border border-green-500/10"><span class="text-green-500 font-bold uppercase text-[10px]">BAS (Go System)</span><p class="text-slate-400 text-sm mt-1">Assertive tonality, effortless dialing, and zero-latency execution.</p></li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="poll" class="py-32 px-6 border-y border-white/5 bg-white/[0.02]">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 tracking-tighter">Which state is your <br/>team stuck in?</h2>
+            <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 tracking-tighter">Which state is your team stuck in?</h2>
             <div class="grid md:grid-cols-3 gap-6 text-left">
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block">
-                    <span class="text-green-500 font-black text-xs uppercase mb-4 block">The Winner</span>
-                    <p class="text-sm text-slate-400 leading-relaxed font-medium">BAS Dominant. High-velocity execution. Ready to scale.</p>
-                </a>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block border-yellow-500/20">
-                    <span class="text-yellow-500 font-black text-xs uppercase mb-4 block">The Fighter</span>
-                    <p class="text-sm text-slate-400 leading-relaxed font-medium">Willpower-heavy. Scrapping for goals. High burnout risk.</p>
-                </a>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block border-red-500/20">
-                    <span class="text-red-500 font-black text-xs uppercase mb-4 block">The Defeated</span>
-                    <p class="text-sm text-slate-400 leading-relaxed font-medium">BIS Dominant. Heavy phones. Emergency reset needed.</p>
-                </a>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block"><span class="text-green-500 font-black text-xs uppercase mb-4 block">The Winner</span><p class="text-sm text-slate-400 leading-relaxed font-medium">BAS Dominant. Ready to scale.</p></a>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block border-yellow-500/20"><span class="text-yellow-500 font-black text-xs uppercase mb-4 block">The Fighter</span><p class="text-sm text-slate-400 leading-relaxed font-medium">Willpower-heavy. High burnout risk.</p></a>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass p-8 rounded-3xl poll-card block border-red-500/20"><span class="text-red-500 font-black text-xs uppercase mb-4 block">The Defeated</span><p class="text-sm text-slate-400 leading-relaxed font-medium">BIS Dominant. Emergency reset needed.</p></a>
             </div>
         </div>
     </section>
 
     <section id="founder" class="py-32 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
-            </div>
+            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"><img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"></div>
             <div>
                 <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Pioneer</p>
                 <h2 class="text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Meet <span class="text-accent">Floyd Orr</span></h2>
@@ -185,7 +161,7 @@
                     <p>I realized that <strong>Inconsistency is a biological problem</strong>. My 80XPower15 framework doesn't just teach scripts; it installs State Access.</p>
                     <p>I am a high-level practitioner proving these protocols daily to maintain #1 productivity rankings in a Fortune 500 tech leader.</p>
                 </div>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-10 bg-white text-midnight px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-accent hover:text-white transition-all">
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-10 bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,62,0,0.3)]">
                     Book Performance Audit
                 </a>
             </div>
@@ -195,11 +171,9 @@
     <section id="book" class="py-32 px-6 bg-midnight">
         <div class="max-w-5xl mx-auto">
             <div class="glass p-12 md:p-20 rounded-[4rem] border-accent/30 text-center relative overflow-hidden">
-                <h2 class="text-4xl md:text-6xl font-black uppercase text-white mb-8 tracking-tighter">Scale Your <br/><span class="text-accent">Outbound Capacity.</span></h2>
+                <h2 class="text-4xl md:text-6xl font-black uppercase text-white mb-8 tracking-tighter leading-none">Scale Your <br/><span class="text-accent">Outbound Capacity.</span></h2>
                 <p class="text-slate-400 text-xl mb-12 max-w-2xl mx-auto">Download the Manuscript Summary or book your Performance Audit below.</p>
-                <div class="max-w-md mx-auto mb-10 min-h-[300px]">
-                    <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
-                </div>
+                <div class="max-w-md mx-auto mb-10 min-h-[300px]"><div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div></div>
             </div>
         </div>
     </section>
