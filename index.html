@@ -1,236 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHYCN9WWRX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LHYCN9WWRX');
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "BiohackingSales",
-    "description": "The 80XPower15 System uses practical neuroscience to automate high-volume outbound activity and turn sales lambs into lions."
-  }
-  </script>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BiohackingSales | The 80XPower15 System</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { midnight: '#020617', accent: '#ffd166', slate: { 850: '#1e293b', 950: '#010409' } },
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Outbound Inconsistency Crisis | Floyd Orr</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --midnight: #0a0e14;
+            --accent: #ff3e00; /* Aggressive orange-red for 'The Lion' */
         }
-      }
-    }
-  </script>
-
-  <style>
-    body { background-color: #010409; color: #f8fafc; scroll-behavior: smooth; }
-    .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
-    .accent-gradient { background: linear-gradient(135deg, #ffd166 0%, #d9a01b 100%); }
-    .text-gradient { background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 40px 40px; }
-    .book-img { width: min(420px, 92vw); filter: drop-shadow(0 25px 40px rgba(0,0,0,.75)); transform: rotate(2deg); }
-    .ctct-inline-form { min-height: 280px !important; display: block !important; }
-  </style>
-
-  <script> var _ctct_m = "ecd81de60098820365573a3c28c34522"; </script>
-  <script id="signupScript" src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+        body { background-color: var(--midnight); color: #fff; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        .text-accent { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+    </style>
 </head>
+<body class="antialiased">
 
-<body class="font-sans antialiased hero-pattern">
-
-  <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-xl font-extrabold tracking-tight text-white uppercase">Biohacking<span class="text-accent">Sales</span></span>
-      </div>
-      <div class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest uppercase text-slate-400">
-        <a href="#system" class="hover:text-accent transition">The System</a>
-        <a href="#proof" class="hover:text-accent transition">Proof</a>
-        <a href="#founder" class="hover:text-accent transition">Floyd Orr</a>
-        <a href="#manuscript-form" class="text-accent font-extrabold" onclick="return scrollToManuscriptForm(event)">Manuscript</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="pt-40 pb-20 px-6 relative">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
-      <div>
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-black tracking-widest uppercase mb-7">
-          <span>Executive Practitioner | The 80XPower15 System</span>
-        </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.05] mb-7 uppercase tracking-tight text-white">
-          Turn Outbound<br/> 
-          Sales <span class="text-accent">Lambs</span><br/>
-          <span class="text-gradient">Into Lions.</span>
-        </h1>
-        <p class="text-xl text-slate-300/90 mb-9 max-w-xl leading-relaxed font-medium">
-          The math is simple: High output equals more opportunities to close. We use practical neuroscience to automate high-volume activity, so your reps close more and stay longer.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#manuscript-form" class="accent-gradient text-midnight font-black px-10 py-5 rounded-xl shadow-xl hover:scale-105 transition uppercase tracking-wider text-sm inline-block text-center">Get the Manuscript</a>
-          <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="glass text-white font-black px-10 py-5 rounded-xl hover:bg-white/5 transition uppercase tracking-wider text-sm inline-block text-center border border-white/10">Request Audit</a>
-        </div>
-      </div>
-      <div class="relative flex justify-center lg:justify-end">
-        <img src="booknobackground.png" alt="Biohacking Sales Manuscript" class="book-img" />
-      </div>
-    </div>
-  </header>
-
-  <section class="py-10 border-y border-white/5 bg-slate-950/20">
-    <div class="max-w-7xl mx-auto px-6">
-      <p class="text-center text-slate-500 text-[10px] uppercase tracking-[0.3em] font-black mb-6">Battle Tested At</p>
-      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale font-black text-xl tracking-tighter uppercase">
-         <span class="text-white">Fortune 500 Tech Leaders</span>
-         <span class="text-white">American Express</span>
-         <span class="text-white">Constant Contact</span>
-         <span class="text-white">Siemplify</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="system" class="py-24 px-6 border-b border-white/5">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-accent font-black uppercase tracking-widest text-[10px] mb-2">The Blueprint</p>
-        <h2 class="text-3xl font-extrabold uppercase text-white tracking-tight">Strategic Outbound FAQ & Insights</h2>
-      </div>
-      <div class="grid gap-6 text-sm">
-        <div class="glass p-8 rounded-3xl border-white/10">
-          <h4 class="text-white font-black mb-3 uppercase tracking-widest text-xs text-accent">Does this solve rep turnover and burnout?</h4>
-          <p class="text-slate-400 leading-relaxed font-medium">Burnout is "biological friction"—the mental tax of forcing willpower. By regulating the nervous system, we remove that friction. Reps stay in a "flow state" longer, which drastically reduces churn.</p>
-        </div>
-        <div class="glass p-8 rounded-3xl border-white/10">
-          <h4 class="text-white font-black mb-3 uppercase tracking-widest text-xs text-accent">How does output impact closing?</h4>
-          <p class="text-slate-400 leading-relaxed font-medium">High volume is the prerequisite for high revenue. Most reps fail not because they can't close, but because they don't have enough conversations. We systemize output so reps have 20-50% more opportunities to close every single day.</p>
-        </div>
-        <div class="glass p-8 rounded-3xl border-white/10">
-          <h4 class="text-white font-black mb-3 uppercase tracking-widest text-xs text-accent">Is this automation software?</h4>
-          <p class="text-slate-400 leading-relaxed font-medium">No. We upgrade the <strong>human</strong> rep. While software adds tools, we remove the biological resistance—the avoidance state—that stops reps from using those tools at an elite level.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proof" class="py-24 px-6 bg-slate-950">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-accent font-black uppercase tracking-widest text-[10px] mb-2">Proven Results</p>
-        <h2 class="text-4xl font-extrabold uppercase text-white tracking-tight">The Practitioner's Edge</h2>
-      </div>
-      <div class="glass p-10 rounded-[2.5rem] border-accent/20 mb-12 bg-accent/5">
-        <span class="bg-accent text-midnight text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4 inline-block">Case Study: Siemplify</span>
-        <h3 class="text-2xl font-extrabold text-white mb-4 uppercase tracking-tight">From Zero to High-Velocity Appointments</h3>
-        <p class="text-slate-300 leading-relaxed mb-6 max-w-2xl font-medium">As a **Player-Coach**, I architected the outbound engine: tech selection, cold email protocols, and the first wave of strategic appointments.</p>
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7277378773929353216/" target="_blank" class="text-accent hover:text-white transition font-black uppercase text-xs tracking-widest">Read Full Case Study on LinkedIn →</a>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="glass p-8 rounded-3xl border-white/10 flex flex-col justify-between italic text-slate-300">
-          <p>"Floyd was EXCELLENT... professional, responsible, and very creative in handling objections."</p>
-          <p class="mt-4 not-italic text-white font-black uppercase text-[10px]">Lisa Lefebvre / Lucid Growth Lab</p>
-        </div>
-        <div class="glass p-8 rounded-3xl border-white/10 flex flex-col justify-between italic text-slate-300">
-          <p>"A tenacious salesman... performed well above the other freelancers we had on the project."</p>
-          <p class="mt-4 not-italic text-white font-black uppercase text-[10px]">Michael P. / Manager, Thumbtack</p>
-        </div>
-        <div class="glass p-8 rounded-3xl border-white/10 flex flex-col justify-between italic text-slate-300">
-          <p>"Excellent professional, closed many meetings. Very sharp and fast."</p>
-          <p class="mt-4 not-italic text-white font-black uppercase text-[10px]">Gary Fatakhov / Founder, Siemplify</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="story" class="py-24 px-6 bg-slate-900/30">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-accent font-black uppercase tracking-widest text-xs mb-4 text-center">Built In The Fire</p>
-      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10 text-white leading-tight uppercase tracking-tight">
-        I Didn't Build This to Make Money. <br/>
-        <span class="text-accent">I Built It to Save My Life.</span>
-      </h2>
-      <div class="space-y-6 text-lg text-slate-300 leading-relaxed font-medium">
-        <p>I lived a double life. On the surface, I was a <strong>decent closer</strong>. But underneath, I was drowning.</p>
-        <p>Currently working at a **Fortune 500 technology leader**, I recently went through a brutal divorce. I was isolated. I couldn't take time off, and I had to make quota. My mind was in a **Behavioral Inhibition State**—a biological lockdown that causes total avoidance. I kept thinking about dropping my kids off at the airport because I didn't know how I was going to survive the next dial.</p>
-        <p class="border-l-4 border-accent pl-6 italic bg-white/5 py-8 px-6 rounded-r-xl text-white font-medium shadow-lg">
-          "The week my marriage ended, I had to get back on the phones immediately. I turned my camera off so I wouldn't breakdown and cry in front of my team."
-        </p>
-        <p>I built this system because it has to work when you are sad, because it **systemizes output** beyond your emotions. I stopped trying to 'grind harder' and used neuroscience to regulate my biology. The results: I went from the bottom of the activity report to **#1 in Productivity** at my Fortune 500 company in just a few days.</p>
-        
-        <div class="bg-accent/10 p-8 rounded-3xl border border-accent/20 shadow-xl mt-12">
-          <p class="text-white font-black text-xl md:text-2xl text-center uppercase tracking-tight leading-tight">
-            The future of teams is <span class="text-accent">Biological.</span>
-          </p>
-          <div class="mt-8 space-y-4 text-center text-slate-300 font-bold italic leading-relaxed">
-            <p>Psychology moved from talk therapy to <span class="text-white">Somatic Therapy.</span></p>
-            <p>Pro sports moved from motivation to <span class="text-white">Bio-Psycho Performance.</span></p>
-            <p>Now, Sales is moving from scripts and objection handling to <span class="text-accent">Applied Neuroscience.</span></p>
-            <p class="mt-8 text-white not-italic uppercase tracking-widest text-sm">Your organization cannot afford to be left behind.</p>
-          </div>
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-midnight"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px]"></div>
         </div>
 
-        <div class="bg-slate-800/20 p-8 rounded-3xl border border-white/10 shadow-xl mt-12">
-          <h3 class="text-2xl md:text-3xl text-accent font-extrabold text-center mb-4 uppercase tracking-tight">Our Philosophy</h3>
-          <p class="text-slate-300 leading-relaxed text-lg font-medium">
-            The prospect’s nervous system reacts to signals, not pressure. By regulating the agent's biology, we ensure confusion and rushed tones never trigger <strong>distrust in prospects.</strong> Now reps have the skills to actually do what they know they should do.
-          </p>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <p class="text-accent font-black uppercase tracking-[0.3em] text-xs mb-6 animate-pulse">For CROs & VPs of Sales</p>
+            <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
+                End the <br/><span class="text-accent">Inconsistency</span> Crisis.
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
+                Traditional training fails because it coaches the <strong>mind</strong> while ignoring the <strong>biology</strong> that controls it. Stop paying the "Hesitation Tax" and start regulating for performance.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#book" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,62,0,0.3)]">
+                    Get the Book Summary
+                </a>
+                <a href="#system" class="border border-white/20 hover:bg-white/5 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest transition-all">
+                    The Science
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="founder" class="py-24 px-6 border-y border-white/5 bg-slate-950/20">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.5fr] gap-16 items-center">
-        <div class="glass aspect-[4/5] rounded-[2.5rem] bg-slate-800 overflow-hidden relative">
-            <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover opacity-80" />
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-transparent"></div>
+    <section id="system" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-black uppercase mb-8 leading-tight">
+                        Your Team is Paying a <br/>
+                        <span class="text-accent">$100,000 Hesitation Tax</span>
+                    </h2>
+                    <p class="text-slate-400 text-lg mb-8">
+                        Hesitation isn't fear; it's the activation of the <strong>Behavioral Inhibition System (BIS)</strong>—the internal brake pedal that slams down when a situation feels high-risk[cite: 788, 803]. 
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <i class="fas fa-microscope text-accent mt-1"></i>
+                            <p class="text-slate-300"><strong>The Biological Brake:</strong> BIS overrides training in microseconds, causing tone to soften and timing to collapse[cite: 790, 811].</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-chart-line text-accent mt-1"></i>
+                            <p class="text-slate-300"><strong>Invisible Revenue Leak:</strong> When a rep loses just one opportunity a day to hesitation, it costs you up to $100k per year, per rep[cite: 779].</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-12 rounded-[3rem] border-white/10 relative">
+                    <div class="absolute -top-6 -right-6 bg-accent text-white px-6 py-2 rounded-full font-bold text-sm uppercase">State-Dependent Performance</div>
+                    <h3 class="text-2xl font-black mb-6 uppercase">BIS vs. BAS Dominance</h3>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+                            <span><strong>BIS (Stop):</strong> Overthinking, apologizing, and avoiding conflict[cite: 797].</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            <span><strong>BAS (Go):</strong> Effortless dialing, grounded tonality, and "Winner Aura"[cite: 793, 840].</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div>
-          <p class="text-[11px] uppercase tracking-widest text-accent font-black mb-2">Architect of the 80XPower15 System</p>
-          <h2 class="text-4xl md:text-5xl font-extrabold mb-6 uppercase text-white leading-tight">Meet <span class="text-accent">Floyd Orr</span></h2>
-          <p class="text-slate-300 mb-8 text-xl font-bold italic leading-relaxed">Front-Line Player-Coach. Systems Architect. University Counselor.</p>
-          <div class="space-y-4 text-slate-400 leading-relaxed font-medium">
-            <p>I teach from the desk next to yours. I am currently proving these protocols in high-pressure Fortune 500 environments.</p>
-            <p>From tech stack architecture to cold email systems, I build the "velocity engine" that turns outbound sales lambs into lions.</p>
-          </div>
-          <a class="mt-8 bg-white text-midnight px-10 py-5 rounded-xl font-black hover:bg-accent transition uppercase tracking-widest text-xs inline-block" href="https://calendly.com/biohackingsales/30-minute-meeting">Book Performance Audit →</a>
+    </section>
+
+    <section class="py-32 bg-slate-900/30 px-6 border-y border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black uppercase tracking-tight">From the Manuscript: <br/><span class="text-accent">The 80XPower15 Protocol</span></h2>
+            </div>
+            
+            <div class="space-y-12">
+                <div class="border-l-4 border-accent pl-8 py-2">
+                    <p class="text-xl text-slate-300 italic mb-4">
+                        "Most reps don't lack 'work ethic'; they lack 'biological momentum.' The average rep loses 40% of their day in the micro-seconds of indecision. The 80XPower15 system creates a zero-latency environment where the body moves before the mind can hesitate."
+                    </p>
+                    <span class="text-accent font-bold uppercase text-xs tracking-widest">— Chapter 17: The Afternoon Crash</span>
+                </div>
+
+                <div class="border-l-4 border-accent pl-8 py-2">
+                    <p class="text-xl text-slate-300 italic mb-4">
+                        "We don't apply pressure; we trigger <strong>Eustress</strong>—the positive biological state of alertness. By stacking 15-minute high-intensity bursts with neuro-regulation resets, we prevent the 'Adrenal Slump' that kills afternoon revenue."
+                    </p>
+                    <span class="text-accent font-bold uppercase text-xs tracking-widest">— Chapter 14: What a Regulated System Looks Like</span>
+                </div>
+            </div>
         </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="manuscript-form" class="py-24 px-6 bg-slate-950">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h3 class="text-4xl font-extrabold mb-4 uppercase tracking-tighter text-white">Get the <span class="text-accent">Manuscript</span>.</h3>
-        <p class="text-slate-300 mb-8 leading-relaxed text-lg font-medium">Download the document that describes why traditional "sales hustle" is failing your team's biology.</p>
-      </div>
-      <div class="glass rounded-[2.65rem] p-10 relative border border-white/5">
-        <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
-      </div>
-    </div>
-  </section>
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <div class="aspect-square bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-slate-600 font-black text-2xl uppercase">Floyd Orr</div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <p class="text-accent font-black uppercase text-xs mb-2">The Founder's Story</p>
+                <h2 class="text-4xl font-black uppercase mb-6">Born in the <span class="text-accent">Trenches</span></h2>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    I wasn't born consistent. I was the rep managers were confused by: talented but unpredictable[cite: 565]. I built this system because I lived inside the "Inconsistency Crisis"—dominating one month and disappearing the next due to <strong>nervous system overload</strong>[cite: 572, 632].
+                </p>
+                <p class="text-slate-400 leading-relaxed">
+                    I stopped trying to fix mindset and started focusing on the source of performance: <strong>Biological Regulation</strong>[cite: 314]. Today, I help teams shift from "Freeze-or-Forward" to consistent BAS dominance[cite: 786, 810].
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <footer class="py-16 bg-slate-950 border-t border-white/5 text-center">
-    <p class="text-slate-600 text-[10px] font-black uppercase tracking-[0.2em]">© <span id="year"></span> BiohackingSales LLC | The 80XPower15 System</p>
-  </footer>
+    <section id="book" class="py-32 px-6 bg-accent">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-black uppercase text-white mb-8">Stop Managing Fatigue. <br/>Start Scaling Capacity.</h2>
+            <p class="text-white/80 text-xl mb-12 font-medium">
+                Enter your email to receive a 15-page summary of the book and the <strong>80XPower15 Execution Audit.</strong>
+            </p>
+            <form class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+                <input type="email" placeholder="Work Email Address" class="flex-1 px-8 py-5 rounded-full bg-white text-midnight font-bold outline-none">
+                <button class="bg-midnight text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all">
+                    Get Access
+                </button>
+            </form>
+            <p class="text-white/60 text-xs mt-6 uppercase tracking-widest">Join 500+ CROs optimizing their biological floor.</p>
+        </div>
+    </section>
 
-  <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
-    function scrollToManuscriptForm(e) { if (e) e.preventDefault(); const el = document.getElementById('manuscript-form'); const y = el.getBoundingClientRect().top + window.pageYOffset - 90; window.scrollTo({ top: y, behavior: 'smooth' }); }
-  </script>
+    <footer class="py-12 text-center text-slate-600 text-xs font-bold uppercase tracking-widest border-t border-white/5">
+        &copy; 2026 Floyd Orr | Biohacking Sales | All Rights Reserved.
+    </footer>
+
 </body>
 </html>
