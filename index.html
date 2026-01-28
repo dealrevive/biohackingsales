@@ -14,6 +14,7 @@
         .bg-accent { background-color: var(--accent); }
         .hero-gradient { background: radial-gradient(circle at center, rgba(255,95,21,0.1) 0%, transparent 70%); }
         
+        /* CAPSULE DNA HELIX */
         .dna-container {
             position: relative;
             width: 30px;
@@ -32,13 +33,11 @@
             left: 50%;
             transform-origin: center;
         }
-
         @keyframes capsule-rotate {
             0% { transform: translateX(-50%) rotateY(0deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
             50% { transform: translateX(-50%) rotateY(180deg) translateZ(15px); opacity: 1; scale: 1.1; }
             100% { transform: translateX(-50%) rotateY(360deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
         }
-
         .bar { animation: capsule-rotate 3s infinite ease-in-out; }
         .bar:nth-child(1) { top: 0%; animation-delay: 0s; }
         .bar:nth-child(2) { top: 20%; animation-delay: -0.4s; }
@@ -47,6 +46,7 @@
         .bar:nth-child(5) { top: 80%; animation-delay: -1.6s; }
         .bar:nth-child(6) { top: 100%; animation-delay: -2.0s; }
 
+        /* SPINNING BOOK */
         @keyframes slowRotate {
             0% { transform: rotate(0deg) translateY(0px); }
             50% { transform: rotate(3deg) translateY(-15px); }
@@ -56,7 +56,6 @@
             animation: slowRotate 8s ease-in-out infinite;
             filter: drop-shadow(0 25px 50px rgba(255, 95, 21, 0.3));
         }
-        .poll-card:hover { border-color: var(--accent); transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="antialiased">
@@ -72,11 +71,11 @@
                     <div class="helix-bar bar"></div>
                     <div class="helix-bar bar"></div>
                 </div>
-                <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span><span class="text-[10px] ml-0.5 opacity-70">.com</span></span>
+                <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span></span>
             </div>
             <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#system" class="hover:text-accent transition">The Science</a>
-                <a href="#os" class="hover:text-accent transition">The Infrastructure</a>
+                <a href="#os" class="hover:text-accent transition">The OS</a>
                 <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-6 py-2 rounded-full hover:scale-105 transition">Book Audit</a>
             </div>
         </div>
@@ -88,7 +87,7 @@
             <div class="text-left">
                 <p class="text-accent font-black uppercase tracking-[0.3em] text-[10px] mb-6">Strategic Outbound Performance</p>
                 <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-8">End the <span class="text-accent">Outbound</span> <br/>Inconsistency Crisis.</h1>
-                <p class="text-xl text-slate-400 mb-12 font-medium leading-relaxed">Stop paying the <strong>$100,000 Hesitation Tax</strong>. We use applied neuroscience to regulate the biology of execution and stabilize your team's output floor.</p>
+                <p class="text-xl text-slate-400 mb-12 font-medium leading-relaxed">Stop paying the <strong>$100,000 Hesitation Tax</strong>. We use applied neuroscience to regulate the biology of execution.</p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,95,21,0.4)]">Book Performance Audit</a>
                     <a href="#book" class="glass text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:bg-white/10 transition-all text-center">Get Manuscript</a>
@@ -107,6 +106,23 @@
                 <div><p class="text-2xl font-black text-white">-30%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Rep Turnover</p></div>
                 <div><p class="text-2xl font-black text-white">+25%</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Pipeline Velocity</p></div>
                 <div><p class="text-2xl font-black text-white">Zero</p><p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Hesitation Tax</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            </div>
+            <div>
+                <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Practitioner</p>
+                <h2 class="text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Meet <span class="text-accent">Floyd Orr</span></h2>
+                <div class="space-y-6 text-slate-400 text-lg leading-relaxed font-medium">
+                    <p>I realized that <strong>Inconsistency is a biological problem</strong>. My background as a <strong>University Addiction Counselor</strong> allowed me to identify the "Dopamine Loops" that kill sales performance—the same loops that keep people hooked on substances keep reps hooked on distraction.</p>
+                    <p>I am a high-level practitioner proving these protocols daily to maintain #1 productivity rankings in a Fortune 500 tech leader, closing in the <strong>$400–$600 commission trenches</strong> where the margin for error is zero. We don't just change habits; we change biology.</p>
+                </div>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-10 bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,95,21,0.3)]">Book Performance Audit</a>
             </div>
         </div>
     </section>
@@ -131,83 +147,65 @@
         </div>
     </section>
 
-    <section id="founder" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"><img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"></div>
-            <div>
-                <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Pioneer</p>
-                <h2 class="text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Meet <span class="text-accent">Floyd Orr</span></h2>
-                <div class="space-y-6 text-slate-400 text-lg leading-relaxed font-medium">
-                    <p>I realized that <strong>Inconsistency is a biological problem</strong>. My 80XPower15 framework doesn't just teach scripts; it installs State Access.</p>
-                    <p>I am a high-level practitioner proving these protocols daily to maintain #1 productivity rankings in a Fortune 500 tech leader.</p>
-                </div>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-10 bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,95,21,0.3)]">Book Performance Audit</a>
-            </div>
-        </div>
-    </section>
-
     <section id="os" class="py-32 px-6 border-y border-white/5 bg-white/[0.01]">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
                 <h2 class="text-4xl md:text-7xl font-black uppercase mb-6 leading-[0.8]">The <span class="text-accent">Lion’s</span> Infrastructure</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto uppercase text-xs font-bold tracking-[0.3em]">Turning outbound sales lambs into lions by re-engineering the biological floor of execution.</p>
+                <p class="text-slate-500 max-w-2xl mx-auto uppercase text-xs font-bold tracking-[0.3em]">The 80XPower15 Operating System</p>
             </div>
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-bolt text-accent text-xl mb-6 block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Instant State-Access</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: The "Slow Start"</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">We eliminate the 90-minute "ramp up" period. Using specific neurological triggers, we move reps from 'resting' to 'hunting' in under 5 minutes.</p>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: The "Slow Start"</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">We eliminate the 90-minute "ramp up." Specific neurological triggers move reps from 'resting' to 'hunting' in under 5 minutes.</p>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-hourglass-half text-accent text-xl mb-6 block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Apex 30 Intervals</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: The 8-Hour Slog</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Using physical 30-minute hourglass hardware to compress output. We treat dialing like a sprint, not a marathon, preventing the mental fatigue of "open-ended" days.</p>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: The 8-Hour Slog</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Using physical hourglass hardware to compress output. We treat dialing like a sprint, preventing mental fatigue.</p>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-shield-virus text-accent text-xl mb-6 block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Limbic Neutrality</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: Tone Desperation</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">We train the biology of the voice. By regulating the rep’s Limbic System, they stop triggering the prospect's "rejection reflex" before the first 5 seconds are over.</p>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: Tone Desperation</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">We regulate the rep’s Limbic System so they never trigger the prospect's "rejection reflex" or lizard-brain skepticism.</p>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-lock text-accent text-xl mb-6 block"></i>
-                    <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Digital Vaulting</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: The Smoker's Cycle</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Using clinical addiction protocols to identify and seal "Dopamine Leaks." We turn the biological urge for distraction back into the urge for execution.</p>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Dopamine Vaulting</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: The Smoker's Cycle</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Clinical addiction protocols to seal "Dopamine Leaks." We turn the urge for distraction into the urge for execution.</p>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-battery-full text-accent text-xl mb-6 block"></i>
-                    <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">The 2:00 PM Anti-Crash</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: Metabolic Decline</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Most teams die in the afternoon. Our OS includes lighting, posture, and biological resets that keep the "Lion" energy consistent from 9 AM to 5 PM.</p>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">2:00 PM Anti-Crash</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: Metabolic Decline</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Lighting and biological resets that keep the "Lion" energy levels consistent from 9 AM to 5 PM without the afternoon dip.</p>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-wind text-accent text-xl mb-6 block"></i>
-                    <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Inter-Call Recovery</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: Rejection Carryover</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">Reps carry the "sting" of a bad call into the next ten. Our 60-second recovery protocol flushes stress hormones so every dial sounds like a fresh start.</p>
+                    <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Cortisol Flushing</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: Rejection Carryover</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">A 60-second recovery protocol that flushes stress hormones after a bad call to keep the next dial sounding fresh.</p>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-eye text-accent text-xl mb-6 block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">The Visual Cockpit</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: Peripheral Distraction</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">We re-engineer the physical workspace. By controlling the visual field, we eliminate the micro-distractions that cost companies 2+ hours of output per day.</p>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: Peripheral Distraction</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Re-engineering the physical workspace to eliminate micro-distractions that cost companies 2+ hours of output per day.</p>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-accent/30 transition-all group">
                     <i class="fas fa-brain text-accent text-xl mb-6 block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase tracking-tighter group-hover:text-accent transition-colors">Zero-Latency Flow</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4">Problem: Decision Fatigue</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">We strip away the "What do I do next?" friction. The OS dictates the next move so the rep never has to think—only execute at a high frequency.</p>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium uppercase tracking-wide mb-4 text-accent">Problem: Decision Fatigue</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">The OS dictates the next move so the rep never has to think about "who to call next"—only execute at high frequency.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-
-[Image of the limbic system in the human brain]
-
 
     <section id="book" class="py-32 px-6 bg-midnight">
         <div class="max-w-5xl mx-auto">
