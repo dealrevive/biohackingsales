@@ -7,14 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --midnight: #0a0e14; --accent: #ff5f15; } 
+        :root { --midnight: #0a0e14; --accent: #ff5f15; } /* Updated to Safety Orange */
         body { background-color: var(--midnight); color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .text-accent { color: var(--accent); }
         .bg-accent { background-color: var(--accent); }
         .hero-gradient { background: radial-gradient(circle at center, rgba(255,95,21,0.1) 0%, transparent 70%); }
         
-        /* CAPSULE DNA HELIX */
+        /* UPDATED CAPSULE DNA HELIX */
         .dna-container {
             position: relative;
             width: 30px;
@@ -26,7 +26,7 @@
         }
         .helix-bar {
             width: 18px;
-            height: 5px;
+            height: 5px; /* Makes it a capsule/bar like the hat */
             background: var(--accent);
             border-radius: 10px;
             position: absolute;
@@ -41,6 +41,8 @@
         }
 
         .bar { animation: capsule-rotate 3s infinite ease-in-out; }
+        
+        /* Stagger bars to create the 80XPower15 Twist */
         .bar:nth-child(1) { top: 0%; animation-delay: 0s; }
         .bar:nth-child(2) { top: 20%; animation-delay: -0.4s; }
         .bar:nth-child(3) { top: 40%; animation-delay: -0.8s; }
@@ -48,6 +50,7 @@
         .bar:nth-child(5) { top: 80%; animation-delay: -1.6s; }
         .bar:nth-child(6) { top: 100%; animation-delay: -2.0s; }
 
+        /* SPINNING BOOK ANIMATION */
         @keyframes slowRotate {
             0% { transform: rotate(0deg) translateY(0px); }
             50% { transform: rotate(3deg) translateY(-15px); }
@@ -57,6 +60,8 @@
             animation: slowRotate 8s ease-in-out infinite;
             filter: drop-shadow(0 25px 50px rgba(255, 95, 21, 0.3));
         }
+
+        .poll-card:hover { border-color: var(--accent); transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="antialiased">
@@ -76,7 +81,7 @@
             </div>
             <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#system" class="hover:text-accent transition">The Science</a>
-                <a href="#operating-system" class="hover:text-accent transition">The OS</a>
+                <a href="#poll" class="hover:text-accent transition">Team Audit</a>
                 <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-6 py-2 rounded-full hover:scale-105 transition">Book Audit</a>
             </div>
         </div>
@@ -124,62 +129,59 @@
             <div>
                 <h2 class="text-4xl font-black uppercase mb-8 leading-tight">The Science of <br/><span class="text-accent">State Access</span></h2>
                 <p class="text-slate-400 text-lg mb-8 leading-relaxed font-medium">
-                    Inconsistency is a biological failure. Most sales lost are the result of the rep triggering the prospect’s <strong>Limbic System</strong> (the lizard brain) through stress-laden tonality. Our system locks the rep in a "Lion State" to ensure every dial bypasses skeptical filters.
+                    Inconsistency is the activation of the <strong>Behavioral Inhibition System (BIS)</strong>. When your team's biological brake is on, they lose their edge. We install <strong>BAS dominance</strong> for high-velocity outbound. By regulating the <strong>Limbic System</strong>, our system prevents the stress-based tonality that triggers prospect rejection.
                 </p>
                 <div class="space-y-6">
-                    <div class="flex gap-4"><i class="fas fa-dna text-accent mt-1"></i><p class="text-slate-300"><strong>Neuro-Regulation:</strong> We eliminate the "Smoker's Cycle" of digital distractions that reps use to change their mood during tedious dial blocks.</p></div>
-                    <div class="flex gap-4"><i class="fas fa-shield-alt text-accent mt-1"></i><p class="text-slate-300"><strong>Limbic Lock:</strong> Stop triggering "flight or fight" in your prospects. We manage the rep's biology so they stay calm, grounded, and lethal.</p></div>
+                    <div class="flex gap-4"><i class="fas fa-brain text-accent mt-1"></i><p class="text-slate-300"><strong>Neuro-Regulation:</strong> Manage allostatic load to prevent the 2:00 PM output crash.</p></div>
+                    <div class="flex gap-4"><i class="fas fa-bolt text-accent mt-1"></i><p class="text-slate-300"><strong>Eustress Activation:</strong> Maintain grounded tonality and confident execution on every dial.</p></div>
                 </div>
             </div>
             <div class="glass p-12 rounded-[3.5rem] border-white/10">
-                <h3 class="text-xl font-black mb-6 uppercase tracking-widest text-accent">Biological ROI</h3>
+                <h3 class="text-xl font-black mb-6 uppercase tracking-widest">Outbound State Dynamics</h3>
                 <ul class="space-y-6">
-                    <li class="p-4 rounded-xl bg-accent/5 border border-accent/10"><p class="text-slate-300 text-sm"><strong>More Dials:</strong> Short power-sprints via physical hourglass cycles.</p></li>
-                    <li class="p-4 rounded-xl bg-accent/5 border border-accent/10"><p class="text-slate-300 text-sm"><strong>More Closes:</strong> Neutralizing the rep's internal stress to prevent prospect rejection.</p></li>
+                    <li class="p-4 rounded-xl bg-red-500/5 border border-red-500/10"><span class="text-red-500 font-bold uppercase text-[10px]">BIS (Stop System)</span><p class="text-slate-400 text-sm mt-1">Apologetic tone, heavy phones, and rapid burnout.</p></li>
+                    <li class="p-4 rounded-xl bg-green-500/5 border border-green-500/10"><span class="text-green-500 font-bold uppercase text-[10px]">BAS (Go System)</span><p class="text-slate-400 text-sm mt-1">Assertive tonality, effortless dialing, and zero-latency execution.</p></li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="operating-system" class="py-32 px-6 bg-white/[0.01] border-y border-white/5">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl md:text-6xl font-black uppercase mb-16">The Daily <span class="text-accent">Operating System</span></h2>
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                <div class="glass p-8 rounded-3xl border-white/10">
-                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-6"><i class="fas fa-hourglass-half text-white"></i></div>
-                    <h3 class="text-xl font-black mb-4 uppercase">Apex Sprints</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">We utilize physical 30-minute hourglass intervals to trigger deep hunt-state. This isn't time management—it's hormonal management for high-density dialing.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-white/10">
-                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-6"><i class="fas fa-lock text-white"></i></div>
-                    <h3 class="text-xl font-black mb-4 uppercase">Dopamine Lock</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Our clinical-grade protocol traps the impulse to "doom-scroll" or take hidden breaks. We dispute the biological need for distraction and return that energy to the close.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-white/10">
-                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-6"><i class="fas fa-sync text-white"></i></div>
-                    <h3 class="text-xl font-black mb-4 uppercase">Limbic Reset</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">A 60-second recovery protocol to be used after brutal rejections. We flush attention residue so the frustration of the last call never kills the next one.</p>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="founder" class="py-32 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
-            </div>
+            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"><img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"></div>
             <div>
-                <p class="text-accent font-black uppercase text-xs mb-2">Clinical Expert & Battle-Tested Closer</p>
+                <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Practitioner</p>
                 <h2 class="text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Meet <span class="text-accent">Floyd Orr</span></h2>
                 <div class="space-y-6 text-slate-400 text-lg leading-relaxed font-medium">
-                    <p>I am an expert in **Habit Formation and Behavioral Modification**, with a foundation as a **University Addiction Counselor**. I discovered that a sales floor is a high-stress dopamine environment where reps treat distraction like a nicotine hit.</p>
-                    <p>I didn't just build this in a lab. I developed these protocols while running full-cycle sales and personally closing in the **$400–$600 commission trenches** I still operate in today. </p>
-                    <p>My 80XPower15 framework is the only system built for both the motivated superstar and the unmotivated rep—because biology doesn't care how you feel.</p>
+                    <p>I realized that <strong>Inconsistency is a biological problem</strong>. My background as a <strong>University Addiction Counselor</strong> allowed me to identify the "Dopamine Loops" that kill sales performance. </p>
+                    <p>I developed these protocols while closing in the <strong>$400–$600 commission trenches</strong> where I still operate today to maintain #1 productivity rankings.</p>
                 </div>
                 <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="inline-block mt-10 bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,95,21,0.3)]">
                     Book Performance Audit
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 border-y border-white/5 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-black uppercase mb-12 text-center">The Daily <span class="text-accent">Operating System</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-[3rem] border-white/10 text-center">
+                    <i class="fas fa-hourglass-start text-accent text-3xl mb-6"></i>
+                    <h3 class="text-xl font-black mb-4 uppercase">Apex Sprints</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">30-minute physical hourglass intervals to lock in deep hunt-state. Hardware only functions when paired with 80xPower15 math.</p>
+                </div>
+                <div class="glass p-10 rounded-[3rem] border-white/10 text-center">
+                    <i class="fas fa-lock text-accent text-3xl mb-6"></i>
+                    <h3 class="text-xl font-black mb-4 uppercase">Dopamine Lock</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Clinically-rooted protocol to dispute the "Smoker's Cycle" of digital distractions. Captures hidden breaks and returns energy to the dial.</p>
+                </div>
+                <div class="glass p-10 rounded-[3rem] border-white/10 text-center">
+                    <i class="fas fa-shield-alt text-accent text-3xl mb-6"></i>
+                    <h3 class="text-xl font-black mb-4 uppercase">Limbic Mastery</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Biological system that prevents triggering prospect skepticism. Manage your reps' emotions to eliminate desperate tonality.</p>
+                </div>
             </div>
         </div>
     </section>
