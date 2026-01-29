@@ -8,14 +8,23 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root { --midnight: #0a0e14; --accent: #ff5f15; }
-        body { background-color: var(--midnight); color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { 
+            background-color: var(--midnight); 
+            color: #fff; 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth; 
+            overflow-x: hidden; 
+        }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .text-accent { color: var(--accent); }
         .bg-accent { background-color: var(--accent); }
         .hero-gradient { background: radial-gradient(circle at center, rgba(255,95,21,0.1) 0%, transparent 70%); }
         
-        .dna-container { position: relative; width: 30px; height: 45px; perspective: 1000px; display: flex; flex-direction: column; justify-content: space-between; }
-        .helix-bar { width: 18px; height: 5px; background: var(--accent); border-radius: 10px; position: absolute; left: 50%; transform-origin: center; }
+        /* DNA Animation scaling */
+        .dna-container { position: relative; width: 24px; height: 35px; perspective: 1000px; display: flex; flex-direction: column; justify-content: space-between; }
+        @media (min-width: 768px) { .dna-container { width: 30px; height: 45px; } }
+        
+        .helix-bar { width: 100%; height: 4px; background: var(--accent); border-radius: 10px; position: absolute; left: 50%; transform-origin: center; }
         @keyframes capsule-rotate {
             0% { transform: translateX(-50%) rotateY(0deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
             50% { transform: translateX(-50%) rotateY(180deg) translateZ(15px); opacity: 1; scale: 1.1; }
@@ -31,162 +40,135 @@
 
         @keyframes slowRotate { 0% { transform: rotate(0deg) translateY(0px); } 50% { transform: rotate(3deg) translateY(-15px); } 100% { transform: rotate(0deg) translateY(0px); } }
         .animate-spin-slow { animation: slowRotate 8s ease-in-out infinite; filter: drop-shadow(0 25px 50px rgba(255, 95, 21, 0.3)); }
+        
+        h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-6">
-                <div class="flex items-center gap-3">
-                    <img src="YOUR_LOGO_HERE.png" alt="Logo" class="h-10 w-auto opacity-80" onerror="this.style.display='none'">
-                    <div class="dna-container">
-                        <div class="helix-bar bar"></div><div class="helix-bar bar"></div><div class="helix-bar bar"></div>
-                        <div class="helix-bar bar"></div><div class="helix-bar bar"></div><div class="helix-bar bar"></div>
-                    </div>
-                    <span class="text-xl font-black uppercase tracking-tighter">Biohacking<span class="text-accent">Sales</span></span>
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Biohacking Sales Logo" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'">
+                
+                <div class="dna-container">
+                    <div class="helix-bar bar"></div><div class="helix-bar bar"></div><div class="helix-bar bar"></div>
+                    <div class="helix-bar bar"></div><div class="helix-bar bar"></div><div class="helix-bar bar"></div>
                 </div>
+                <span class="text-lg md:text-xl font-black uppercase tracking-tighter whitespace-nowrap">Biohacking<span class="text-accent">Sales</span></span>
             </div>
-            <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
+            
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-[10px] font-bold uppercase tracking-widest">
                 <a href="#founder" class="hover:text-accent transition">The Story</a>
                 <a href="#origin" class="hover:text-accent transition">The Science</a>
                 <a href="#os" class="hover:text-accent transition">Infrastructure</a>
-                <a href="#faq" class="hover:text-accent transition">FAQ</a>
-                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-6 py-2 rounded-full hover:scale-105 transition">Book Audit</a>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-4 py-2 rounded-full hover:scale-105 transition">Book Audit</a>
             </div>
+            
+            <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="md:hidden bg-accent text-[10px] text-white px-4 py-2 rounded-full font-bold uppercase">Audit</a>
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5 pt-20">
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5 pt-24 pb-12">
         <div class="absolute inset-0 z-0 hero-gradient"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div class="text-left">
-                <p class="text-accent font-black uppercase tracking-[0.3em] text-[10px] mb-6">Unpredictable Revenue Ends Here</p>
-                <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-8">Turn Outbound Sales <span class="text-accent">Lambs</span> <br/>into Lions.</h1>
-                <p class="text-xl text-slate-400 mb-12 font-medium leading-relaxed">Stop paying the <strong>$100,000 Hesitation Tax</strong>. We use applied neuroscience to regulate the biology of execution and stabilize your forecast.</p>
+                <p class="text-accent font-black uppercase tracking-[0.2em] text-[10px] mb-4">Unpredictable Revenue Ends Here</p>
+                <h1 class="text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-6">Turn Outbound Sales <span class="text-accent">Lambs</span> <br class="hidden md:block"/>into Lions.</h1>
+                <p class="text-lg md:text-xl text-slate-400 mb-8 font-medium leading-relaxed max-w-xl">Stop paying the <strong>$100,000 Hesitation Tax</strong>. We use applied neuroscience to regulate the biology of execution.</p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,95,21,0.4)]">Book Performance Audit</a>
+                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,95,21,0.4)] text-sm">Book Performance Audit</a>
                 </div>
             </div>
-            <div class="relative flex justify-center lg:justify-end">
-                <img src="booknobackground.png" alt="Biohacking Sales Manuscript" class="w-[450px] animate-spin-slow">
+            <div class="relative flex justify-center lg:justify-end mt-12 lg:mt-0">
+                <img src="booknobackground.png" alt="Biohacking Sales Manuscript" class="w-[280px] md:w-[450px] animate-spin-slow">
             </div>
         </div>
     </header>
 
-    <section id="founder" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+    <section id="founder" class="py-20 md:py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
             </div>
             <div>
                 <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Pioneer</p>
-                <h2 class="text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Floyd Orr: <span class="text-accent">The Architect of Sales Neurology</span></h2>
-                <div class="space-y-6 text-slate-400 text-lg leading-relaxed font-medium">
-                    <p>Why do two reps with the same training and scripts perform wildly differently? One becomes a lion; the other remains a lamb.</p>
-                    <p>My career has spanned the entire sales ecosystem—from agile startups to global enterprise giants like <strong>American Express, Yelp, and Constant Contact.</strong> Most notably, I was part of the engine that helped <strong>Siemplify achieve its landmark acquisition by Google.</strong></p>
-                    <p>But the "secret sauce" isn't just in the logos. It’s in my history as an <strong>Addiction Counselor</strong> and my certifications in <strong>Sleep, Stress, and Recovery.</strong></p>
-                    <p>By combining clinical recovery protocols with 15 years of high-stakes outbound execution, I am the first person to solve the "Inconsistency Crisis" at a biological level. I don't just teach people how to sell; I give them the neurological infrastructure to win.</p>
+                <h2 class="text-4xl md:text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Floyd Orr: <br/><span class="text-accent">Architect of Sales Neurology</span></h2>
+                <div class="space-y-6 text-slate-400 text-base md:text-lg leading-relaxed font-medium">
+                    <p>Why do two reps with the same training perform wildly differently? One becomes a lion; the other remains a lamb.</p>
+                    <p>Having worked with giants like <strong>American Express, Yelp, and Constant Contact</strong>, and helping <strong>Siemplify</strong> toward its Google acquisition, I've seen every sales script imaginable. None of them solve the "biology" problem.</p>
+                    <p>My background as an <strong>Addiction Counselor</strong> allowed me to be the first to solve the Inconsistency Crisis at a neurological level. I don't just teach sales; I install the hardware to win.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="origin" class="py-32 px-6 bg-white/[0.02] border-y border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <p class="text-accent font-black uppercase text-center text-xs mb-4 tracking-[0.3em]">The Development of 80XPower15</p>
-            <h2 class="text-4xl md:text-6xl font-black uppercase text-center mb-12 tracking-tighter">Born in the <span class="text-accent">Collapse.</span></h2>
-            <div class="space-y-8 text-slate-400 text-lg leading-relaxed font-medium mb-16 text-center">
+    <section id="origin" class="py-20 md:py-32 px-6 bg-white/[0.02] border-y border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-accent font-black uppercase text-xs mb-4 tracking-[0.3em]">The Development of 80XPower15</p>
+            <h2 class="text-4xl md:text-6xl font-black uppercase mb-12 tracking-tighter">Born in the <span class="text-accent">Collapse.</span></h2>
+            <div class="space-y-8 text-slate-400 text-base md:text-lg leading-relaxed font-medium">
                 <p>The 80XPower15 framework was developed when my life collapsed. Two months into a role at a <strong>Fortune 500 tech leader</strong>, my marriage ended and my six kids moved out of the country.</p>
                 <p>Isolated on a remote homestead—broke and alone—I was still expected to hit quota. I noticed that when my internal state was in distress, I triggered <strong>biological resistance</strong> in my prospects before I finished my first sentence.</p>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8 pt-12 border-t border-white/5">
-                <div class="text-center px-4">
-                    <h4 class="font-bold mb-2 uppercase text-sm text-accent">Predictable Forecasts</h4>
-                    <p class="text-slate-500 text-xs">Eliminate the "rollercoaster" months by stabilizing the rep's daily execution floor.</p>
-                </div>
-                <div class="text-center px-4">
-                    <h4 class="font-bold mb-2 uppercase text-sm text-accent">Reduced Ramp Time</h4>
-                    <p class="text-slate-500 text-xs">New hires bypass the "hesitation phase" by using neurological state-triggers from day one.</p>
-                </div>
-                <div class="text-center px-4">
-                    <h4 class="font-bold mb-2 uppercase text-sm text-accent">High-Output Retention</h4>
-                    <p class="text-slate-500 text-sm">Reps who can regulate stress don't burn out. They stay, they hunt, and they grow.</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <section class="py-32 px-6 border-b border-white/5">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-            <div class="glass p-4 rounded-3xl border-white/10 text-center overflow-hidden">
-                <img src="braindisconnect.jpg" alt="Sales Neurology Map" class="rounded-2xl w-full grayscale opacity-80 hover:grayscale-0 transition duration-500">
+    <section class="py-20 md:py-32 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="glass p-4 rounded-3xl border-white/10 text-center order-2 lg:order-1">
+                <img src="neuromap.jpg" alt="Sales Neurology Map" class="rounded-2xl w-full grayscale opacity-80 hover:grayscale-0 transition duration-500">
                 <p class="text-[10px] text-center mt-4 text-slate-600 uppercase tracking-widest">Neural Pathway of the 'Biological No'</p>
             </div>
-            <div>
-                <h3 class="text-3xl font-black uppercase mb-6 tracking-tight">The <span class="text-accent">Subconscious</span> Wall</h3>
-                <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
-                    <p>
-                        When a rep’s Amygdala fires, their biology "leaks" anxiety through micro-tonality and erratic pacing. This instantly triggers the prospect's <strong>Insular Cortex</strong>—the brain's ancient seat of disgust and avoidance. 
-                    </p>
-                    <p class="font-bold border-l-2 border-accent pl-6 italic text-white">
-                        The prospect’s survival brain senses this "threat" and forces a rejection reflex before they ever logically process your value prop.
-                    </p>
-                    <p class="text-sm text-slate-500">
-                        80XPower15 is the only system that installs a <strong>Neurological Firewall</strong>. By regulating the ACC and silencing the Insula, we bypass the "Biological No" and turn resistance into a clear path for the close.
-                    </p>
+            <div class="order-1 lg:order-2">
+                <h3 class="text-3xl md:text-4xl font-black uppercase mb-6 tracking-tight">The <span class="text-accent">Subconscious</span> Wall</h3>
+                <div class="space-y-6 text-slate-400 text-base md:text-lg leading-relaxed">
+                    <p>When a rep’s Amygdala fires, their biology "leaks" anxiety. This instantly triggers the prospect's <strong>Insular Cortex</strong>—the brain's seat of disgust and avoidance.</p>
+                    <p class="font-bold border-l-2 border-accent pl-6 italic text-white">The prospect’s survival brain forces a rejection reflex before they ever logically process your value prop.</p>
+                    <p class="text-sm text-slate-500">80XPower15 installs a <strong>Neurological Firewall</strong>. By regulating the ACC and silencing the Insula, we turn biological resistance into a clear path for the close.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="os" class="py-32 px-6 border-b border-white/5 bg-white/[0.01]">
+    <section id="os" class="py-20 md:py-32 px-6 bg-white/[0.01]">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl md:text-7xl font-black uppercase mb-20 text-center leading-[0.8]">The <span class="text-accent">Lion’s</span> Infrastructure</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
                     <i class="fas fa-bolt text-accent mb-6 text-2xl block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">Instant State-Access</h3>
-                    <p class="text-slate-500 text-sm mb-4">Neuro-triggers move reps from 'resting' to 'hunting' in under 5 minutes.</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
+                    <p class="text-slate-500 text-xs mb-4">Neuro-triggers move reps from 'resting' to 'hunting' in under 5 minutes.</p>
+                    <ul class="text-[9px] text-accent font-bold uppercase tracking-widest space-y-2">
                         <li><i class="fas fa-check mr-2"></i>Eliminates 90m ramp-up</li>
-                        <li><i class="fas fa-check mr-2"></i>Triggers BAS activation</li>
                         <li><i class="fas fa-check mr-2"></i>Immediate dial velocity</li>
-                        <li><i class="fas fa-check mr-2"></i>Morning brain-fog bypass</li>
                     </ul>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
                     <i class="fas fa-lock text-accent mb-6 text-2xl block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">Dopamine Vaulting</h3>
-                    <p class="text-slate-500 text-sm mb-4">Clinical addiction protocols to seal "Dopamine Leaks."</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
+                    <p class="text-slate-500 text-xs mb-4">Clinical addiction protocols to seal "Dopamine Leaks" and distractions.</p>
+                    <ul class="text-[9px] text-accent font-bold uppercase tracking-widest space-y-2">
                         <li><i class="fas fa-check mr-2"></i>100% focused dial blocks</li>
-                        <li><i class="fas fa-check mr-2"></i>Stops digital distraction</li>
-                        <li><i class="fas fa-check mr-2"></i>High-density execution</li>
-                        <li><i class="fas fa-check mr-2"></i>Prevents scrolling fatigue</li>
+                        <li><i class="fas fa-check mr-2"></i>Stops digital fatigue</li>
                     </ul>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
                     <i class="fas fa-shield-virus text-accent mb-6 text-2xl block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">Limbic Neutrality</h3>
-                    <p class="text-slate-500 text-sm mb-4">Regulating the Limbic System to stop the prospect's rejection reflex.</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
-                        <li><i class="fas fa-check mr-2"></i>Amygdala-Override Protocols</li>
-                        <li><i class="fas fa-check mr-2"></i>Calm under high tension</li>
-                        <li><i class="fas fa-check mr-2"></i>Tonality regulation</li>
+                    <p class="text-slate-500 text-xs mb-4">Regulating the Limbic System to stop the prospect's rejection reflex.</p>
+                    <ul class="text-[9px] text-accent font-bold uppercase tracking-widest space-y-2">
+                        <li><i class="fas fa-check mr-2"></i>Amygdala-Override</li>
                         <li><i class="fas fa-check mr-2"></i>ACC Goal-Persistence</li>
                     </ul>
                 </div>
                 <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
                     <i class="fas fa-battery-full text-accent mb-6 text-2xl block"></i>
                     <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">2:00 PM Anti-Crash</h3>
-                    <p class="text-slate-500 text-sm mb-4">Biological resets that maintain energy levels through the dip.</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
-                        <li><i class="fas fa-check mr-2"></i>Peak closing energy all day</li>
+                    <p class="text-slate-500 text-xs mb-4">Biological resets that maintain energy levels through the afternoon dip.</p>
+                    <ul class="text-[9px] text-accent font-bold uppercase tracking-widest space-y-2">
+                        <li><i class="fas fa-check mr-2"></i>Peak closing energy</li>
                         <li><i class="fas fa-check mr-2"></i>Cortisol management</li>
-                        <li><i class="fas fa-check mr-2"></i>Sustained focus output</li>
-                        <li><i class="fas fa-check mr-2"></i>Ends afternoon slump loss</li>
                     </ul>
                 </div>
             </div>
@@ -194,41 +176,30 @@
     </section>
 
     <section class="py-12 px-6">
-        <div class="max-w-4xl mx-auto text-center glass p-20 rounded-[4rem] border-white/5 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center glass p-12 md:p-20 rounded-[3rem] md:rounded-[4rem] border-white/5 overflow-hidden">
+            <p class="text-accent font-black uppercase text-xs mb-8 tracking-[0.4em]">Brand Identity Preview</p>
             <img src="mockupofhat.jpg" alt="Biohacking Sales Hat Mockup" class="max-w-full h-auto rounded-3xl shadow-2xl mx-auto">
         </div>
     </section>
 
-    <section id="faq" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black uppercase mb-16 text-center">Frequently <span class="text-accent">Asked</span></h2>
-            <div class="space-y-4">
-                <div class="glass p-8 rounded-3xl border-white/5">
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-tight">1. How does this impact my bottom line?</h4>
-                    <p class="text-slate-400 text-sm">By eliminating the "Hesitation Tax," we increase top-of-funnel volume. Most teams see a 40% increase in dial density within 72 hours, leading to a more stable pipeline.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-white/5">
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-tight">2. Does this replace our current sales methodology?</h4>
-                    <p class="text-slate-400 text-sm">No. 80XPower15 is the <strong>infrastructure</strong> that allows your reps to execute Sandler, Challenger, or SPIN without their biology getting in the way.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-white/5">
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-tight">3. Is this hard to implement for a large team?</h4>
-                    <p class="text-slate-400 text-sm">The protocols take less than 5 minutes of a rep's day and require zero change to your current CRM or tech stack.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="book" class="py-32 px-6 bg-midnight">
+    <section id="book" class="py-20 md:py-32 px-6">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl md:text-6xl font-black uppercase text-white mb-8 tracking-tighter">Scale Your <span class="text-accent">Capacity.</span></h2>
-            <div class="max-w-md mx-auto mb-10 min-h-[300px]">
-                <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
+            <div class="flex flex-col items-center gap-10">
+                <div class="max-w-md w-full min-h-[300px]">
+                    <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
+                </div>
+                
+                <div class="h-px w-24 bg-white/10"></div>
+                
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,95,21,0.4)] text-sm md:text-base">
+                    Schedule Your Performance Audit
+                </a>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 text-center text-slate-600 text-[10px] font-black uppercase tracking-[0.4em]">
+    <footer class="py-12 text-center text-slate-600 text-[9px] font-black uppercase tracking-[0.3em] px-6">
         &copy; 2026 BiohackingSales LLC | The 80XPower15 System
     </footer>
 
