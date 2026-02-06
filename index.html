@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Outbound Sales Inconsistency Crisis | Floyd Orr</title>
+    <title>Biohacking Sales | Performance Infrastructure for Outbound Teams</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -20,23 +20,6 @@
         .bg-accent { background-color: var(--accent); }
         .hero-gradient { background: radial-gradient(circle at center, rgba(255,95,21,0.1) 0%, transparent 70%); }
         
-        .dna-container { position: relative; width: 24px; height: 35px; perspective: 1000px; display: flex; flex-direction: column; justify-content: space-between; }
-        @media (min-width: 768px) { .dna-container { width: 30px; height: 45px; } }
-        
-        .helix-bar { width: 100%; height: 4px; background: var(--accent); border-radius: 10px; position: absolute; left: 50%; transform-origin: center; }
-        @keyframes capsule-rotate {
-            0% { transform: translateX(-50%) rotateY(0deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
-            50% { transform: translateX(-50%) rotateY(180deg) translateZ(15px); opacity: 1; scale: 1.1; }
-            100% { transform: translateX(-50%) rotateY(360deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
-        }
-        .bar { animation: capsule-rotate 3s infinite ease-in-out; }
-        .bar:nth-child(1) { top: 0%; animation-delay: 0s; }
-        .bar:nth-child(2) { top: 20%; animation-delay: -0.4s; }
-        .bar:nth-child(3) { top: 40%; animation-delay: -0.8s; }
-        .bar:nth-child(4) { top: 60%; animation-delay: -1.2s; }
-        .bar:nth-child(5) { top: 80%; animation-delay: -1.6s; }
-        .bar:nth-child(6) { top: 100%; animation-delay: -2.0s; }
-
         @keyframes slowRotate { 0% { transform: rotate(0deg) translateY(0px); } 50% { transform: rotate(3deg) translateY(-15px); } 100% { transform: rotate(0deg) translateY(0px); } }
         .animate-spin-slow { animation: slowRotate 8s ease-in-out infinite; filter: drop-shadow(0 25px 50px rgba(255, 95, 21, 0.3)); }
         
@@ -53,7 +36,6 @@
             </div>
             <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-[10px] font-bold uppercase tracking-widest">
                 <a href="#impact" class="hover:text-accent transition">The Result</a>
-                <a href="#origin" class="hover:text-accent transition">The Science</a>
                 <a href="#protocol" class="hover:text-accent transition">The System</a>
                 <a href="#os" class="hover:text-accent transition">Infrastructure</a>
                 <a href="#founder" class="hover:text-accent transition">The Founder</a>
@@ -70,7 +52,8 @@
                 <p class="text-accent font-black uppercase tracking-[0.2em] text-[10px] mb-4">Built for Outbound Teams of 5-50 Reps</p>
                 <h1 class="text-4xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-6">Turn Outbound Sales <span class="text-accent">Lambs</span> <br class="hidden md:block"/>into Lions.</h1>
                 <p class="text-lg md:text-xl text-slate-400 mb-8 font-medium leading-relaxed max-w-xl">
-                    The 80XPower15 is a <span class="text-white font-bold">short daily protocol</span> that increases outbound production by <span class="text-accent font-bold">25%+</span>, stabilizes closing consistency, and reduces turnover through <span class="text-white font-bold">biological resilience.</span>
+                    The 80XPower15 is a <span class="text-white font-bold">short daily protocol</span> that increases production by <span class="text-accent font-bold">25%+</span> and stabilizes closing consistency. <br/>
+                    <span class="text-sm mt-4 block text-slate-500 italic">"Nothing here requires belief in neuroscience—only consistent execution and measurable output."</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,95,21,0.4)] text-sm">Book Performance Audit</a>
@@ -87,18 +70,18 @@
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="space-y-4 text-center md:text-left">
                     <h4 class="text-accent font-black uppercase text-xs tracking-widest">The Performance Delta</h4>
-                    <p class="text-slate-300 text-sm italic">"Reps know what to say—they just aren't doing it consistently. We install the hardware so they can."</p>
+                    <p class="text-slate-300 text-sm italic">"We install the hardware so reps can actually execute the scripts you've already paid for."</p>
                 </div>
                 <div class="glass p-6 rounded-2xl border-white/10 grid grid-cols-2 gap-4">
                     <div>
                         <p class="text-[10px] uppercase text-slate-500 font-bold">Before 80X</p>
                         <p class="text-xl font-black text-white">62 Dials/Day</p>
-                        <p class="text-[10px] text-slate-400">High Fatigue @ 2PM</p>
+                        <p class="text-[10px] text-slate-400">12% Show Rate</p>
                     </div>
                     <div class="border-l border-white/10 pl-4">
                         <p class="text-[10px] uppercase text-accent font-bold">With 80X</p>
                         <p class="text-xl font-black text-accent">91 Dials/Day</p>
-                        <p class="text-[10px] text-slate-400">Zero Afternoon Dip</p>
+                        <p class="text-[10px] text-slate-400">18%+ Show Rate</p>
                     </div>
                 </div>
             </div>
@@ -116,21 +99,48 @@
                 </div>
                 <div class="w-full md:w-2/3">
                     <p class="text-xl md:text-2xl font-light text-slate-200 leading-relaxed">
-                        <span class="text-white font-black italic">Biohacking Sales</span> is the application of <span class="text-accent font-bold">Applied Neuroscience</span> and <span class="text-accent font-bold">Biological Regulation</span> to the outbound sales process.
+                        The application of <span class="text-accent font-bold">Applied Neuroscience</span> to the outbound sales process.
                     </p>
                     <p class="mt-6 text-slate-400 text-sm md:text-base leading-relaxed">
-                        Traditional training focuses on <span class="italic">what to say</span> (Software). We focus on the <span class="text-white font-bold uppercase tracking-widest text-xs">Mental Hardware</span>. By regulating the nervous system, we eliminate the biological friction—anxiety, hesitation, and fatigue—that prevents reps from executing at their highest potential.
+                        Traditional training focuses on <span class="italic">what to say</span> (Software). We focus on the <span class="text-white font-bold uppercase tracking-widest text-xs">Mental Hardware</span>. By regulating the nervous system, we eliminate the biological friction—anxiety, hesitation, and fatigue—that prevents reps from executing.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="impact" class="py-20 px-6 border-b border-white/5 relative bg-accent/5">
+    <section class="py-20 px-6 bg-accent/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6 text-white">What This Removes for <span class="text-accent">Sales Leaders</span></h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times-circle text-accent mt-1"></i>
+                            <span class="text-slate-300"><strong>No more begging</strong> reps to "push harder" through afternoon slumps.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times-circle text-accent mt-1"></i>
+                            <span class="text-slate-300"><strong>No more retraining</strong> every 90 days because of "burnout."</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-times-circle text-accent mt-1"></i>
+                            <span class="text-slate-300"><strong>No more revenue volatility</strong> caused by rep "moods" or bad weeks.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] border-white/10">
+                    <p class="text-white font-bold text-xl mb-4 italic">"I don't just teach reps to sell; I give managers their time back by making the floor self-regulating."</p>
+                    <p class="text-accent font-black uppercase tracking-widest text-xs">— Floyd Orr</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-20 px-6 border-b border-white/5 relative bg-white/[0.01]">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">The <span class="text-accent">72-Hour</span> Impact</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto font-medium">When you regulate the biology of a sales floor, the shift is immediate. We solve the Dial-Hesitation and Fatigue that bleed your revenue dry.</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -151,12 +161,6 @@
                     <div class="text-white font-bold uppercase text-xs tracking-widest">Frankness / Close</div>
                 </div>
             </div>
-
-            <div class="max-w-4xl mx-auto bg-white/5 p-8 rounded-3xl border border-white/10">
-                <p class="text-lg md:text-xl leading-relaxed text-slate-300 italic text-center">
-                    "The logic is simple: <strong>More self-regulation equals more contentment with the daily sales grind.</strong> Contented reps make more dials. More dials create more opportunities. More opportunities lead to more closes. More closes put more commission in your reps' pockets—and that is the only way your revenue targets are hit."
-                </p>
-            </div>
         </div>
     </section>
 
@@ -164,32 +168,24 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">The <span class="text-accent">Protocol</span></h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">80XPower15 is a licensed performance system designed to turn outbound sales lambs into lions. We give your team the <span class="text-white font-bold">short daily protocol</span> required to maintain high-intensity closing energy all day.</p>
+                <p class="text-slate-400 max-w-2xl mx-auto">80XPower15 is a licensed performance system. We provide the <span class="text-white font-bold">short daily protocol</span> required to maintain high-intensity closing energy all day.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl border-white/10 relative">
+                <div class="glass p-8 rounded-3xl border-white/10">
                     <i class="fas fa-phone-alt text-accent mb-6 text-2xl"></i>
-                    <h4 class="text-xl font-bold text-white mb-4 uppercase leading-tight">High-Impact Volume Installation</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        A masterclass in <strong>Mental Hardware</strong>. Floyd Orr demonstrates the specific neurological triggers that eliminate <strong>dial-hesitation</strong>. We install the "Frankness Protocols" and regulation required to maintain high-intensity output all day.
-                    </p>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase">Volume Installation</h4>
+                    <p class="text-slate-400 text-sm">Mental Hardware training that eliminate <strong>dial-hesitation</strong> and install regulation required to maintain intensity.</p>
                 </div>
-
                 <div class="glass p-8 rounded-3xl border-accent/30 bg-accent/5">
                     <i class="fas fa-battery-bolt text-accent mb-6 text-2xl"></i>
-                    <h4 class="text-xl font-bold text-white mb-4 uppercase leading-tight">The Anti-Fatigue Workbook</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        The physical companion to the training. It maps out the <span class="text-white font-bold italic">short daily routine</span> that ensures your reps hit their dial KPIs every single day, effectively killing the mid-afternoon energy crash.
-                    </p>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase">The Resilience Workbook</h4>
+                    <p class="text-slate-400 text-sm">The <strong>short daily maintenance routine</strong> that ensures your reps hit their dial KPIs without crashing at 2:00 PM.</p>
                 </div>
-
-                <div class="glass p-8 rounded-3xl border-white/10 relative">
+                <div class="glass p-8 rounded-3xl border-white/10">
                     <i class="fas fa-certificate text-accent mb-6 text-2xl"></i>
-                    <h4 class="text-xl font-bold text-white mb-4 uppercase leading-tight">Team Performance License</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Full rights to deploy the 80XPower15 infrastructure across your sales floor. This license ensures that your <strong>Dial Volume</strong> and revenue targets are never at the mercy of "rep mood" again.
-                    </p>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase">Performance License</h4>
+                    <p class="text-slate-400 text-sm">Full rights to deploy the infrastructure across your floor so revenue never depends on "rep mood."</p>
                 </div>
             </div>
         </div>
@@ -197,147 +193,13 @@
 
     <section id="origin" class="py-20 md:py-32 px-6 bg-white/[0.02] border-y border-white/5">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="text-accent font-black uppercase text-xs mb-4 tracking-[0.3em]">The Development of 80XPower15</p>
+            <p class="text-accent font-black uppercase text-xs mb-4">The Development of 80XPower15</p>
             <h2 class="text-4xl md:text-6xl font-black uppercase mb-12 tracking-tighter">Born in the <span class="text-accent">Collapse.</span></h2>
-            
-            <div class="space-y-8 text-slate-400 text-base md:text-lg leading-relaxed font-medium">
-                <p>The 80XPower15 framework was developed when my life collapsed. Two months into a role at a <strong>Fortune 500 tech leader</strong>, my marriage ended, and my kids moved out of the country.</p>
-                <p>
-                    Isolated on a remote homestead—broke and alone—I was still expected to hit quota. I noticed that when my internal state was in distress, I triggered <strong>biological resistance</strong> in my prospects before I finished my first sentence.
-                    <span class="text-white block mt-4 font-bold">I knew what to do, but I just could not do it.</span>
-                </p>
-                
-                <div class="bg-accent/10 border border-accent/20 p-8 md:p-12 rounded-3xl mt-12 text-left">
-                    <h4 class="text-white font-black uppercase mb-6 tracking-tight flex items-center gap-3">
-                        <i class="fas fa-microchip text-accent"></i> The "So What" for Sales Leaders:
-                    </h4>
-                    
-                    <p class="text-slate-200 mb-6">
-                        Your reps aren't just fighting prospects; they are fighting their own biology. When a rep has a bad night or a bad sales week, their <strong>unregulated nervous system</strong> kills the deal before the pitch even starts.
-                    </p>
-
-                    <p class="text-slate-200 mb-6">
-                        They don't push when they should, they don't speak frankly, and it becomes nearly impossible to hit dial KPIs. If your reps are two months out of training and still inconsistent, the problem isn't their script; it's their <span class="text-accent underline decoration-2 underline-offset-4">mental hardware.</span>
-                    </p>
-
-                    <p class="text-white font-bold text-lg md:text-xl leading-tight">
-                        I realized that if I could hit quota while my life was in ruins, I could build a system that makes your team "unshakable." 80XPower15 ensures human volatility never dictates revenue targets again.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 md:py-32 px-6 border-b border-white/5">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div class="glass p-4 rounded-3xl border-accent/30 text-center order-2 lg:order-1 relative group">
-                <img src="braindisconnect.jpg" alt="Sales Neurology Map" class="rounded-2xl w-full border border-accent/20 shadow-[0_0_30px_rgba(255,95,21,0.2)]">
-                <p class="text-[10px] text-center mt-4 text-accent uppercase font-black tracking-widest">Neural Pathway of the 'Biological No'</p>
-            </div>
-            <div class="order-1 lg:order-2">
-                <h3 class="text-3xl md:text-4xl font-black uppercase mb-6 tracking-tight">The <span class="text-accent">Subconscious</span> Wall</h3>
-                <div class="space-y-6 text-slate-400 text-base md:text-lg leading-relaxed">
-                    <p>
-                        When a rep’s Amygdala fires, their biology "leaks" anxiety. This instantly triggers the prospect's <strong>Insular Cortex</strong>—the brain's seat of disgust, avoidance, and immediate rejection.
-                    </p>
-                    <p>
-                        Furthermore, the rep loses <strong>cognitive flexibility</strong>. They aren't as creative in solving issues or navigating objections because their Prefrontal Cortex has been hijacked by survival instincts.
-                    </p>
-                    <p class="font-bold border-l-2 border-accent pl-6 italic text-white">
-                        The prospect’s survival brain forces a rejection reflex before they ever logically process your value prop.
-                    </p>
-                    <p class="text-sm text-slate-500">
-                        80XPower15 installs a <strong>Neurological Firewall</strong>. By regulating the ACC and silencing the Insula, we turn biological resistance into a clear path for the close.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="os" class="py-20 md:py-32 px-6 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-7xl font-black uppercase mb-20 text-center leading-[0.8]">The <span class="text-accent">Lion’s</span> Infrastructure</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
-                    <i class="fas fa-bolt text-accent mb-6 text-2xl block"></i>
-                    <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">Instant State-Access</h3>
-                    <p class="text-slate-500 text-sm mb-4">Neuro-triggers move reps from 'resting' to 'hunting' instantly.</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
-                        <li><i class="fas fa-check mr-2"></i>Eliminates dial-hesitation</li>
-                        <li><i class="fas fa-check mr-2"></i>Triggers BAS activation</li>
-                        <li><i class="fas fa-check mr-2"></i>Immediate dial velocity</li>
-                        <li><i class="fas fa-check mr-2"></i>Morning brain-fog bypass</li>
-                    </ul>
-                </div>
-                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
-                    <i class="fas fa-lock text-accent mb-6 text-2xl block"></i>
-                    <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">Dopamine Vaulting</h3>
-                    <p class="text-slate-500 text-sm mb-4">Clinical addiction protocols to seal "Dopamine Leaks."</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
-                        <li><i class="fas fa-check mr-2"></i>100% focused dial blocks</li>
-                        <li><i class="fas fa-check mr-2"></i>Stops digital distraction</li>
-                        <li><i class="fas fa-check mr-2"></i>High-density execution</li>
-                        <li><i class="fas fa-check mr-2"></i>Prevents scrolling fatigue</li>
-                    </ul>
-                </div>
-                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
-                    <i class="fas fa-shield-virus text-accent mb-6 text-2xl block"></i>
-                    <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">Limbic Neutrality</h3>
-                    <p class="text-slate-500 text-sm mb-4">Regulating the Limbic System to stop the prospect's rejection reflex.</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
-                        <li><i class="fas fa-check mr-2"></i>Amygdala-Override Protocols</li>
-                        <li><i class="fas fa-check mr-2"></i>Calm under high tension</li>
-                        <li><i class="fas fa-check mr-2"></i>Tonality regulation</li>
-                        <li><i class="fas fa-check mr-2"></i>ACC Goal-Persistence</li>
-                    </ul>
-                </div>
-                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
-                    <i class="fas fa-battery-full text-accent mb-6 text-2xl block"></i>
-                    <h3 class="text-lg font-black mb-3 uppercase group-hover:text-accent transition">2:00 PM Anti-Crash</h3>
-                    <p class="text-slate-500 text-sm mb-4">Biological resets that maintain energy levels through the dip.</p>
-                    <ul class="text-[10px] text-accent font-bold uppercase tracking-widest space-y-2">
-                        <li><i class="fas fa-check mr-2"></i>Peak closing energy all day</li>
-                        <li><i class="fas fa-check mr-2"></i>Cortisol management</li>
-                        <li><i class="fas fa-check mr-2"></i>Sustained focus output</li>
-                        <li><i class="fas fa-check mr-2"></i>Ends afternoon slump loss</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="founder" class="py-20 md:py-32 px-6 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
-            </div>
-            <div>
-                <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Pioneer</p>
-                <h2 class="text-4xl md:text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Floyd Orr: <br/><span class="text-accent">Engineer of Mental Hardware</span></h2>
-                <div class="space-y-6 text-slate-400 text-base md:text-lg leading-relaxed font-medium">
-                    <p>Why do two reps with the same training perform wildly differently? One becomes a lion; the other remains a lamb.</p>
-                    <p>Having worked with giants like <strong>American Express, Yelp, and Constant Contact</strong>, and helping <strong>Siemplify</strong> toward its Google acquisition, I've seen every sales script imaginable. None of them solve the "biology" problem.</p>
-                    <p>My background as an <strong>Addiction Counselor</strong> allowed me to be the first to solve the Inconsistency Crisis at a neurological level. I don't just teach sales; I install the hardware to win.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-32 px-6 bg-accent/5 border-t border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black uppercase mb-16 text-center">Frequently <span class="text-accent">Asked</span></h2>
-            <div class="space-y-4">
-                <div class="glass p-8 rounded-3xl border-white/5">
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-tight">1. How does this impact my bottom line?</h4>
-                    <p class="text-slate-400 text-sm">By eliminating the "Hesitation Tax," we increase top-of-funnel volume. Most teams see a 40% increase in dial density within 72 hours, leading to a more stable pipeline.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-white/5">
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-tight">2. Does this replace our current sales methodology?</h4>
-                    <p class="text-slate-400 text-sm">No. 80XPower15 is the <strong>infrastructure</strong> that allows your reps to execute Sandler, Challenger, or SPIN without their biology getting in the way.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-white/5">
-                    <h4 class="text-white font-bold mb-3 uppercase tracking-tight">3. Is this hard to implement for a large team?</h4>
-                    <p class="text-slate-400 text-sm">The protocol takes only a <span class="text-white font-bold italic">short daily routine</span> and requires zero change to your current CRM or tech stack.</p>
+            <div class="space-y-6 text-slate-400 text-base md:text-lg leading-relaxed text-left">
+                <p>The 80XPower15 framework was developed when my life collapsed. Two months into a role at a <strong>Fortune 500 tech leader</strong>, my personal life fell apart. Alone and broke, I was still expected to hit quota.</p>
+                <p>I realized my reps aren't fighting prospects; they are fighting their own biology. When a rep is in distress, they trigger <strong>biological resistance</strong> in their prospects before the pitch even starts.</p>
+                <div class="bg-accent/10 p-8 rounded-3xl mt-8">
+                    <p class="text-white font-bold">If your reps are inconsistent, the problem isn't their script; it's their hardware. I built 80XPower15 to ensure human volatility never dictates your revenue targets again.</p>
                 </div>
             </div>
         </div>
@@ -347,24 +209,13 @@
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl md:text-6xl font-black uppercase text-white mb-8 tracking-tighter">Scale Your <span class="text-accent">Capacity.</span></h2>
             <div class="flex flex-col items-center gap-10">
-                <div class="max-w-md w-full min-h-[300px]">
-                    <p class="text-accent font-black uppercase tracking-widest text-xs mb-6">Get the 80XPower15 Manuscript</p>
+                <div class="max-w-md w-full">
                     <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
                 </div>
-                <div class="h-px w-24 bg-white/10"></div>
-                <div>
-                    <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px] mb-6">Or Deploy the System Company-Wide</p>
-                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform text-center shadow-[0_0_30px_rgba(255,95,21,0.4)] text-sm md:text-base inline-block">
-                        Schedule Your Performance Audit
-                    </a>
-                </div>
+                <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="bg-accent text-white px-10 py-5 rounded-full font-black uppercase tracking-widest hover:scale-105 transition shadow-[0_0_30px_rgba(255,95,21,0.4)] text-sm">
+                    Schedule Your Performance Audit
+                </a>
             </div>
-        </div>
-    </section>
-
-    <section class="py-12 px-6 border-t border-white/5">
-        <div class="max-w-4xl mx-auto text-center glass p-12 md:p-20 rounded-[3rem] md:rounded-[4rem] border-white/5 overflow-hidden">
-            <img src="mockupofhat.jpg" alt="Biohacking Sales Hat Mockup" class="max-w-full h-auto rounded-3xl shadow-2xl mx-auto">
         </div>
     </section>
 
