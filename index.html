@@ -20,6 +20,23 @@
         .bg-accent { background-color: var(--accent); }
         .hero-gradient { background: radial-gradient(circle at center, rgba(255,95,21,0.1) 0%, transparent 70%); }
         
+        .dna-container { position: relative; width: 24px; height: 35px; perspective: 1000px; display: flex; flex-direction: column; justify-content: space-between; }
+        @media (min-width: 768px) { .dna-container { width: 30px; height: 45px; } }
+        
+        .helix-bar { width: 100%; height: 4px; background: var(--accent); border-radius: 10px; position: absolute; left: 50%; transform-origin: center; }
+        @keyframes capsule-rotate {
+            0% { transform: translateX(-50%) rotateY(0deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
+            50% { transform: translateX(-50%) rotateY(180deg) translateZ(15px); opacity: 1; scale: 1.1; }
+            100% { transform: translateX(-50%) rotateY(360deg) translateZ(-15px); opacity: 0.3; scale: 0.8; }
+        }
+        .bar { animation: capsule-rotate 3s infinite ease-in-out; }
+        .bar:nth-child(1) { top: 0%; animation-delay: 0s; }
+        .bar:nth-child(2) { top: 20%; animation-delay: -0.4s; }
+        .bar:nth-child(3) { top: 40%; animation-delay: -0.8s; }
+        .bar:nth-child(4) { top: 60%; animation-delay: -1.2s; }
+        .bar:nth-child(5) { top: 80%; animation-delay: -1.6s; }
+        .bar:nth-child(6) { top: 100%; animation-delay: -2.0s; }
+
         @keyframes slowRotate { 0% { transform: rotate(0deg) translateY(0px); } 50% { transform: rotate(3deg) translateY(-15px); } 100% { transform: rotate(0deg) translateY(0px); } }
         .animate-spin-slow { animation: slowRotate 8s ease-in-out infinite; filter: drop-shadow(0 25px 50px rgba(255, 95, 21, 0.3)); }
         
@@ -142,7 +159,6 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">The <span class="text-accent">72-Hour</span> Impact</h2>
             </div>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                 <div class="glass p-8 rounded-3xl border-accent shadow-[0_0_20px_rgba(255,95,21,0.1)]">
                     <div class="text-accent text-3xl font-black mb-2">20-50%</div>
@@ -170,7 +186,6 @@
                 <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-4">The <span class="text-accent">Protocol</span></h2>
                 <p class="text-slate-400 max-w-2xl mx-auto">80XPower15 is a licensed performance system. We provide the <span class="text-white font-bold">short daily protocol</span> required to maintain high-intensity closing energy all day.</p>
             </div>
-
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass p-8 rounded-3xl border-white/10">
                     <i class="fas fa-phone-alt text-accent mb-6 text-2xl"></i>
@@ -205,6 +220,66 @@
         </div>
     </section>
 
+    <section class="py-20 md:py-32 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="glass p-4 rounded-3xl border-accent/30 text-center order-2 lg:order-1 relative group">
+                <img src="braindisconnect.jpg" alt="Sales Neurology Map" class="rounded-2xl w-full border border-accent/20 shadow-[0_0_30px_rgba(255,95,21,0.2)]">
+                <p class="text-[10px] text-center mt-4 text-accent uppercase font-black tracking-widest">Neural Pathway of the 'Biological No'</p>
+            </div>
+            <div class="order-1 lg:order-2">
+                <h3 class="text-3xl md:text-4xl font-black uppercase mb-6 tracking-tight">The <span class="text-accent">Subconscious</span> Wall</h3>
+                <div class="space-y-6 text-slate-400 text-base md:text-lg leading-relaxed">
+                    <p>When a rep’s Amygdala fires, their biology "leaks" anxiety. This triggers the prospect's <strong>Insular Cortex</strong>—the seat of disgust and avoidance.</p>
+                    <p>80XPower15 installs a <strong>Neurological Firewall</strong>. By regulating the ACC and silencing the Insula, we turn biological resistance into a clear path for the close.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="os" class="py-20 md:py-32 px-6 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-7xl font-black uppercase mb-20 text-center leading-[0.8]">The <span class="text-accent">Lion’s</span> Infrastructure</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
+                    <i class="fas fa-bolt text-accent mb-6 text-2xl block"></i>
+                    <h3 class="text-lg font-black mb-3 uppercase">Instant State-Access</h3>
+                    <p class="text-slate-500 text-sm">Neuro-triggers move reps from 'resting' to 'hunting' instantly.</p>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
+                    <i class="fas fa-lock text-accent mb-6 text-2xl block"></i>
+                    <h3 class="text-lg font-black mb-3 uppercase">Dopamine Vaulting</h3>
+                    <p class="text-slate-500 text-sm">Clinical protocols to seal "Dopamine Leaks" and stops digital distraction.</p>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
+                    <i class="fas fa-shield-virus text-accent mb-6 text-2xl block"></i>
+                    <h3 class="text-lg font-black mb-3 uppercase">Limbic Neutrality</h3>
+                    <p class="text-slate-500 text-sm">Regulating the Limbic System to stop the prospect's rejection reflex.</p>
+                </div>
+                <div class="glass p-8 rounded-[2.5rem] border-white/5 group">
+                    <i class="fas fa-battery-full text-accent mb-6 text-2xl block"></i>
+                    <h3 class="text-lg font-black mb-3 uppercase">2:00 PM Anti-Crash</h3>
+                    <p class="text-slate-500 text-sm">Biological resets that maintain energy levels through the dip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder" class="py-20 md:py-32 px-6 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                <img src="mypic.jpg" alt="Floyd Orr" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            </div>
+            <div>
+                <p class="text-accent font-black uppercase text-xs mb-2">Systems Architect & Pioneer</p>
+                <h2 class="text-4xl md:text-5xl font-black uppercase mb-8 tracking-tighter leading-tight">Floyd Orr: <br/><span class="text-accent">Engineer of Mental Hardware</span></h2>
+                <div class="space-y-6 text-slate-400 text-base md:text-lg leading-relaxed font-medium">
+                    <p>Having worked with giants like <strong>American Express, Yelp, and Constant Contact</strong>, I've seen every sales script imaginable. None of them solve the "biology" problem.</p>
+                    <p>My background as an <strong>Addiction Counselor</strong> allowed me to be the first to solve the Inconsistency Crisis at a neurological level. I don't just teach sales; I install the hardware to win.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="book" class="py-20 md:py-32 px-6">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl md:text-6xl font-black uppercase text-white mb-8 tracking-tighter">Scale Your <span class="text-accent">Capacity.</span></h2>
@@ -216,6 +291,12 @@
                     Schedule Your Performance Audit
                 </a>
             </div>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center glass p-12 md:p-20 rounded-[3rem] border-white/5 overflow-hidden">
+            <img src="mockupofhat.jpg" alt="Biohacking Sales Hat Mockup" class="max-w-full h-auto rounded-3xl shadow-2xl mx-auto">
         </div>
     </section>
 
