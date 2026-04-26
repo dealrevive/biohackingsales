@@ -1,21 +1,177 @@
-<section id="book" class="py-20 md:py-40 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-5xl md:text-8xl font-black uppercase text-white mb-16 tracking-tighter italic leading-none">Scale Your <span class="text-accent">Capacity.</span></h2>
-            
-            <div class="bg-white p-10 md:p-16 rounded-[4rem] w-full max-w-4xl mx-auto shadow-[0_40px_100px_rgba(255,95,21,0.2)] text-black">
-                
-                <div class="mb-10 flex flex-col items-center">
-                    <img src="guarantee.png" alt="70/20 Performance Bond" class="h-24 md:h-32 w-auto mb-4" onerror="this.src='https://via.placeholder.com/200x200/000000/ff5f15?text=70/20+BOND+SEAL'">
-                    <p class="text-black font-black uppercase text-[10px] tracking-[0.3em] italic">Official Performance Infrastructure Guarantee</p>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80xPower15 | Biohacking Sales Infrastructure</title>
+    <style>
+        /* RESET & BASE STYLES */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #f4f4f4; 
+            background-color: #0a0a0a; 
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-                <div class="flex flex-col md:flex-row gap-10 justify-center mb-12">
-                    <a href="https://biohackingsales.gumroad.com/l/oigvs" class="bg-black text-white px-10 py-6 rounded-full font-black uppercase tracking-widest hover:bg-accent transition text-lg italic">Deploy System ($3,350)</a>
-                    <a href="https://calendly.com/biohackingsales/30-minute-meeting" class="border-4 border-black text-black px-10 py-6 rounded-full font-black uppercase tracking-widest hover:bg-black hover:text-white transition text-lg italic">Book Audit</a>
-                </div>
+        /* HERO SECTION */
+        .hero { 
+            padding: 120px 0 80px; 
+            text-align: center; 
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+        }
+        .hero h1 { 
+            font-size: 56px; 
+            font-weight: 800; 
+            letter-spacing: -2px; 
+            margin-bottom: 20px; 
+            color: #fff;
+        }
+        .hero p { 
+            font-size: 24px; 
+            color: #aaa; 
+            max-width: 800px; 
+            margin: 0 auto 40px; 
+        }
+        .hero strong { color: #fff; }
 
-                <div class="max-w-md mx-auto pt-10 border-t border-slate-100">
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Final Dispatch Protocol</p>
-                    <div class="ctct-inline-form" data-form-id="bdd6a5c3-c95a-474e-8226-fd3901343fb4"></div>
+        /* CTA BUTTON */
+        .cta-button { 
+            background: #fff; 
+            color: #000; 
+            padding: 20px 45px; 
+            font-weight: 800; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-size: 20px; 
+            display: inline-block; 
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-button:hover { 
+            background: #00ffcc; /* Subtle tech-green glow */
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,255,204,0.2);
+        }
+
+        /* INFRASTRUCTURE SECTION */
+        .features { padding: 100px 0; background: #000; text-align: center; }
+        .features h2 { font-size: 32px; margin-bottom: 40px; color: #fff; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background: #111; padding: 40px; border-radius: 10px; border: 1px solid #222; }
+        .feature-card h3 { margin-bottom: 15px; color: #00ffcc; }
+
+        /* PERFORMANCE BOND SECTION */
+        .guarantee-section { 
+            padding: 100px 0; 
+            text-align: center; 
+            background-color: #fff; 
+            color: #000; 
+        }
+        .bond-image { 
+            width: 100%; 
+            max-width: 650px; 
+            height: auto; 
+            border-radius: 12px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        .bond-image:hover { 
+            transform: scale(1.03); 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4); 
+        }
+        
+        .guarantee-content { max-width: 800px; margin: 40px auto 0; }
+        .guarantee-content h2 { font-size: 42px; font-weight: 900; margin-bottom: 20px; letter-spacing: -1px; }
+        .guarantee-content p { font-size: 20px; color: #333; margin-bottom: 30px; }
+
+        /* LEGAL BOX */
+        .fine-print-box { 
+            background: #f4f4f4; 
+            padding: 30px; 
+            border-radius: 8px; 
+            display: inline-block; 
+            text-align: left; 
+            max-width: 700px; 
+            border-left: 6px solid #000; 
+            margin-top: 20px;
+        }
+        .fine-print-box p { font-size: 14px; color: #666; margin: 0; line-height: 1.6; }
+
+        /* FOOTER */
+        footer { padding: 50px 0; text-align: center; font-size: 14px; color: #444; background: #000; }
+
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 38px; }
+            .hero p { font-size: 18px; }
+            .guarantee-content h2 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>80xPower15™</h1>
+            <p>The Biological Infrastructure for VPs & CEOs who need reps to <strong>increase output by 20%+</strong>, close better, and quit less.</p>
+            <a href="INSERT_YOUR_GUMROAD_URL_HERE" class="cta-button">Secure the Infrastructure</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Beyond Sales Coaching. Infrastructure.</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Nervous System Regulation</h3>
+                    <p>Eliminate call reluctance by resetting the biological response to rejection at the cellular level.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cognitive Output</h3>
+                    <p>Techniques to maintain high-velocity dialing without the mental "burnout" that kills afternoon production.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Retention Architecture</h3>
+                    <p>Build a floor culture that reps don't want to leave, saving hundreds of thousands in hiring costs.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="guarantee-section">
+        <div class="container">
+            
+            <a href="INSERT_YOUR_GUMROAD_URL_HERE" target="_blank" rel="noopener noreferrer">
+                <img src="guarantee.png" alt="80xPower15 40/70 Performance Bond" class="bond-image">
+            </a>
+
+            <div class="guarantee-content">
+                <h2>The 40/70 Performance Bond</h2>
+                <p>
+                    I personally guarantee a <strong>40% increase in output</strong> for your team. If 70% of your reps don't achieve this lift within 30 days of training completion, I will issue a 70% refund. No questions.
+                </p>
+
+                <div class="fine-print-box">
+                    <p>
+                        <strong>The Terms:</strong> We allow a full 6-month window for deployment and filing. Eligibility is verified via CRM data comparing your 14-day pre-deployment baseline to the 30-day window immediately following training completion. A 30% non-refundable institutional licensing fee ($1,005) is retained for permanent IP access.
+                    </p>
+                </div>
+            </div>
+
+            <p style="margin-top: 40px; color: #999; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+                Click the badge above to visit secure checkout
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 BiohackingSales. Built for High-Volume Outbound. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
